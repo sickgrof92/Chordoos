@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="vo-shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7FB2FF"/><stop offset="0.45" stop-color="#3D5AFE"/><stop offset="1" stop-color="#26239E"/></linearGradient>
+    <radialGradient id="vo-head" cx="0.4" cy="0.3" r="0.85"><stop offset="0" stop-color="#5A5F8A"/><stop offset="1" stop-color="#22243F"/></radialGradient>
+    <linearGradient id="vo-bolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6A8"/><stop offset="1" stop-color="#FFC21A"/></linearGradient>
+    <radialGradient id="vo-eye" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.4" stop-color="#FFF27A"/><stop offset="1" stop-color="#FFB800"/></radialGradient>
+    <radialGradient id="vo-spark"><stop offset="0" stop-color="#FFF27A" stop-opacity=".7"/><stop offset="1" stop-color="#FFF27A" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="100" cy="184" rx="66" ry="6" fill="#2B2340" opacity=".14"/>
+  <!-- legs -->
+  <g fill="none" stroke="#22243F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 140 L44 152 L40 176"/><path d="M80 150 L70 166 L72 182"/><path d="M98 152 L98 168 L104 182"/>
+    <path d="M128 148 L140 164 L138 182"/><path d="M146 138 L164 150 L170 174"/>
+  </g>
+  <g fill="#FFC21A"><circle cx="40" cy="177" r="3.5"/><circle cx="72" cy="183" r="3.5"/><circle cx="104" cy="183" r="3.5"/><circle cx="138" cy="183" r="3.5"/><circle cx="170" cy="175" r="3.5"/></g>
+  <!-- shell -->
+  <path d="M40 128 C40 92 72 70 106 72 C138 74 164 94 164 126 C164 146 140 156 102 156 C66 156 40 148 40 128 Z" fill="url(#vo-shell)" stroke="#1A1866" stroke-width="3.5"/>
+  <path d="M104 74 C102 100 102 130 102 155" stroke="#1A1866" stroke-width="3" fill="none"/>
+  <path d="M60 96 C70 84 86 78 98 78" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".45"/>
+  <path d="M112 80 C124 82 136 88 144 96" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+  <!-- lightning bolts on shell -->
+  <path d="M74 104 L64 124 L74 124 L68 140 L86 116 L76 116 L82 104 Z" fill="url(#vo-bolt)" stroke="#B37A00" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M132 104 L122 124 L132 124 L126 140 L144 116 L134 116 L140 104 Z" fill="url(#vo-bolt)" stroke="#B37A00" stroke-width="2" stroke-linejoin="round"/>
+  <!-- head -->
+  <path d="M148 104 C150 84 166 74 180 78 C194 82 198 100 192 114 C186 126 170 130 160 126 C150 122 146 114 148 104 Z" fill="url(#vo-head)" stroke="#14152A" stroke-width="3.5"/>
+  <!-- horn -->
+  <path d="M176 80 C176 60 168 42 156 34 C170 34 186 50 188 72 L190 82 Z" fill="url(#vo-bolt)" stroke="#B37A00" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M170 50 L176 52 M176 62 L182 62" stroke="#B37A00" stroke-width="2" stroke-linecap="round"/>
+  <!-- antennae -->
+  <path d="M160 82 C150 66 142 58 132 56 M168 78 C164 62 160 52 150 44" fill="none" stroke="#22243F" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="130" cy="56" r="5" fill="url(#vo-eye)" stroke="#B37A00" stroke-width="2"/>
+  <circle cx="148" cy="43" r="4.2" fill="url(#vo-eye)" stroke="#B37A00" stroke-width="2"/>
+  <!-- glowing eyes -->
+  <circle class="fx" cx="168" cy="100" r="14" fill="url(#vo-spark)"/>
+  <ellipse cx="166" cy="100" rx="8" ry="9" fill="url(#vo-eye)" stroke="#14152A" stroke-width="2"/>
+  <ellipse cx="164" cy="97" rx="2.6" ry="3.2" fill="#fff"/>
+  <ellipse cx="186" cy="100" rx="6" ry="8" fill="url(#vo-eye)" stroke="#14152A" stroke-width="2"/>
+  <ellipse cx="184.5" cy="97" rx="2" ry="2.6" fill="#fff"/>
+  <path d="M168 116 Q176 122 184 114" fill="none" stroke="#FFE14D" stroke-width="2.6" stroke-linecap="round"/>
+  <!-- sparks -->
+  <path d="M24 92 L32 84 L30 92 L38 88" fill="none" stroke="#FFC21A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 60 L36 54 L35 60 L41 57" fill="none" stroke="#FFC21A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="fx" d="M100 52 Q100 58 106 58 Q100 58 100 64 Q100 58 94 58 Q100 58 100 52 Z" fill="#FFE14D"/>
+</svg>
