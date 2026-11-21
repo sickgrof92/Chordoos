@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="diamondo-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D8E0EC"/><stop offset="0.5" stop-color="#8A98B0"/><stop offset="1" stop-color="#4A5670"/></radialGradient><linearGradient id="diamondo-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFFFFF"/><stop offset="0.50" stop-color="#C8F0FF"/><stop offset="1.00" stop-color="#6AB8E8"/></linearGradient><radialGradient id="diamondo-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A2A4A"/><stop offset="1" stop-color="#060A14"/></radialGradient><radialGradient id="diamondo-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A2A4A"/><stop offset="1" stop-color="#060A14"/></radialGradient></defs><ellipse cx="100" cy="184" rx="74" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M37 150 L36 180 H60 L59 150" fill="url(#diamondo-s1)" stroke="#1E2A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M40 180 v-5 M48 180 v-5 M56 180 v-5" fill="none" stroke="#1E2A40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63 150 L62 180 H86 L85 150" fill="url(#diamondo-s1)" stroke="#1E2A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M66 180 v-5 M74 180 v-5 M82 180 v-5" fill="none" stroke="#1E2A40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M117 150 L116 180 H140 L139 150" fill="url(#diamondo-s1)" stroke="#1E2A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120 180 v-5 M128 180 v-5 M136 180 v-5" fill="none" stroke="#1E2A40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M143 150 L142 180 H166 L165 150" fill="url(#diamondo-s1)" stroke="#1E2A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M146 180 v-5 M154 180 v-5 M162 180 v-5" fill="none" stroke="#1E2A40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 140 L194 150 L172 156 Z" fill="#C8F0FF" stroke="#1E3A5A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M30 150 C30 98 64 70 104 70 C144 70 176 98 176 150 Z" fill="url(#diamondo-l2)" stroke="#1E3A5A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M34.0 150 L42.6 128 L51.2 150" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M51.2 150 L59.9 128 L68.5 150" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M68.5 150 L77.1 128 L85.8 150" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M85.8 150 L94.4 128 L103.0 150" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M103.0 150 L111.6 128 L120.2 150" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120.2 150 L128.9 128 L137.5 150" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M137.5 150 L146.1 128 L154.8 150" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M154.8 150 L163.4 128 L172.0 150" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M44.0 128 L52.6 106 L61.1 128" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M61.1 128 L69.7 106 L78.3 128" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M78.3 128 L86.9 106 L95.4 128" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M95.4 128 L104.0 106 L112.6 128" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M112.6 128 L121.1 106 L129.7 128" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M129.7 128 L138.3 106 L146.9 128" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M146.9 128 L155.4 106 L164.0 128" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M60.0 106 L68.8 86 L77.6 106" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M77.6 106 L86.4 86 L95.2 106" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M95.2 106 L104.0 86 L112.8 106" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M112.8 106 L121.6 86 L130.4 106" fill="#FFFFFF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M130.4 106 L139.2 86 L148.0 106" fill="#A8E0FF" stroke="#1E3A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M30 150 C30 98 64 70 104 70 C144 70 176 98 176 150 Z" fill="none" stroke="#1E3A5A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M4 128 C2 104 22 92 42 94 C60 96 70 112 64 130 C58 148 36 152 22 148 C10 144 4 138 4 128 Z" fill="url(#diamondo-s1)" stroke="#1E2A40" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M14 104 C22 88 48 86 60 100 L50 108 C42 100 28 100 20 110 Z" fill="#C8F0FF" stroke="#1E3A5A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="24" cy="122" rx="6" ry="8" fill="url(#diamondo-e3)"/>
+<path d="M18.6 125.2 Q24 131.2 29.4 125.2 Q27.6 128.8 24 128.8 Q20.4 128.8 18.6 125.2 Z" fill="#5AC8FF" opacity=".85"/>
+<circle cx="26.1" cy="118.8" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="21.6" cy="125.2" r="1.08" fill="#FFFFFF"/>
+<path d="M30 110 L18 116" fill="none" stroke="#2B2340" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="46" cy="122" rx="6" ry="8" fill="url(#diamondo-e4)"/>
+<path d="M40.6 125.2 Q46 131.2 51.4 125.2 Q49.6 128.8 46 128.8 Q42.4 128.8 40.6 125.2 Z" fill="#5AC8FF" opacity=".85"/>
+<circle cx="48.1" cy="118.8" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="43.6" cy="125.2" r="1.08" fill="#FFFFFF"/>
+<path d="M40 110 L52 116" fill="none" stroke="#2B2340" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25 140 Q33.4 142.2 39 135.2" fill="none" stroke="#1E2A40" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="fx" d="M80 43 Q80 50 87 50 Q80 50 80 57 Q80 50 73 50 Q80 50 80 43 Z" fill="#FFFFFF"/>
+<path class="fx" d="M150 49 Q150 56 157 56 Q150 56 150 63 Q150 56 143 56 Q150 56 150 49 Z" fill="#FFFFFF"/>
+<path class="fx" d="M184 103 Q184 110 191 110 Q184 110 184 117 Q184 110 177 110 Q184 110 184 103 Z" fill="#FFFFFF"/></svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="antsy-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D88A6A"/><stop offset="0.5" stop-color="#A0402A"/><stop offset="1" stop-color="#5A1A0E"/></radialGradient><radialGradient id="antsy-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFE8B8"/><stop offset="0.5" stop-color="#E8B060"/><stop offset="1" stop-color="#A8702A"/></radialGradient><radialGradient id="antsy-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A0A04"/><stop offset="1" stop-color="#0A0302"/></radialGradient><radialGradient id="antsy-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A0A04"/><stop offset="1" stop-color="#0A0302"/></radialGradient><radialGradient id="antsy-f5"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="66" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M40 54 C34 28 66 14 100 16 C140 18 170 30 164 56 C160 76 120 82 98 80 C66 78 44 74 40 54 Z" fill="url(#antsy-s2)" stroke="#6A3A0A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="70" cy="40" r="3" fill="#A8702A"/>
+<circle cx="100" cy="30" r="3" fill="#A8702A"/>
+<circle cx="130" cy="46" r="3" fill="#A8702A"/>
+<circle cx="90" cy="60" r="3" fill="#A8702A"/>
+<circle cx="146" cy="38" r="3" fill="#A8702A"/>
+<path d="M60 148 L50 166 L56 182" fill="none" stroke="#2A0A04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 148 L90 166 L84 182" fill="none" stroke="#2A0A04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 148 L90 166 L96 182" fill="none" stroke="#2A0A04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 148 L130 166 L124 182" fill="none" stroke="#2A0A04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 148 L130 166 L136 182" fill="none" stroke="#2A0A04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 148 L170 166 L164 182" fill="none" stroke="#2A0A04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="144" cy="138" rx="30" ry="24" fill="url(#antsy-s1)" stroke="#2A0A04" stroke-width="3.5"/>
+<ellipse cx="104" cy="138" rx="16" ry="14" fill="url(#antsy-s1)" stroke="#2A0A04" stroke-width="3.5"/>
+<circle cx="64" cy="128" r="26" fill="url(#antsy-s1)" stroke="#2A0A04" stroke-width="3"/>
+<path d="M54 106 C46 92 40 90 32 92 M70 104 C72 90 78 84 86 84" fill="none" stroke="#2A0A04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 128 L96 78" fill="none" stroke="#2A0A04" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 128 L96 78" fill="none" stroke="#A0402A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112 128 L122 78" fill="none" stroke="#2A0A04" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112 128 L122 78" fill="none" stroke="#A0402A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="56" cy="124" rx="6" ry="8" fill="url(#antsy-e3)"/>
+<path d="M50.6 127.2 Q56 133.2 61.4 127.2 Q59.6 130.8 56 130.8 Q52.4 130.8 50.6 127.2 Z" fill="#FF8A5A" opacity=".85"/>
+<circle cx="58.1" cy="120.8" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="53.6" cy="127.2" r="1.08" fill="#FFFFFF"/>
+<ellipse cx="74" cy="124" rx="6" ry="8" fill="url(#antsy-e4)"/>
+<path d="M68.6 127.2 Q74 133.2 79.4 127.2 Q77.6 130.8 74 130.8 Q70.4 130.8 68.6 127.2 Z" fill="#FF8A5A" opacity=".85"/>
+<circle cx="76.1" cy="120.8" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="71.6" cy="127.2" r="1.08" fill="#FFFFFF"/>
+<path d="M60 140 Q66 149.0 72 140 Z" fill="#5A1A0E" stroke="#5A1A0E" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M63.0 143.72 Q66 141.8 69.0 143.72 Q66 146.3 63.0 143.72 Z" fill="#FF7F9B"/>
+<ellipse cx="48" cy="138" rx="5" ry="3" fill="url(#antsy-f5)"/>
+<path d="M180 110 H196" fill="none" stroke="#C8A890" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M180 130 H196" fill="none" stroke="#C8A890" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M180 150 H196" fill="none" stroke="#C8A890" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path class="fx" d="M30 70 q-2 -8 2 -12 M24 80 q-4 -6 -2 -10" stroke="#8AC8F0" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>

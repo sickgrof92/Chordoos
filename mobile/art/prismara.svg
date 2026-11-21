@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="prismara-l1" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFFFFF"/><stop offset="0.50" stop-color="#E8F0FF"/><stop offset="1.00" stop-color="#B8C8F0"/></linearGradient><radialGradient id="prismara-e2" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A4A"/><stop offset="1" stop-color="#0A0614"/></radialGradient><radialGradient id="prismara-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A4A"/><stop offset="1" stop-color="#0A0614"/></radialGradient><radialGradient id="prismara-f4"><stop offset="0" stop-color="#FF8AC8" stop-opacity="0.7"/><stop offset="1" stop-color="#FF8AC8" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="36" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M128 98 L200 66 L200 72 L128 101 Z" fill="#FF5A6A" class="fx" opacity=".85"/>
+<path d="M128 101 L200 78 L200 84 L128 104 Z" fill="#FF9A3A" class="fx" opacity=".85"/>
+<path d="M128 104 L200 90 L200 96 L128 107 Z" fill="#FFD84D" class="fx" opacity=".85"/>
+<path d="M128 107 L200 102 L200 108 L128 110 Z" fill="#6ACC5A" class="fx" opacity=".85"/>
+<path d="M128 110 L200 114 L200 120 L128 113 Z" fill="#4AA8FF" class="fx" opacity=".85"/>
+<path d="M128 113 L200 126 L200 132 L128 116 Z" fill="#9A6AE8" class="fx" opacity=".85"/>
+<path d="M0 78 L72 104 L72 108 L0 84 Z" fill="#FFFFFF" stroke="#D8D8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" class="fx"/>
+<path d="M100 30 L150 130 H50 Z" fill="url(#prismara-l1)" stroke="#2A2A5A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 30 L150 130 H122 Z" fill="#C8D4F8" opacity=".7"/>
+<path d="M100 30 L150 130 H50 Z" fill="none" stroke="#2A2A5A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 30 L122 130" fill="none" stroke="#2A2A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<ellipse cx="86" cy="98" rx="7" ry="9" fill="url(#prismara-e2)"/>
+<path d="M79.7 101.6 Q86 108.35 92.3 101.6 Q90.2 105.65 86 105.65 Q81.8 105.65 79.7 101.6 Z" fill="#9A6AE8" opacity=".85"/>
+<circle cx="88.45" cy="94.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="83.2" cy="101.6" r="1.26" fill="#FFFFFF"/>
+<ellipse cx="110" cy="98" rx="7" ry="9" fill="url(#prismara-e3)"/>
+<path d="M103.7 101.6 Q110 108.35 116.3 101.6 Q114.2 105.65 110 105.65 Q105.8 105.65 103.7 101.6 Z" fill="#9A6AE8" opacity=".85"/>
+<circle cx="112.45" cy="94.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="107.2" cy="101.6" r="1.26" fill="#FFFFFF"/>
+<path d="M92 114 Q98 118.8 104 114" fill="none" stroke="#2A2A5A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="112" rx="5" ry="3" fill="url(#prismara-f4)"/>
+<ellipse cx="120" cy="112" rx="5" ry="3" fill="url(#prismara-f4)"/>
+<ellipse cx="84" cy="70" rx="4" ry="12" fill="#FFFFFF" transform="rotate(25 84 70)" opacity="0.55"/>
+<path d="M76 143 L81 150 L76 157 L71 150 Z" fill="#E8F0FF" stroke="#2A2A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M124 145 L129 152 L124 159 L119 152 Z" fill="#E8F0FF" stroke="#2A2A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 155 L105 162 L100 169 L95 162 Z" fill="#E8F0FF" stroke="#2A2A5A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path class="fx" d="M30 134 Q30 140 36 140 Q30 140 30 146 Q30 140 24 140 Q30 140 30 134 Z" fill="#B89AF0"/>
+<path class="fx" d="M40 24 Q40 30 46 30 Q40 30 40 36 Q40 30 34 30 Q40 30 40 24 Z" fill="#B89AF0"/>
+<path class="fx" d="M170 144 Q170 150 176 150 Q170 150 170 156 Q170 150 164 150 Q170 150 170 144 Z" fill="#B89AF0"/></svg>

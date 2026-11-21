@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="rubbles-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E0DCD4"/><stop offset="0.5" stop-color="#A49C90"/><stop offset="1" stop-color="#6A6258"/></radialGradient><linearGradient id="rubbles-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFE84D"/><stop offset="1.00" stop-color="#FFB020"/></linearGradient><radialGradient id="rubbles-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A241C"/><stop offset="1" stop-color="#0A0806"/></radialGradient><radialGradient id="rubbles-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A241C"/><stop offset="1" stop-color="#0A0806"/></radialGradient><radialGradient id="rubbles-f5"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="46" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M71 150 L70 178 H94 L93 150 Z" fill="url(#rubbles-s1)" stroke="#3A342C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M107 150 L106 178 H130 L129 150 Z" fill="url(#rubbles-s1)" stroke="#3A342C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56 88 L78 62 L124 58 L148 82 L150 132 L130 156 L74 158 L52 134 Z" fill="url(#rubbles-s1)" stroke="#3A342C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M78 62 L124 58 L112 74 L86 76 Z" fill="#F0ECE4" opacity=".6"/>
+<path d="M130 156 L124 120 L150 104" fill="none" stroke="#6A6258" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M60 120 L74 112" fill="none" stroke="#6A6258" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M66 64 C66 34 134 34 134 64 Z" fill="url(#rubbles-l2)" stroke="#8A5A00" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M58 64 H142 V72 H58 Z" fill="#FFB020" stroke="#8A5A00" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 38 V64" fill="none" stroke="#8A5A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="84" cy="98" rx="9" ry="11" fill="url(#rubbles-e3)"/>
+<path d="M75.9 102.4 Q84 110.65 92.1 102.4 Q89.4 107.35 84 107.35 Q78.6 107.35 75.9 102.4 Z" fill="#FFB020" opacity=".85"/>
+<circle cx="87.15" cy="93.6" r="3.6" fill="#FFFFFF"/>
+<circle cx="80.4" cy="102.4" r="1.6199999999999999" fill="#FFFFFF"/>
+<ellipse cx="116" cy="98" rx="9" ry="11" fill="url(#rubbles-e4)"/>
+<path d="M107.9 102.4 Q116 110.65 124.1 102.4 Q121.4 107.35 116 107.35 Q110.6 107.35 107.9 102.4 Z" fill="#FFB020" opacity=".85"/>
+<circle cx="119.15" cy="93.6" r="3.6" fill="#FFFFFF"/>
+<circle cx="112.4" cy="102.4" r="1.6199999999999999" fill="#FFFFFF"/>
+<path d="M89.6 120 Q100 132.0 110.4 120 Z" fill="#FFFFFF" stroke="#3A342C" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="70" cy="116" rx="7" ry="4" fill="url(#rubbles-f5)"/>
+<circle cx="67.55" cy="113.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<ellipse cx="130" cy="116" rx="7" ry="4" fill="url(#rubbles-f5)"/>
+<circle cx="127.55" cy="113.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<path d="M148 112 C160 114 166 104 166 94" fill="none" stroke="#3A342C" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M148 112 C160 114 166 104 166 94" fill="none" stroke="#A49C90" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 150 L176 60" fill="none" stroke="#8A5A2A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 60 C164 50 186 50 198 62 C186 58 176 60 168 66 Z" fill="#C8CCD8" stroke="#3A3A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M54 112 C42 118 38 132 44 142" fill="none" stroke="#3A342C" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54 112 C42 118 38 132 44 142" fill="none" stroke="#A49C90" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>

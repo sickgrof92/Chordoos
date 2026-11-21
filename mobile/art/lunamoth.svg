@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="lunamoth-f1"><stop offset="0" stop-color="#C8FFE8" stop-opacity="0.5"/><stop offset="1" stop-color="#C8FFE8" stop-opacity="0"/></radialGradient><radialGradient id="lunamoth-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#F4FFF0"/><stop offset="0.5" stop-color="#B8F0C8"/><stop offset="1" stop-color="#5AB88A"/></radialGradient><radialGradient id="lunamoth-f3"><stop offset="0" stop-color="#FFF6A8" stop-opacity="0.9"/><stop offset="1" stop-color="#FFF6A8" stop-opacity="0"/></radialGradient><radialGradient id="lunamoth-f4"><stop offset="0" stop-color="#FFF6A8" stop-opacity="0.9"/><stop offset="1" stop-color="#FFF6A8" stop-opacity="0"/></radialGradient><radialGradient id="lunamoth-s5" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#F0F0F0"/><stop offset="1" stop-color="#B8C0C8"/></radialGradient><radialGradient id="lunamoth-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1E3A3A"/><stop offset="1" stop-color="#0A1414"/></radialGradient><radialGradient id="lunamoth-e7" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1E3A3A"/><stop offset="1" stop-color="#0A1414"/></radialGradient><radialGradient id="lunamoth-f8"><stop offset="0" stop-color="#FFA8C8" stop-opacity="0.7"/><stop offset="1" stop-color="#FFA8C8" stop-opacity="0"/></radialGradient><radialGradient id="lunamoth-s9" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFF0"/><stop offset="0.5" stop-color="#FFF6C8"/><stop offset="1" stop-color="#E8D890"/></radialGradient></defs><circle cx="100" cy="92" r="100" fill="url(#lunamoth-f1)" class="fx"/>
+<ellipse cx="100" cy="184" rx="40" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M100 86 C124 30 192 18 192 70 C192 98 154 106 100 100 Z" fill="url(#lunamoth-s2)" stroke="#1E3A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 104 C146 108 160 128 154 148 C150 164 158 180 166 192 C140 180 130 160 126 146 C120 130 108 118 100 112 Z" fill="url(#lunamoth-s2)" stroke="#1E3A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="156" cy="66" r="18" fill="url(#lunamoth-f3)" class="fx"/>
+<circle cx="156" cy="66" r="11" fill="#FFF6C8" stroke="#8A7A2A" stroke-width="2"/>
+<circle cx="156" cy="66" r="6" fill="#6A4A9A"/>
+<circle cx="158" cy="64" r="2" fill="#FFFFFF"/>
+<path d="M108 60 C140 44 170 40 186 50" fill="none" stroke="#E8C8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M100 86 C76 30 8 18 8 70 C8 98 46 106 100 100 Z" fill="url(#lunamoth-s2)" stroke="#1E3A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 104 C54 108 40 128 46 148 C50 164 42 180 34 192 C60 180 70 160 74 146 C80 130 92 118 100 112 Z" fill="url(#lunamoth-s2)" stroke="#1E3A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="44" cy="66" r="18" fill="url(#lunamoth-f4)" class="fx"/>
+<circle cx="44" cy="66" r="11" fill="#FFF6C8" stroke="#8A7A2A" stroke-width="2"/>
+<circle cx="44" cy="66" r="6" fill="#6A4A9A"/>
+<circle cx="46" cy="64" r="2" fill="#FFFFFF"/>
+<path d="M92 60 C60 44 30 40 14 50" fill="none" stroke="#E8C8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<ellipse cx="100" cy="120" rx="13" ry="30" fill="url(#lunamoth-s5)" stroke="#1E3A3A" stroke-width="3"/>
+<circle cx="100" cy="82" r="20" fill="url(#lunamoth-s5)" stroke="#1E3A3A" stroke-width="3"/>
+<path d="M108 66 C114 46 124 38 134 36 C128 46 120 56 112 66 Z" fill="#F0E0B8" stroke="#8A7A4A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M92 66 C86 46 76 38 66 36 C72 46 80 56 88 66 Z" fill="#F0E0B8" stroke="#8A7A4A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="92" cy="82" rx="6" ry="7" fill="url(#lunamoth-e6)"/>
+<path d="M86.6 84.8 Q92 90.05 97.4 84.8 Q95.6 87.95 92 87.95 Q88.4 87.95 86.6 84.8 Z" fill="#5AB88A" opacity=".85"/>
+<path d="M94.1 76.55 Q94.1 79.55 97.1 79.55 Q94.1 79.55 94.1 82.55 Q94.1 79.55 91.1 79.55 Q94.1 79.55 94.1 76.55 Z" fill="#FFFFFF"/>
+<circle cx="89.6" cy="84.8" r="1.08" fill="#FFFFFF"/>
+<ellipse cx="108" cy="82" rx="6" ry="7" fill="url(#lunamoth-e7)"/>
+<path d="M102.6 84.8 Q108 90.05 113.4 84.8 Q111.6 87.95 108 87.95 Q104.4 87.95 102.6 84.8 Z" fill="#5AB88A" opacity=".85"/>
+<path d="M110.1 76.55 Q110.1 79.55 113.1 79.55 Q110.1 79.55 110.1 82.55 Q110.1 79.55 107.1 79.55 Q110.1 79.55 110.1 76.55 Z" fill="#FFFFFF"/>
+<circle cx="105.6" cy="84.8" r="1.08" fill="#FFFFFF"/>
+<path d="M96 94 Q100 97.2 104 94" fill="none" stroke="#1E3A3A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="86" cy="92" rx="4" ry="3" fill="url(#lunamoth-f8)"/>
+<ellipse cx="114" cy="92" rx="4" ry="3" fill="url(#lunamoth-f8)"/>
+<circle cx="100" cy="20" r="12" fill="url(#lunamoth-s9)" class="fx"/></svg>
