@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="zephyrin-f1"><stop offset="0" stop-color="#B8F4FF" stop-opacity="0.5"/><stop offset="1" stop-color="#B8F4FF" stop-opacity="0"/></radialGradient><radialGradient id="zephyrin-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#C8F4FF"/><stop offset="1" stop-color="#6AC8E0"/></radialGradient><radialGradient id="zephyrin-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A3A4A"/><stop offset="1" stop-color="#061218"/></radialGradient><radialGradient id="zephyrin-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A3A4A"/><stop offset="1" stop-color="#061218"/></radialGradient><radialGradient id="zephyrin-f5"><stop offset="0" stop-color="#FFA8C8" stop-opacity="0.7"/><stop offset="1" stop-color="#FFA8C8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(#zephyrin-f1)" class="fx"/>
+<path d="M100 120 C140 130 150 160 120 172 C96 182 76 166 86 150 C94 138 112 144 108 156" fill="none" stroke="#1E6A7A" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 120 C140 130 150 160 120 172 C96 182 76 166 86 150 C94 138 112 144 108 156" fill="none" stroke="#C8F4FF" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M62 90 C62 56 138 56 138 90 C138 116 122 128 100 128 C78 128 62 116 62 90 Z" fill="url(#zephyrin-s2)" stroke="#1E6A7A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70 70 C64 50 80 34 98 38 C88 44 90 54 100 56 C104 40 124 34 136 46 C122 46 118 58 130 70" fill="url(#zephyrin-s2)" stroke="#1E6A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 56 C104 50 112 50 112 56" fill="none" stroke="#1E6A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64 98 C48 96 40 86 44 76 C48 70 56 74 52 80" fill="none" stroke="#1E6A7A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M136 98 C152 96 160 86 156 76 C152 70 144 74 148 80" fill="none" stroke="#1E6A7A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="86" cy="90" rx="8" ry="10" fill="url(#zephyrin-e3)"/>
+<path d="M78.8 94.0 Q86 101.5 93.2 94.0 Q90.8 98.5 86 98.5 Q81.2 98.5 78.8 94.0 Z" fill="#6AC8E0" opacity=".85"/>
+<circle cx="88.8" cy="86.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="82.8" cy="94.0" r="1.44" fill="#FFFFFF"/>
+<ellipse cx="114" cy="90" rx="8" ry="10" fill="url(#zephyrin-e4)"/>
+<path d="M106.8 94.0 Q114 101.5 121.2 94.0 Q118.8 98.5 114 98.5 Q109.2 98.5 106.8 94.0 Z" fill="#6AC8E0" opacity=".85"/>
+<circle cx="116.8" cy="86.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="110.8" cy="94.0" r="1.44" fill="#FFFFFF"/>
+<path d="M94 108 Q100 112.8 106 108" fill="none" stroke="#1E6A7A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="104" rx="6" ry="4" fill="url(#zephyrin-f5)"/>
+<circle cx="73.9" cy="101.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<ellipse cx="124" cy="104" rx="6" ry="4" fill="url(#zephyrin-f5)"/>
+<circle cx="121.9" cy="101.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<g class="fx" transform="rotate(-20 30 130)"><path d="M20 124 H40 V138 H20 Z" fill="#FFFFFF" stroke="#8AB0C0" stroke-width="1.5"/><path d="M24 129 H36 M24 133 H34" stroke="#8AB0C0" stroke-width="1.2"/></g>
+<g class="fx" transform="rotate(15 164 120)"><path d="M154 114 H174 V128 H154 Z" fill="#FFFFFF" stroke="#8AB0C0" stroke-width="1.5"/><path d="M158 119 H170 M158 123 H168" stroke="#8AB0C0" stroke-width="1.2"/></g>
+<g class="fx" transform="rotate(10 40 44)"><path d="M30 38 H50 V52 H30 Z" fill="#FFFFFF" stroke="#8AB0C0" stroke-width="1.5"/><path d="M34 43 H46 M34 47 H44" stroke="#8AB0C0" stroke-width="1.2"/></g>
+<path d="M20 90 Q40 80 56 88" fill="none" stroke="#8AD8F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M150 150 Q166 142 184 150" fill="none" stroke="#8AD8F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/></svg>

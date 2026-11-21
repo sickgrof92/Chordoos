@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="yetti-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#EEF2FA"/><stop offset="1" stop-color="#B8C4DA"/></radialGradient><radialGradient id="yetti-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8F4FF"/><stop offset="0.5" stop-color="#A8D0F0"/><stop offset="1" stop-color="#6AA0D0"/></radialGradient><linearGradient id="yetti-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#9AD8FF"/><stop offset="1.00" stop-color="#3A7AD0"/></linearGradient><linearGradient id="yetti-l4" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#9AD8FF"/><stop offset="1.00" stop-color="#3A7AD0"/></linearGradient><radialGradient id="yetti-s5" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#EAF4FF"/><stop offset="1" stop-color="#A8C8E8"/></radialGradient><radialGradient id="yetti-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#0E1A3A"/><stop offset="1" stop-color="#04080E"/></radialGradient><radialGradient id="yetti-e7" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#0E1A3A"/><stop offset="1" stop-color="#04080E"/></radialGradient><radialGradient id="yetti-f8"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="62" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M1 150 H27 V172 H1 Z" fill="#F6FAFF" stroke="#A8C0DA" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M27 150 H53 V172 H27 Z" fill="#F6FAFF" stroke="#A8C0DA" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M147 150 H173 V172 H147 Z" fill="#F6FAFF" stroke="#A8C0DA" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M173 150 H199 V172 H173 Z" fill="#F6FAFF" stroke="#A8C0DA" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M13 128 H39 V150 H13 Z" fill="#F6FAFF" stroke="#A8C0DA" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M161 128 H187 V150 H161 Z" fill="#F6FAFF" stroke="#A8C0DA" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M54 120 C50 90 70 68 100 68 C130 68 150 90 146 120 L150 160 L138 156 L132 170 L120 162 L110 174 L100 164 L90 174 L80 162 L68 170 L62 156 L50 160 Z" fill="url(#yetti-s1)" stroke="#3A4A6A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M72 96 C72 80 128 80 128 96 C128 118 116 128 100 128 C84 128 72 118 72 96 Z" fill="url(#yetti-s2)" stroke="#3A4A6A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M130 76 C144 64 146 46 138 34 C134 48 128 58 120 66 Z" fill="url(#yetti-l3)" stroke="#1E3A7A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70 76 C56 64 54 46 62 34 C66 48 72 58 80 66 Z" fill="url(#yetti-l4)" stroke="#1E3A7A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56 116 C40 120 34 136 40 146 C48 142 54 134 60 128" fill="url(#yetti-s1)" stroke="#3A4A6A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M144 116 C160 120 166 136 160 146 C152 142 146 134 140 128" fill="url(#yetti-s1)" stroke="#3A4A6A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="100" cy="148" r="16" fill="url(#yetti-s5)" stroke="#8AA0C0" stroke-width="2.5"/>
+<ellipse cx="80" cy="178" rx="14" ry="6" fill="#B8C4DA" stroke="#3A4A6A" stroke-width="2.5"/>
+<ellipse cx="120" cy="178" rx="14" ry="6" fill="#B8C4DA" stroke="#3A4A6A" stroke-width="2.5"/>
+<ellipse cx="88" cy="100" rx="7" ry="9" fill="url(#yetti-e6)"/>
+<path d="M81.7 103.6 Q88 110.35 94.3 103.6 Q92.2 107.65 88 107.65 Q83.8 107.65 81.7 103.6 Z" fill="#3A7AD0" opacity=".85"/>
+<circle cx="90.45" cy="96.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="85.2" cy="103.6" r="1.26" fill="#FFFFFF"/>
+<ellipse cx="112" cy="100" rx="7" ry="9" fill="url(#yetti-e7)"/>
+<path d="M105.7 103.6 Q112 110.35 118.3 103.6 Q116.2 107.65 112 107.65 Q107.8 107.65 105.7 103.6 Z" fill="#3A7AD0" opacity=".85"/>
+<circle cx="114.45" cy="96.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="109.2" cy="103.6" r="1.26" fill="#FFFFFF"/>
+<path d="M90.9 116 Q100 126.5 109.1 116 Z" fill="#FFFFFF" stroke="#1E3A7A" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="78" cy="112" rx="5" ry="3" fill="url(#yetti-f8)"/>
+<ellipse cx="122" cy="112" rx="5" ry="3" fill="url(#yetti-f8)"/></svg>

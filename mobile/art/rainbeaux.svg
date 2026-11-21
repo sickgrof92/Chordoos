@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="rainbeaux-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#E8E0FF"/><stop offset="1" stop-color="#A898E0"/></radialGradient><radialGradient id="rainbeaux-e2" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A4A"/><stop offset="1" stop-color="#0A0614"/></radialGradient><radialGradient id="rainbeaux-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A4A"/><stop offset="1" stop-color="#0A0614"/></radialGradient><radialGradient id="rainbeaux-f4"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="60" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M30 160 C30 120 80 120 90 140 C100 160 150 170 160 130 C168 100 140 76 116 80" fill="none" stroke="#FF5A6A" stroke-width="34" stroke-linecap="round"/>
+<path d="M30 160 C30 120 80 120 90 140 C100 160 150 170 160 130 C168 100 140 76 116 80" fill="none" stroke="#FF9A3A" stroke-width="29" stroke-linecap="round"/>
+<path d="M30 160 C30 120 80 120 90 140 C100 160 150 170 160 130 C168 100 140 76 116 80" fill="none" stroke="#FFD84D" stroke-width="24" stroke-linecap="round"/>
+<path d="M30 160 C30 120 80 120 90 140 C100 160 150 170 160 130 C168 100 140 76 116 80" fill="none" stroke="#6ACC5A" stroke-width="19" stroke-linecap="round"/>
+<path d="M30 160 C30 120 80 120 90 140 C100 160 150 170 160 130 C168 100 140 76 116 80" fill="none" stroke="#4AA8FF" stroke-width="14" stroke-linecap="round"/>
+<path d="M30 160 C30 120 80 120 90 140 C100 160 150 170 160 130 C168 100 140 76 116 80" fill="none" stroke="#9A6AE8" stroke-width="9" stroke-linecap="round"/>
+<path d="M30 160 C30 120 80 120 90 140 C100 160 150 170 160 130 C168 100 140 76 116 80" fill="none" stroke="#3A2A6A" stroke-width="37" stroke-linecap="round" opacity=".0"/>
+<path d="M12 169.4 C8.400000000000002 162.2 15.6 155.0 21.0 158.6 C22.8 149.6 33.6 147.8 35.4 156.8 C42.6 153.2 51.599999999999994 160.4 48 169.4 C40.8 173.9 19.200000000000003 173.9 12 169.4 Z" fill="#FFFFFF" stroke="#8AA0D0" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M84 66 C84 40 118 32 136 46 C152 58 150 86 130 94 C110 100 84 92 84 66 Z" fill="url(#rainbeaux-s1)" stroke="#3A2A6A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M90 43.0 C88.0 39.0 92.0 35.0 95.0 37.0 C96.0 32.0 102.0 31.0 103.0 36.0 C107.0 34.0 112.0 38.0 110 43.0 C106.0 45.5 94.0 45.5 90 43.0 Z" fill="#FFFFFF" stroke="#8AA0D0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M122 39.0 C120.0 35.0 124.0 31.0 127.0 33.0 C128.0 28.0 134.0 27.0 135.0 32.0 C139.0 30.0 144.0 34.0 142 39.0 C138.0 41.5 126.0 41.5 122 39.0 Z" fill="#FFFFFF" stroke="#8AA0D0" stroke-width="2" stroke-linejoin="round"/>
+<ellipse cx="104" cy="66" rx="7" ry="9" fill="url(#rainbeaux-e2)"/>
+<path d="M97.7 69.6 Q104 76.35 110.3 69.6 Q108.2 73.65 104 73.65 Q99.8 73.65 97.7 69.6 Z" fill="#9A6AE8" opacity=".85"/>
+<circle cx="106.45" cy="62.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="101.2" cy="69.6" r="1.26" fill="#FFFFFF"/>
+<ellipse cx="128" cy="66" rx="7" ry="9" fill="url(#rainbeaux-e3)"/>
+<path d="M121.7 69.6 Q128 76.35 134.3 69.6 Q132.2 73.65 128 73.65 Q123.8 73.65 121.7 69.6 Z" fill="#9A6AE8" opacity=".85"/>
+<circle cx="130.45" cy="62.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="125.2" cy="69.6" r="1.26" fill="#FFFFFF"/>
+<path d="M136 82 Q144 88 140 94 L144 98" fill="none" stroke="#E8405A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112 82 Q118 86.8 124 82" fill="none" stroke="#3A2A6A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="96" cy="80" rx="5" ry="3" fill="url(#rainbeaux-f4)"/>
+<ellipse cx="140" cy="76" rx="5" ry="3" fill="url(#rainbeaux-f4)"/>
+<path class="fx" d="M40 35 Q40 40 45 40 Q40 40 40 45 Q40 40 35 40 Q40 40 40 35 Z" fill="#FFE14D"/>
+<path class="fx" d="M176 55 Q176 60 181 60 Q176 60 176 65 Q176 60 171 60 Q176 60 176 55 Z" fill="#FFE14D"/>
+<path class="fx" d="M64 87 Q64 92 69 92 Q64 92 64 97 Q64 92 59 92 Q64 92 64 87 Z" fill="#FFE14D"/></svg>

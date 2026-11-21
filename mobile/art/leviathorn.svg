@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="leviathorn-l1" x1="0" y1="0" x2="1" y2="1"><stop offset="0.00" stop-color="#7FE0D0"/><stop offset="0.50" stop-color="#2A9AB8"/><stop offset="1.00" stop-color="#1E4E8A"/></linearGradient><linearGradient id="leviathorn-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFB0E0"/><stop offset="1.00" stop-color="#C24AE0"/></linearGradient><radialGradient id="leviathorn-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#0E2A4E"/><stop offset="1" stop-color="#040C1E"/></radialGradient><radialGradient id="leviathorn-f4"><stop offset="0" stop-color="#FF8FD8" stop-opacity="0.7"/><stop offset="1" stop-color="#FF8FD8" stop-opacity="0"/></radialGradient></defs><path d="M0 176 Q20 166 40 176 T80 176 T120 176 T160 176 T200 176 V200 H0 Z" fill="#4AB2E8"/>
+<path d="M0 188 Q20 178 40 188 T80 188 T120 188 T160 188 T200 188 V200 H0 Z" fill="#2A82C0"/>
+<path d="M20 180 C20 150 52 150 52 176" fill="none" stroke="#0E2A4E" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M20 180 C20 150 52 150 52 176" fill="none" stroke="#2A9AB8" stroke-width="17" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M80 180 C80 140 120 140 120 176" fill="none" stroke="#0E2A4E" stroke-width="26" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M80 180 C80 140 120 140 120 176" fill="none" stroke="#2A9AB8" stroke-width="19" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M146 182 C144 140 150 100 140 76" fill="none" stroke="#0E2A4E" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M146 182 C144 140 150 100 140 76" fill="none" stroke="#3AB0C8" stroke-width="23" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M136 100 Q146 104 156 100" fill="none" stroke="#BFF5F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M136 118 Q146 122 156 118" fill="none" stroke="#BFF5F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M136 136 Q146 140 156 136" fill="none" stroke="#BFF5F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M136 154 Q146 158 156 154" fill="none" stroke="#BFF5F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M160 60 C182 64 186 84 176 100 C172 92 168 88 162 88 C172 102 172 120 160 130 C158 112 152 104 150 98 Z" fill="url(#leviathorn-l2)" stroke="#6A1E8A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120 58 C122 36 150 26 168 40 C180 50 176 72 160 80 C146 88 120 82 120 58 Z" fill="url(#leviathorn-l1)" stroke="#0E2A4E" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120 64 C104 62 92 66 88 74 C96 82 112 82 126 76 Z" fill="url(#leviathorn-l1)" stroke="#0E2A4E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="140" cy="40" rx="8" ry="4" fill="#FFFFFF" transform="rotate(-35 140 40)" opacity="0.55"/>
+<ellipse cx="146" cy="56" rx="8" ry="10" fill="url(#leviathorn-e3)"/>
+<path d="M138.8 60.0 Q146 67.5 153.2 60.0 Q150.8 64.5 146 64.5 Q141.2 64.5 138.8 60.0 Z" fill="#FFE14D" opacity=".85"/>
+<circle cx="148.8" cy="52.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="142.8" cy="60.0" r="1.44" fill="#FFFFFF"/>
+<ellipse cx="92" cy="72" rx="2" ry="1.6" fill="#0E2A4E"/>
+<path d="M98 76 Q104 80.8 110 76" fill="none" stroke="#0E2A4E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="132" cy="70" rx="6" ry="4" fill="url(#leviathorn-f4)"/>
+<circle cx="129.9" cy="67.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<path d="M60 140 C64 146 64 150 60 151 C56 150 56 146 60 140 Z" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" class="fx"/>
+<path d="M110 128 C114 134 114 138 110 139 C106 138 106 134 110 128 Z" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" class="fx"/>
+<path d="M170 150 C174 156 174 160 170 161 C166 160 166 156 170 150 Z" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" class="fx"/>
+<path d="M34 150 C38 156 38 160 34 161 C30 160 30 156 34 150 Z" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" class="fx"/></svg>

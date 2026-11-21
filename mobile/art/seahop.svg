@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="seahop-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFE0F0"/><stop offset="0.5" stop-color="#FF9AC8"/><stop offset="1" stop-color="#D85A9A"/></radialGradient><radialGradient id="seahop-f2"><stop offset="0" stop-color="#7FD0FF" stop-opacity="0.3"/><stop offset="1" stop-color="#7FD0FF" stop-opacity="0"/></radialGradient><linearGradient id="seahop-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFE14D"/><stop offset="1.00" stop-color="#FFB0C8"/></linearGradient><linearGradient id="seahop-l4" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFF3A0"/><stop offset="1.00" stop-color="#FFC93C"/></linearGradient><radialGradient id="seahop-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A1E4E"/><stop offset="1" stop-color="#140A1E"/></radialGradient><radialGradient id="seahop-f6"><stop offset="0" stop-color="#FF5A9A" stop-opacity="0.7"/><stop offset="1" stop-color="#FF5A9A" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(#seahop-f2)" class="fx"/>
+<path d="M110 140 C122 160 120 182 100 184 C84 184 80 166 92 160 C102 156 106 168 98 170" fill="none" stroke="#7A1E52" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M110 140 C122 160 120 182 100 184 C84 184 80 166 92 160 C102 156 106 168 98 170" fill="none" stroke="#FF9AC8" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M128 90 C150 84 158 104 146 118 C140 110 134 104 126 104 Z" fill="url(#seahop-l3)" stroke="#7A1E52" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 40 C130 40 140 64 132 86 C126 104 134 120 126 138 C118 154 96 156 86 140 C78 126 88 112 84 100 C70 98 60 88 62 74 C66 54 80 40 100 40 Z" fill="url(#seahop-s1)" stroke="#7A1E52" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M92 108 C104 104 116 112 116 126 C112 138 98 140 92 130 Z" fill="#FFF2F8" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M96 114 H112" fill="none" stroke="#FFB0C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M96 122 H112" fill="none" stroke="#FFB0C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M96 130 H112" fill="none" stroke="#FFB0C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66 76 C52 76 38 80 32 86 C40 92 54 92 66 88 Z" fill="url(#seahop-s1)" stroke="#7A1E52" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="32" cy="87" r="3" fill="#7A1E52"/>
+<path d="M88 42 L86 24 L96 34 L104 18 L110 34 L120 26 L118 44 Z" fill="url(#seahop-l4)" stroke="#A86A0A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="104" cy="30" r="3" fill="#4DD6FF"/>
+<ellipse cx="112" cy="54" rx="8" ry="4" fill="#FFFFFF" transform="rotate(-35 112 54)" opacity="0.55"/>
+<ellipse cx="96" cy="68" rx="10" ry="12" fill="url(#seahop-e5)"/>
+<path d="M87.0 72.8 Q96 81.8 105.0 72.8 Q102.0 78.2 96 78.2 Q90.0 78.2 87.0 72.8 Z" fill="#7FD0FF" opacity=".85"/>
+<circle cx="99.5" cy="63.2" r="4.0" fill="#FFFFFF"/>
+<circle cx="92.0" cy="72.8" r="1.7999999999999998" fill="#FFFFFF"/>
+<path d="M86.5 61.4 L80.5 57.4" fill="none" stroke="#140A1E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86.5 67.4 L80.5 65.4" fill="none" stroke="#140A1E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="84" cy="86" rx="8" ry="5" fill="url(#seahop-f6)"/>
+<circle cx="81.2" cy="83.0" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<circle cx="46" cy="50" r="6" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.8" class="fx"/>
+<circle cx="36" cy="30" r="4" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.8" class="fx"/>
+<circle cx="160" cy="56" r="5" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.8" class="fx"/>
+<circle cx="170" cy="36" r="3" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.8" class="fx"/></svg>

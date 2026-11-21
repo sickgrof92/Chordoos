@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="gustav-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#F0DCC0"/><stop offset="0.5" stop-color="#B8885A"/><stop offset="1" stop-color="#6E4A28"/></radialGradient><radialGradient id="gustav-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#F2F0EA"/><stop offset="1" stop-color="#C8C2B0"/></radialGradient><radialGradient id="gustav-s3" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8FAFF"/><stop offset="0.5" stop-color="#9AD8F0"/><stop offset="1" stop-color="#4A98C0"/></radialGradient><radialGradient id="gustav-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1808"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="gustav-s5" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8FAFF"/><stop offset="0.5" stop-color="#9AD8F0"/><stop offset="1" stop-color="#4A98C0"/></radialGradient><radialGradient id="gustav-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1808"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="gustav-f7"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="44" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M130 110 C160 90 184 96 188 110 C176 112 180 122 170 124 C160 126 162 134 140 136 Z" fill="url(#gustav-s1)" stroke="#3A2410" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70 110 C40 90 16 96 12 110 C24 112 20 122 30 124 C40 126 38 134 60 136 Z" fill="url(#gustav-s1)" stroke="#3A2410" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="100" cy="134" rx="36" ry="42" fill="url(#gustav-s1)" stroke="#3A2410" stroke-width="3.5"/>
+<ellipse cx="100" cy="146" rx="22" ry="26" fill="#FFF2DE"/>
+<path d="M84 174 l-4 8 M90 176 v8 M110 176 v8 M116 174 l4 8" fill="none" stroke="#E0A030" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="100" cy="82" r="32" fill="url(#gustav-s2)" stroke="#3A2410" stroke-width="3"/>
+<ellipse cx="74" cy="60" rx="8" ry="6" fill="url(#gustav-s2)" stroke="#3A2410" stroke-width="2.5"/>
+<ellipse cx="100" cy="50" rx="8" ry="6" fill="url(#gustav-s2)" stroke="#3A2410" stroke-width="2.5"/>
+<ellipse cx="126" cy="60" rx="8" ry="6" fill="url(#gustav-s2)" stroke="#3A2410" stroke-width="2.5"/>
+<path d="M66 76 H134" stroke="#5A3410" stroke-width="6" stroke-linecap="round"/>
+<circle cx="86" cy="80" r="14" fill="#C8C8D0" stroke="#3A3A4A" stroke-width="3"/>
+<circle cx="86" cy="80" r="10" fill="url(#gustav-s3)"/>
+<ellipse cx="86" cy="81" rx="6" ry="7" fill="url(#gustav-e4)"/>
+<path d="M80.6 83.8 Q86 89.05 91.4 83.8 Q89.6 86.95 86 86.95 Q82.4 86.95 80.6 83.8 Z" fill="#4A98C0" opacity=".85"/>
+<circle cx="88.1" cy="78.2" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="83.6" cy="83.8" r="1.08" fill="#FFFFFF"/>
+<circle cx="114" cy="80" r="14" fill="#C8C8D0" stroke="#3A3A4A" stroke-width="3"/>
+<circle cx="114" cy="80" r="10" fill="url(#gustav-s5)"/>
+<ellipse cx="114" cy="81" rx="6" ry="7" fill="url(#gustav-e6)"/>
+<path d="M108.6 83.8 Q114 89.05 119.4 83.8 Q117.6 86.95 114 86.95 Q110.4 86.95 108.6 83.8 Z" fill="#4A98C0" opacity=".85"/>
+<circle cx="116.1" cy="78.2" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="111.6" cy="83.8" r="1.08" fill="#FFFFFF"/>
+<path d="M91 98 Q100 93.5 109 98 L100 109.7 Z" fill="#FFC83D" stroke="#B8650F" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M93.7 101.15 Q100 103.85 106.3 101.15" fill="none" stroke="#B8650F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="72" cy="98" rx="6" ry="4" fill="url(#gustav-f7)"/>
+<ellipse cx="128" cy="98" rx="6" ry="4" fill="url(#gustav-f7)"/>
+<path d="M30 50 Q46 42 58 50 M150 40 Q164 32 178 40" fill="none" stroke="#A8C8F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/></svg>

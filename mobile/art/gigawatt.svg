@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="gigawatt-l1" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#FFF6A8"/><stop offset="1.00" stop-color="#FFF6A8"/></linearGradient><radialGradient id="gigawatt-f2"><stop offset="0" stop-color="#5AFFE8" stop-opacity="0.95"/><stop offset="1" stop-color="#5AFFE8" stop-opacity="0"/></radialGradient><radialGradient id="gigawatt-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A3A5A"/><stop offset="1" stop-color="#0A1020"/></radialGradient><radialGradient id="gigawatt-f4"><stop offset="0" stop-color="#5AFFE8" stop-opacity="0.95"/><stop offset="1" stop-color="#5AFFE8" stop-opacity="0"/></radialGradient><radialGradient id="gigawatt-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A3A5A"/><stop offset="1" stop-color="#0A1020"/></radialGradient><radialGradient id="gigawatt-s6" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#FFF6A8"/><stop offset="1" stop-color="#FFD020"/></radialGradient></defs><path d="M100 40 L196 6 V76 Z" fill="url(#gigawatt-l1)" class="fx" opacity=".55"/>
+<path d="M100 40 L4 10 V70 Z" fill="#FFF6A8" class="fx" opacity=".35"/>
+<ellipse cx="100" cy="184" rx="48" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M70 180 L78 64 H122 L130 180 Z" fill="#FFFFFF" stroke="#2A2A4A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M74 128 L76 100 H124 L126 128 Z" fill="#E8405A"/>
+<path d="M71 170 L72 150 H128 L129 170 Z" fill="#E8405A"/>
+<path d="M70 180 L78 64 H122 L130 180 Z" fill="none" stroke="#2A2A4A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M82 104 H118 V136 H82 Z" fill="#2A3A5A" stroke="#2A2A4A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="92" cy="118" rx="6" ry="7" fill="url(#gigawatt-f2)"/>
+<ellipse cx="92" cy="119" rx="3.3000000000000003" ry="3.8500000000000005" fill="url(#gigawatt-e3)"/>
+<circle cx="93.5" cy="116.6" r="1.32" fill="#FFFFFF"/>
+<ellipse cx="108" cy="118" rx="6" ry="7" fill="url(#gigawatt-f4)"/>
+<ellipse cx="108" cy="119" rx="3.3000000000000003" ry="3.8500000000000005" fill="url(#gigawatt-e5)"/>
+<circle cx="109.5" cy="116.6" r="1.32" fill="#FFFFFF"/>
+<path d="M95 128 Q100 132.0 105 128" fill="none" stroke="#5AFFE8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74 64 H126 V56 H74 Z" fill="#3A3A5A" stroke="#2A2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M80 56 V30 H120 V56 Z" fill="url(#gigawatt-s6)" stroke="#2A2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M90 30 V56 M110 30 V56" fill="none" stroke="#2A2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76 30 L100 12 L124 30 Z" fill="#E8405A" stroke="#2A2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="100" cy="10" r="4" fill="#E8405A" stroke="#2A2A4A" stroke-width="2"/>
+<path d="M76 150 C60 148 54 138 52 126" fill="none" stroke="#2A2A4A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76 150 C60 148 54 138 52 126" fill="none" stroke="#9AA0B8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M124 150 C140 148 146 138 148 126" fill="none" stroke="#2A2A4A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M124 150 C140 148 146 138 148 126" fill="none" stroke="#9AA0B8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="52" cy="122" r="7" fill="#C8CCD8" stroke="#2A2A4A" stroke-width="2.5"/>
+<circle cx="148" cy="122" r="7" fill="#C8CCD8" stroke="#2A2A4A" stroke-width="2.5"/>
+<path d="M150 176 H186 L180 186 H156 Z" fill="#5AC8FF" stroke="#1E5A8A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M168 176 V160 L180 172" fill="none" stroke="#1E5A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

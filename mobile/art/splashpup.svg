@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="splashpup-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8D2B8"/><stop offset="0.5" stop-color="#A8784E"/><stop offset="1" stop-color="#6E4A2A"/></radialGradient><linearGradient id="splashpup-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#9BE3FF"/><stop offset="1.00" stop-color="#4AB2E8"/></linearGradient><linearGradient id="splashpup-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFB0C8"/><stop offset="1.00" stop-color="#FF6A8A"/></linearGradient><radialGradient id="splashpup-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A2414"/><stop offset="1" stop-color="#140A04"/></radialGradient><radialGradient id="splashpup-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A2414"/><stop offset="1" stop-color="#140A04"/></radialGradient><radialGradient id="splashpup-f6"><stop offset="0" stop-color="#FF8FA3" stop-opacity="0.7"/><stop offset="1" stop-color="#FF8FA3" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="176" rx="78" ry="14" fill="url(#splashpup-l2)" stroke="#2A82C0" stroke-width="3"/>
+<path d="M30 174 Q40 168 50 174 M150 176 Q160 170 170 176" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M40 150 C40 124 70 110 104 110 C140 110 164 124 164 148 C164 168 136 176 102 176 C68 176 40 170 40 150 Z" fill="url(#splashpup-s1)" stroke="#3A2414" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70 150 C70 132 86 124 104 124 C124 124 138 132 138 150 C138 162 122 168 104 168 C86 168 70 162 70 150 Z" fill="#F5E6D2" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M104.0 120.0 L109.9 133.9 L124.9 135.2 L113.5 145.1 L116.9 159.8 L104.0 152.0 L91.1 159.8 L94.5 145.1 L83.1 135.2 L98.1 133.9 Z" fill="url(#splashpup-l3)" stroke="#B8304A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="100" cy="136" r="1.8" fill="#FFFFFF"/>
+<circle cx="110" cy="140" r="1.8" fill="#FFFFFF"/>
+<circle cx="104" cy="148" r="1.8" fill="#FFFFFF"/>
+<ellipse cx="84" cy="136" rx="9" ry="7" fill="url(#splashpup-s1)" stroke="#3A2414" stroke-width="3" transform="rotate(-20 84 136)"/>
+<ellipse cx="124" cy="136" rx="9" ry="7" fill="url(#splashpup-s1)" stroke="#3A2414" stroke-width="3" transform="rotate(20 124 136)"/>
+<path d="M60 84 C60 56 80 42 104 42 C128 42 148 56 148 84 C148 108 128 120 104 120 C80 120 60 108 60 84 Z" fill="url(#splashpup-s1)" stroke="#3A2414" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="66" cy="58" r="8" fill="url(#splashpup-s1)" stroke="#3A2414" stroke-width="3"/>
+<circle cx="142" cy="58" r="8" fill="url(#splashpup-s1)" stroke="#3A2414" stroke-width="3"/>
+<ellipse cx="104" cy="98" rx="22" ry="15" fill="#F5E6D2"/>
+<ellipse cx="78" cy="58" rx="9" ry="4" fill="#FFFFFF" transform="rotate(-35 78 58)" opacity="0.55"/>
+<ellipse cx="86" cy="80" rx="9" ry="11" fill="url(#splashpup-e4)"/>
+<path d="M77.9 84.4 Q86 92.65 94.1 84.4 Q91.4 89.35 86 89.35 Q80.6 89.35 77.9 84.4 Z" fill="#8AD0FF" opacity=".85"/>
+<circle cx="89.15" cy="75.6" r="3.6" fill="#FFFFFF"/>
+<circle cx="82.4" cy="84.4" r="1.6199999999999999" fill="#FFFFFF"/>
+<ellipse cx="122" cy="80" rx="9" ry="11" fill="url(#splashpup-e5)"/>
+<path d="M113.9 84.4 Q122 92.65 130.1 84.4 Q127.4 89.35 122 89.35 Q116.6 89.35 113.9 84.4 Z" fill="#8AD0FF" opacity=".85"/>
+<circle cx="125.15" cy="75.6" r="3.6" fill="#FFFFFF"/>
+<circle cx="118.4" cy="84.4" r="1.6199999999999999" fill="#FFFFFF"/>
+<ellipse cx="104" cy="92" rx="7" ry="5" fill="#2A1A0E"/>
+<path d="M97 100 Q100.5 104.2 104 100 Q107.5 104.2 111 100" fill="none" stroke="#3A2414" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 98 L66 96 M80 102 L66 104 M128 98 L142 96 M128 102 L142 104" fill="none" stroke="#3A2414" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="72" cy="96" rx="8" ry="5" fill="url(#splashpup-f6)"/>
+<ellipse cx="136" cy="96" rx="8" ry="5" fill="url(#splashpup-f6)"/>
+<circle cx="30" cy="140" r="4" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.5" class="fx"/>
+<circle cx="176" cy="138" r="4" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.5" class="fx"/>
+<circle cx="40" cy="120" r="4" fill="#E6F8FF" stroke="#4AB2E8" stroke-width="1.5" class="fx"/></svg>

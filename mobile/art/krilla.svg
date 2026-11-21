@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="krilla-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#F2E0FF"/><stop offset="0.5" stop-color="#C48CFF"/><stop offset="1" stop-color="#8A4ADB"/></radialGradient><radialGradient id="krilla-e2" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A1E6E"/><stop offset="1" stop-color="#140A2E"/></radialGradient><radialGradient id="krilla-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A1E6E"/><stop offset="1" stop-color="#140A2E"/></radialGradient><radialGradient id="krilla-f4"><stop offset="0" stop-color="#FF6FB0" stop-opacity="0.7"/><stop offset="1" stop-color="#FF6FB0" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="66" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M75.5 120 C20 140 40 158 30 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M75.5 120 C20 140 40 158 30 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="30" cy="170" rx="9" ry="8" fill="#FF6B4A" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M23 166 H37" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M81.8 120 C58 140 38 158 48 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M81.8 120 C58 140 38 158 48 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="48" cy="170" rx="9" ry="8" fill="#22B573" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M41 166 H55" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M88.1 120 C56 140 76 158 66 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M88.1 120 C56 140 76 158 66 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="66" cy="170" rx="9" ry="8" fill="#FFC23D" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M59 166 H73" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M95.1 120 C96 140 76 158 86 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M95.1 120 C96 140 76 158 86 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="86" cy="170" rx="9" ry="8" fill="#3A86FF" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M79 166 H93" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M104.9 120 C104 140 124 158 114 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M104.9 120 C104 140 124 158 114 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="114" cy="170" rx="9" ry="8" fill="#FF4D8D" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M107 166 H121" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M111.9 120 C144 140 124 158 134 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M111.9 120 C144 140 124 158 134 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="134" cy="170" rx="9" ry="8" fill="#14B8A6" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M127 166 H141" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M118.2 120 C142 140 162 158 152 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M118.2 120 C142 140 162 158 152 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="152" cy="170" rx="9" ry="8" fill="#A24BFF" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M145 166 H159" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M124.5 120 C180 140 160 158 170 168" fill="none" stroke="#4A1E8A" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M124.5 120 C180 140 160 158 170 168" fill="none" stroke="#C48CFF" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="170" cy="170" rx="9" ry="8" fill="#FF8A3D" stroke="#2B2340" stroke-width="2.5"/>
+<path d="M163 166 H177" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M48 104 C48 58 72 34 100 34 C128 34 152 58 152 104 C152 124 130 132 100 132 C70 132 48 124 48 104 Z" fill="url(#krilla-s1)" stroke="#4A1E8A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="70" cy="60" r="5" fill="#E8D2FF"/>
+<circle cx="132" cy="66" r="4" fill="#E8D2FF"/>
+<circle cx="124" cy="48" r="3" fill="#E8D2FF"/>
+<circle cx="60" cy="82" r="3" fill="#E8D2FF"/>
+<ellipse cx="74" cy="52" rx="12" ry="6" fill="#FFFFFF" transform="rotate(-35 74 52)" opacity="0.55"/>
+<ellipse cx="80" cy="96" rx="11" ry="13" fill="url(#krilla-e2)"/>
+<path d="M70.1 101.2 Q80 110.95 89.9 101.2 Q86.6 107.05 80 107.05 Q73.4 107.05 70.1 101.2 Z" fill="#FF8FD8" opacity=".85"/>
+<circle cx="83.85" cy="90.8" r="4.4" fill="#FFFFFF"/>
+<circle cx="75.6" cy="101.2" r="1.98" fill="#FFFFFF"/>
+<ellipse cx="120" cy="96" rx="11" ry="13" fill="url(#krilla-e3)"/>
+<path d="M110.1 101.2 Q120 110.95 129.9 101.2 Q126.6 107.05 120 107.05 Q113.4 107.05 110.1 101.2 Z" fill="#FF8FD8" opacity=".85"/>
+<circle cx="123.85" cy="90.8" r="4.4" fill="#FFFFFF"/>
+<circle cx="115.6" cy="101.2" r="1.98" fill="#FFFFFF"/>
+<path d="M94 114 Q100 123.0 106 114 Z" fill="#3A1E6E" stroke="#3A1E6E" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M97.0 117.72 Q100 115.8 103.0 117.72 Q100 120.3 97.0 117.72 Z" fill="#FF7F9B"/>
+<ellipse cx="64" cy="110" rx="12" ry="8" fill="url(#krilla-f4)"/>
+<circle cx="59.8" cy="105.2" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<ellipse cx="136" cy="110" rx="12" ry="8" fill="url(#krilla-f4)"/>
+<circle cx="131.8" cy="105.2" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<text class="fx" x="158" y="44" font-size="20" fill="#FF4D8D" font-family="sans-serif">♥</text></svg>

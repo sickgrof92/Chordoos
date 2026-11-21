@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="pumpkid-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFD8A0"/><stop offset="0.5" stop-color="#FF9A3A"/><stop offset="1" stop-color="#C85A14"/></radialGradient><radialGradient id="pumpkid-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D6F5A8"/><stop offset="0.5" stop-color="#7CC850"/><stop offset="1" stop-color="#3E8A2E"/></radialGradient><radialGradient id="pumpkid-s3" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D6F5A8"/><stop offset="0.5" stop-color="#7CC850"/><stop offset="1" stop-color="#3E8A2E"/></radialGradient><radialGradient id="pumpkid-s4" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D6F5A8"/><stop offset="0.5" stop-color="#7CC850"/><stop offset="1" stop-color="#3E8A2E"/></radialGradient><radialGradient id="pumpkid-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#4A2A0A"/><stop offset="1" stop-color="#140A02"/></radialGradient><radialGradient id="pumpkid-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#4A2A0A"/><stop offset="1" stop-color="#140A02"/></radialGradient><radialGradient id="pumpkid-f7"><stop offset="0" stop-color="#FF6A5A" stop-opacity="0.7"/><stop offset="1" stop-color="#FF6A5A" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="62" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M48 128 C30 120 22 104 30 94 C36 86 46 92 42 100" fill="none" stroke="#3E8A2E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M152 128 C170 120 178 104 170 94 C164 86 154 92 158 100" fill="none" stroke="#3E8A2E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(30 112) rotate(120)"><path d="M0 0 C6.0 -6.4 15.0 -6.0 20 0 C15.0 6.0 6.0 6.4 0 0 Z" fill="url(#pumpkid-s2)" stroke="#2A5A1E" stroke-width="2" stroke-linejoin="round"/></g>
+<g transform="translate(170 112) rotate(60)"><path d="M0 0 C6.0 -6.4 15.0 -6.0 20 0 C15.0 6.0 6.0 6.4 0 0 Z" fill="url(#pumpkid-s3)" stroke="#2A5A1E" stroke-width="2" stroke-linejoin="round"/></g>
+<ellipse cx="66" cy="134" rx="32" ry="46" fill="url(#pumpkid-s1)" stroke="#6A2A0A" stroke-width="3"/>
+<ellipse cx="134" cy="134" rx="32" ry="46" fill="url(#pumpkid-s1)" stroke="#6A2A0A" stroke-width="3"/>
+<ellipse cx="84" cy="134" rx="34" ry="46" fill="url(#pumpkid-s1)" stroke="#6A2A0A" stroke-width="3"/>
+<ellipse cx="116" cy="134" rx="34" ry="46" fill="url(#pumpkid-s1)" stroke="#6A2A0A" stroke-width="3"/>
+<ellipse cx="100" cy="134" rx="36" ry="46" fill="url(#pumpkid-s1)" stroke="#6A2A0A" stroke-width="3"/>
+<path d="M94 92 C92 80 96 70 104 66 L110 72 C104 76 104 84 106 92 Z" fill="#6E8A2A" stroke="#3A4A12" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M108 70 C120 60 132 66 126 76 C122 82 114 78 118 72" fill="none" stroke="#3E8A2E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(110 80) rotate(-20)"><path d="M0 0 C7.8 -8.32 19.5 -7.8 26 0 C19.5 7.8 7.8 8.32 0 0 Z" fill="url(#pumpkid-s4)" stroke="#2A5A1E" stroke-width="2.5" stroke-linejoin="round"/><path d="M2.6 0 L22.099999999999998 0" stroke="#2A5A1E" stroke-width="1.8" stroke-linecap="round" opacity=".6"/></g>
+<ellipse cx="84" cy="126" rx="10" ry="12" fill="url(#pumpkid-e5)"/>
+<path d="M75.0 130.8 Q84 139.8 93.0 130.8 Q90.0 136.2 84 136.2 Q78.0 136.2 75.0 130.8 Z" fill="#FFB04A" opacity=".85"/>
+<circle cx="87.5" cy="121.2" r="4.0" fill="#FFFFFF"/>
+<circle cx="80.0" cy="130.8" r="1.7999999999999998" fill="#FFFFFF"/>
+<ellipse cx="116" cy="126" rx="10" ry="12" fill="url(#pumpkid-e6)"/>
+<path d="M107.0 130.8 Q116 139.8 125.0 130.8 Q122.0 136.2 116 136.2 Q110.0 136.2 107.0 130.8 Z" fill="#FFB04A" opacity=".85"/>
+<circle cx="119.5" cy="121.2" r="4.0" fill="#FFFFFF"/>
+<circle cx="112.0" cy="130.8" r="1.7999999999999998" fill="#FFFFFF"/>
+<path d="M85.7 148 Q100 164.5 114.3 148 Z" fill="#FFFFFF" stroke="#6A2A0A" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="68" cy="146" rx="9" ry="6" fill="url(#pumpkid-f7)"/>
+<circle cx="64.85" cy="142.4" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<ellipse cx="132" cy="146" rx="9" ry="6" fill="url(#pumpkid-f7)"/>
+<circle cx="128.85" cy="142.4" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<ellipse cx="70" cy="108" rx="8" ry="12" fill="#FFFFFF" transform="rotate(-15 70 108)" opacity="0.45"/></svg>

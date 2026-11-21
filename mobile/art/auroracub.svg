@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="auroracub-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#F2F6FF"/><stop offset="1" stop-color="#C8D2E8"/></radialGradient><linearGradient id="auroracub-l2" x1="0" y1="1" x2="1" y2="0"><stop offset="0.00" stop-color="#6AFFC8"/><stop offset="0.33" stop-color="#5AC8FF"/><stop offset="0.67" stop-color="#B87AFF"/><stop offset="1.00" stop-color="#FF8AD8"/></linearGradient><radialGradient id="auroracub-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A2A5A"/><stop offset="1" stop-color="#060A1A"/></radialGradient><radialGradient id="auroracub-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A2A5A"/><stop offset="1" stop-color="#060A1A"/></radialGradient><radialGradient id="auroracub-f5"><stop offset="0" stop-color="#FF8AD8" stop-opacity="0.7"/><stop offset="1" stop-color="#FF8AD8" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="60" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M140 150 C170 150 190 120 184 84 C182 66 168 50 156 52 C170 70 168 96 156 110 C150 120 140 128 132 132 Z" fill="url(#auroracub-l2)" stroke="#2A3A6A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path class="fx" d="M178 58 C196 40 190 20 176 10" stroke="#6AFFC8" stroke-width="6" fill="none" opacity=".5" stroke-linecap="round"/>
+<path class="fx" d="M186 80 C198 64 200 46 194 32" stroke="#B87AFF" stroke-width="5" fill="none" opacity=".45" stroke-linecap="round"/>
+<path d="M50 150 C46 124 70 110 100 110 C130 110 150 122 148 150 C146 172 126 180 100 180 C74 180 52 172 50 150 Z" fill="url(#auroracub-s1)" stroke="#2A3A6A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="70" cy="178" rx="10" ry="6" fill="#FFFFFF" stroke="#2A3A6A" stroke-width="2.5"/>
+<ellipse cx="92" cy="178" rx="10" ry="6" fill="#FFFFFF" stroke="#2A3A6A" stroke-width="2.5"/>
+<ellipse cx="116" cy="178" rx="10" ry="6" fill="#FFFFFF" stroke="#2A3A6A" stroke-width="2.5"/>
+<path d="M40 84 C38 60 64 48 86 52 C110 56 120 76 116 96 C112 118 92 124 74 124 C54 124 42 108 40 84 Z" fill="url(#auroracub-s1)" stroke="#2A3A6A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M46 58 L40 24 L68 48 Z" fill="url(#auroracub-s1)" stroke="#2A3A6A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 52 L118 22 L118 62 Z" fill="url(#auroracub-s1)" stroke="#2A3A6A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M48 52 L45 34 L60 48 Z" fill="#B87AFF"/>
+<path d="M106 52 L115 34 L114 56 Z" fill="#5AC8FF"/>
+<ellipse cx="54" cy="104" rx="16" ry="10" fill="#FFFFFF" stroke="#2A3A6A" stroke-width="2"/>
+<circle cx="42" cy="102" r="4" fill="#2A3A6A"/>
+<ellipse cx="64" cy="84" rx="8" ry="10" fill="url(#auroracub-e3)"/>
+<path d="M56.8 88.0 Q64 95.5 71.2 88.0 Q68.8 92.5 64 92.5 Q59.2 92.5 56.8 88.0 Z" fill="#5AC8FF" opacity=".85"/>
+<circle cx="66.8" cy="80.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="60.8" cy="88.0" r="1.44" fill="#FFFFFF"/>
+<path d="M56.4 78.5 L50.4 74.5" fill="none" stroke="#060A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="96" cy="84" rx="8" ry="10" fill="url(#auroracub-e4)"/>
+<path d="M88.8 88.0 Q96 95.5 103.2 88.0 Q100.8 92.5 96 92.5 Q91.2 92.5 88.8 88.0 Z" fill="#5AC8FF" opacity=".85"/>
+<circle cx="98.8" cy="80.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="92.8" cy="88.0" r="1.44" fill="#FFFFFF"/>
+<path d="M103.6 78.5 L109.6 74.5" fill="none" stroke="#060A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49 110 Q54 114.0 59 110" fill="none" stroke="#2A3A6A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="104" rx="6" ry="4" fill="url(#auroracub-f5)"/>
+<ellipse cx="108" cy="102" rx="6" ry="4" fill="url(#auroracub-f5)"/>
+<path class="fx" d="M24 135 Q24 140 29 140 Q24 140 24 145 Q24 140 19 140 Q24 140 24 135 Z" fill="#B8FFE8"/>
+<path class="fx" d="M140 25 Q140 30 145 30 Q140 30 140 35 Q140 30 135 30 Q140 30 140 25 Z" fill="#B8FFE8"/>
+<path class="fx" d="M80 15 Q80 20 85 20 Q80 20 80 25 Q80 20 75 20 Q80 20 80 15 Z" fill="#B8FFE8"/></svg>

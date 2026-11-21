@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="skyfoal-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#F0F0FF"/><stop offset="1" stop-color="#B8B8E0"/></radialGradient><radialGradient id="skyfoal-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#DDE8FF"/><stop offset="1" stop-color="#9AB0E8"/></radialGradient><linearGradient id="skyfoal-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFB0D0"/><stop offset="1.00" stop-color="#B8A0FF"/></linearGradient><linearGradient id="skyfoal-l4" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFB0D0"/><stop offset="0.50" stop-color="#B8A0FF"/><stop offset="1.00" stop-color="#8AD8FF"/></linearGradient><radialGradient id="skyfoal-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A2A5A"/><stop offset="1" stop-color="#0A0A1A"/></radialGradient><radialGradient id="skyfoal-f6"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="60" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M92 108 C80 70 50 50 30 58 C40 66 36 74 46 78 C38 84 42 92 54 92 C50 100 60 108 72 106" fill="url(#skyfoal-s2)" stroke="#3A3A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M112 104 C118 66 140 42 162 44 C154 54 160 60 150 66 C160 70 156 80 144 82 C150 90 140 98 128 98" fill="url(#skyfoal-s2)" stroke="#3A3A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M65 130 L66 164 H74 L75 130" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M60 173.0 C58.0 169.0 62.0 165.0 65.0 167.0 C66.0 162.0 72.0 161.0 73.0 166.0 C77.0 164.0 82.0 168.0 80 173.0 C76.0 175.5 64.0 175.5 60 173.0 Z" fill="#FFFFFF" stroke="#8AA0D0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M83 134 L84 168 H92 L93 134" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M78 177.0 C76.0 173.0 80.0 169.0 83.0 171.0 C84.0 166.0 90.0 165.0 91.0 170.0 C95.0 168.0 100.0 172.0 98 177.0 C94.0 179.5 82.0 179.5 78 177.0 Z" fill="#FFFFFF" stroke="#8AA0D0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M117 134 L118 168 H126 L127 134" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M112 177.0 C110.0 173.0 114.0 169.0 117.0 171.0 C118.0 166.0 124.0 165.0 125.0 170.0 C129.0 168.0 134.0 172.0 132 177.0 C128.0 179.5 116.0 179.5 112 177.0 Z" fill="#FFFFFF" stroke="#8AA0D0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M135 130 L136 164 H144 L145 130" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M130 173.0 C128.0 169.0 132.0 165.0 135.0 167.0 C136.0 162.0 142.0 161.0 143.0 166.0 C147.0 164.0 152.0 168.0 150 173.0 C146.0 175.5 134.0 175.5 130 173.0 Z" fill="#FFFFFF" stroke="#8AA0D0" stroke-width="2" stroke-linejoin="round"/>
+<ellipse cx="104" cy="128" rx="46" ry="28" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="3.5"/>
+<path d="M148 120 C168 112 176 130 168 144 C164 132 158 128 150 130 Z" fill="url(#skyfoal-l3)" stroke="#3A3A7A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70 120 C62 100 60 86 62 74 L86 76 C84 92 86 106 90 116 Z" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M40 70 C38 50 56 40 72 42 C90 44 96 58 92 72 C88 88 72 92 58 92 C46 90 40 82 40 70 Z" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="48" cy="82" rx="9" ry="7" fill="#FFE0EC"/>
+<circle cx="44" cy="80" r="1.6" fill="#3A3A7A"/>
+<circle cx="50" cy="84" r="1.6" fill="#3A3A7A"/>
+<path d="M64 40 C76 30 96 38 94 54 C100 66 94 78 92 90 C86 80 86 70 82 62 C76 54 66 50 64 40 Z" fill="url(#skyfoal-l4)" stroke="#3A3A7A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="78" cy="40" rx="5" ry="10" fill="url(#skyfoal-s1)" stroke="#3A3A7A" stroke-width="2.5" transform="rotate(20 78 40)"/>
+<ellipse cx="68" cy="64" rx="7" ry="9" fill="url(#skyfoal-e5)"/>
+<path d="M61.7 67.6 Q68 74.35 74.3 67.6 Q72.2 71.65 68 71.65 Q63.8 71.65 61.7 67.6 Z" fill="#B8A0FF" opacity=".85"/>
+<circle cx="70.45" cy="60.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="65.2" cy="67.6" r="1.26" fill="#FFFFFF"/>
+<path d="M74.65 59.05 L80.65 55.05" fill="none" stroke="#0A0A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74.65 65.05 L80.65 63.05" fill="none" stroke="#0A0A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50 88 Q54 91.2 58 88" fill="none" stroke="#3A3A7A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="78" rx="5" ry="3" fill="url(#skyfoal-f6)"/>
+<path class="fx" d="M172 75 Q172 80 177 80 Q172 80 172 85 Q172 80 167 80 Q172 80 172 75 Z" fill="#FFE14D"/>
+<path class="fx" d="M24 116 Q24 120 28 120 Q24 120 24 124 Q24 120 20 120 Q24 120 24 116 Z" fill="#B8A0FF"/></svg>

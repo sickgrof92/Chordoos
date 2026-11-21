@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="elderoak-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#C8A07A"/><stop offset="0.5" stop-color="#8A6040"/><stop offset="1" stop-color="#4A2E16"/></radialGradient><radialGradient id="elderoak-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#C8F0A0"/><stop offset="0.5" stop-color="#5EAA3E"/><stop offset="1" stop-color="#2A6A22"/></radialGradient><linearGradient id="elderoak-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#C89A5A"/><stop offset="1.00" stop-color="#7A522A"/></linearGradient><radialGradient id="elderoak-s4" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#BFE8FF"/><stop offset="0.5" stop-color="#6AB8F0"/><stop offset="1" stop-color="#2E78C0"/></radialGradient><linearGradient id="elderoak-l5" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#A8E070"/><stop offset="1.00" stop-color="#4E9A3A"/></linearGradient><radialGradient id="elderoak-f6"><stop offset="0" stop-color="#FF9A8A" stop-opacity="0.7"/><stop offset="1" stop-color="#FF9A8A" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="78" ry="6.5" fill="#2B2340" opacity=".13"/>
+<circle cx="56" cy="60" r="32" fill="url(#elderoak-s2)" stroke="#1E4A16" stroke-width="3"/>
+<circle cx="144" cy="60" r="32" fill="url(#elderoak-s2)" stroke="#1E4A16" stroke-width="3"/>
+<circle cx="78" cy="38" r="32" fill="url(#elderoak-s2)" stroke="#1E4A16" stroke-width="3"/>
+<circle cx="122" cy="38" r="32" fill="url(#elderoak-s2)" stroke="#1E4A16" stroke-width="3"/>
+<circle cx="100" cy="52" r="40" fill="url(#elderoak-s2)" stroke="#1E4A16" stroke-width="3"/>
+<ellipse cx="132" cy="34" rx="20" ry="9" fill="url(#elderoak-l3)" stroke="#4A2E10" stroke-width="2.5"/>
+<path d="M114 32 L150 36 M118 38 L146 30" fill="none" stroke="#4A2E10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<circle cx="132" cy="22" r="9" fill="url(#elderoak-s4)" stroke="#1E4A7A" stroke-width="2.5"/>
+<circle cx="134" cy="20" r="1.8" fill="#2B2340"/>
+<path d="M140 22 L147 24 L140 26 Z" fill="#FFC83D" stroke="#B8650F" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56 182 C60 150 58 112 66 88 C80 78 120 78 134 88 C142 112 140 150 144 182 Z" fill="url(#elderoak-s1)" stroke="#2A1808" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56 182 C46 182 38 176 36 170" fill="none" stroke="#2A1808" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M144 182 C154 182 162 176 164 170" fill="none" stroke="#2A1808" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 182 C86 186 80 186 76 184" fill="none" stroke="#2A1808" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74 100 C70 130 76 160 72 178" fill="none" stroke="#4A2E16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M128 100 C132 130 126 160 130 178" fill="none" stroke="#4A2E16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M100 150 C98 160 102 170 100 180" fill="none" stroke="#4A2E16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M64 116 C46 112 32 98 28 86 L36 82 C42 94 52 102 66 104" fill="url(#elderoak-s1)" stroke="#2A1808" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M136 116 C154 112 168 98 172 86 L164 82 C158 94 148 102 134 104" fill="url(#elderoak-s1)" stroke="#2A1808" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<g transform="translate(30 84) rotate(-110)"><path d="M0 0 C5.3999999999999995 -5.76 13.5 -5.3999999999999995 18 0 C13.5 5.3999999999999995 5.3999999999999995 5.76 0 0 Z" fill="url(#elderoak-s2)" stroke="#1E4A16" stroke-width="2" stroke-linejoin="round"/></g>
+<g transform="translate(170 84) rotate(-70)"><path d="M0 0 C5.3999999999999995 -5.76 13.5 -5.3999999999999995 18 0 C13.5 5.3999999999999995 5.3999999999999995 5.76 0 0 Z" fill="url(#elderoak-s2)" stroke="#1E4A16" stroke-width="2" stroke-linejoin="round"/></g>
+<path d="M72 108 Q86 98 96 108 M104 108 Q114 98 128 108" fill="none" stroke="#3E8A2E" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M76 123 Q84 110.9 92 123" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M108 123 Q116 110.9 124 123" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 136 C82 158 92 168 100 172 C108 168 118 158 122 136 C112 142 88 142 78 136 Z" fill="url(#elderoak-l5)" stroke="#1E4A16" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M92 134 Q100 140.4 108 134" fill="none" stroke="#2A1808" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="72" cy="128" rx="7" ry="4" fill="url(#elderoak-f6)"/>
+<ellipse cx="128" cy="128" rx="7" ry="4" fill="url(#elderoak-f6)"/></svg>

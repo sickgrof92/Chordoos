@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="stormcrest-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#C8D4F0"/><stop offset="0.5" stop-color="#6A7AB8"/><stop offset="1" stop-color="#2E3A78"/></radialGradient><linearGradient id="stormcrest-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#9AA8C8"/><stop offset="1.00" stop-color="#6A7898"/></linearGradient><linearGradient id="stormcrest-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFF6A8"/><stop offset="1.00" stop-color="#FFD020"/></linearGradient><radialGradient id="stormcrest-f4"><stop offset="0" stop-color="#FFE84D" stop-opacity="0.5"/><stop offset="1" stop-color="#FFE84D" stop-opacity="0"/></radialGradient><radialGradient id="stormcrest-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A2A5A"/><stop offset="1" stop-color="#060A1A"/></radialGradient><radialGradient id="stormcrest-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A2A5A"/><stop offset="1" stop-color="#060A1A"/></radialGradient></defs><ellipse cx="100" cy="184" rx="50" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M50 55.0 C40.0 35.0 60.0 15.0 75.0 25.0 C80.0 0.0 110.0 -5.0 115.0 20.0 C135.0 10.0 160.0 30.0 150 55.0 C130.0 67.5 70.0 67.5 50 55.0 Z" fill="url(#stormcrest-l2)" stroke="#3A4868" stroke-width="3" stroke-linejoin="round"/>
+<path d="M62 66 l-4 10" fill="none" stroke="#8AD0FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<path d="M84 66 l-4 10" fill="none" stroke="#8AD0FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<path d="M118 66 l-4 10" fill="none" stroke="#8AD0FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<path d="M140 66 l-4 10" fill="none" stroke="#8AD0FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<path d="M60 110 C40 128 38 160 56 176 C64 156 70 132 72 116 Z" fill="url(#stormcrest-s1)" stroke="#141E4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M140 110 C160 128 162 160 144 176 C136 156 130 132 128 116 Z" fill="url(#stormcrest-s1)" stroke="#141E4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 84 C138 84 146 120 140 150 C134 172 118 180 100 180 C82 180 66 172 60 150 C54 120 62 84 100 84 Z" fill="url(#stormcrest-s1)" stroke="#141E4A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 120 C120 120 126 140 122 158 C118 172 108 176 100 176 C92 176 82 172 78 158 C74 140 80 120 100 120 Z" fill="#E6ECFF" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 88 L90 56 L102 62 L96 30 L118 64 L106 60 L114 86 Z" fill="url(#stormcrest-l3)" stroke="#A87A00" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="104" cy="58" r="26" fill="url(#stormcrest-f4)" class="fx"/>
+<ellipse cx="86" cy="110" rx="8" ry="9" fill="url(#stormcrest-e5)"/>
+<path d="M78.8 113.6 Q86 120.35 93.2 113.6 Q90.8 117.65 86 117.65 Q81.2 117.65 78.8 113.6 Z" fill="#FFD020" opacity=".85"/>
+<circle cx="88.8" cy="106.4" r="3.2" fill="#FFFFFF"/>
+<circle cx="82.8" cy="113.6" r="1.44" fill="#FFFFFF"/>
+<path d="M78 97 L94 103" fill="none" stroke="#2B2340" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="114" cy="110" rx="8" ry="9" fill="url(#stormcrest-e6)"/>
+<path d="M106.8 113.6 Q114 120.35 121.2 113.6 Q118.8 117.65 114 117.65 Q109.2 117.65 106.8 113.6 Z" fill="#FFD020" opacity=".85"/>
+<circle cx="116.8" cy="106.4" r="3.2" fill="#FFFFFF"/>
+<circle cx="110.8" cy="113.6" r="1.44" fill="#FFFFFF"/>
+<path d="M122 97 L106 103" fill="none" stroke="#2B2340" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92 124 Q100 120.0 108 124 L100 134.4 Z" fill="#FFC83D" stroke="#B8650F" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M94.4 126.8 Q100 129.2 105.6 126.8" fill="none" stroke="#B8650F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M88 180 l-4 6 M96 180 v7 M104 180 v7 M112 180 l4 6" fill="none" stroke="#E0A030" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M168 184 V172" fill="none" stroke="#3E8A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="164" cy="170" rx="5" ry="3" fill="#7CC850" transform="rotate(-30 164 170)"/>
+<ellipse cx="172" cy="170" rx="5" ry="3" fill="#7CC850" transform="rotate(30 172 170)"/></svg>
