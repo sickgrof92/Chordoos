@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="drumbo-l1" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#FF6A7A"/><stop offset="1.00" stop-color="#C82A3E"/></linearGradient><radialGradient id="drumbo-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#F6F2EA"/><stop offset="1" stop-color="#D8D0C0"/></radialGradient><radialGradient id="drumbo-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A0A10"/><stop offset="1" stop-color="#0A0206"/></radialGradient><radialGradient id="drumbo-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A0A10"/><stop offset="1" stop-color="#0A0206"/></radialGradient><radialGradient id="drumbo-f5"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="50" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M82 160 L82 178" fill="none" stroke="#6A3A2A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M82 160 L82 178" fill="none" stroke="#F0C8A8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="82" cy="180" rx="10" ry="5" fill="#3A3A5A"/>
+<path d="M118 160 L118 178" fill="none" stroke="#6A3A2A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M118 160 L118 178" fill="none" stroke="#F0C8A8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="118" cy="180" rx="10" ry="5" fill="#3A3A5A"/>
+<path d="M44 70 V150 C44 168 156 168 156 150 V70 Z" fill="url(#drumbo-l1)" stroke="#5A0E1E" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M50 80 L66 150 L82 80 L98 150 L114 80 L130 150 L146 80" fill="none" stroke="#FFD84D" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M44 80 C44 94 156 94 156 80 M44 146 C44 160 156 160 156 146" fill="none" stroke="#FFD84D" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="100" cy="70" rx="56" ry="18" fill="url(#drumbo-s2)" stroke="#5A0E1E" stroke-width="3.5"/>
+<ellipse cx="86" cy="68" rx="6" ry="7" fill="url(#drumbo-e3)"/>
+<path d="M80.6 70.8 Q86 76.05 91.4 70.8 Q89.6 73.95 86 73.95 Q82.4 73.95 80.6 70.8 Z" fill="#FF6A7A" opacity=".85"/>
+<circle cx="88.1" cy="65.2" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="83.6" cy="70.8" r="1.08" fill="#FFFFFF"/>
+<ellipse cx="114" cy="68" rx="6" ry="7" fill="url(#drumbo-e4)"/>
+<path d="M108.6 70.8 Q114 76.05 119.4 70.8 Q117.6 73.95 114 73.95 Q110.4 73.95 108.6 70.8 Z" fill="#FF6A7A" opacity=".85"/>
+<circle cx="116.1" cy="65.2" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="111.6" cy="70.8" r="1.08" fill="#FFFFFF"/>
+<path d="M94 74 Q100 78.8 106 74" fill="none" stroke="#5A0E1E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="72" cy="74" rx="5" ry="3" fill="url(#drumbo-f5)"/>
+<ellipse cx="128" cy="74" rx="5" ry="3" fill="url(#drumbo-f5)"/>
+<path d="M46 110 C30 100 26 82 34 66" fill="none" stroke="#6A3A2A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46 110 C30 100 26 82 34 66" fill="none" stroke="#F0C8A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M154 110 C170 100 174 82 166 66" fill="none" stroke="#6A3A2A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M154 110 C170 100 174 82 166 66" fill="none" stroke="#F0C8A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34 66 L62 42" fill="none" stroke="#C8A070" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64" cy="40" r="5" fill="#FFFFFF" stroke="#8A6A3A" stroke-width="2"/>
+<path d="M166 66 L140 40" fill="none" stroke="#C8A070" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="138" cy="38" r="5" fill="#FFFFFF" stroke="#8A6A3A" stroke-width="2"/>
+<text class="fx" x="86" y="32" font-size="16" font-weight="bold" font-family="sans-serif" fill="#C82A3E">ba-dum!</text></svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="maraca-l1" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#E8C890"/><stop offset="1.00" stop-color="#B8884A"/></linearGradient><radialGradient id="maraca-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFF0C8"/><stop offset="0.5" stop-color="#FFC83A"/><stop offset="1" stop-color="#D88A00"/></radialGradient><radialGradient id="maraca-f3"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient><linearGradient id="maraca-l4" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#E8C890"/><stop offset="1.00" stop-color="#B8884A"/></linearGradient><radialGradient id="maraca-s5" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8FFE8"/><stop offset="0.5" stop-color="#6AD88A"/><stop offset="1" stop-color="#2A9A5A"/></radialGradient><radialGradient id="maraca-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A0A"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="maraca-e7" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A0A"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="maraca-f8"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="66" ry="6.5" fill="#2B2340" opacity=".13"/>
+<g transform="rotate(-14 64 120)">
+<path d="M57 130 H71 L70 178 C70 184 58 184 58 178 Z" fill="url(#maraca-l1)" stroke="#6A4A1A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="64" cy="92" rx="34" ry="42" fill="url(#maraca-s2)" stroke="#6A4200" stroke-width="3.5"/>
+<path d="M32 92 L42 82 L52 92 L62 82 L72 92 L82 82 L92 92" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M34 108 Q64 118 94 108" fill="none" stroke="#E8405A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<path d="M46 69 Q52 60.4 58 69" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70 69 Q76 60.4 82 69" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M58 78 Q64 87.0 70 78 Z" fill="#7A3E2E" stroke="#7A3E2E" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M61.0 81.72 Q64 79.8 67.0 81.72 Q64 84.3 61.0 81.72 Z" fill="#FF7F9B"/>
+<ellipse cx="44" cy="78" rx="5" ry="3" fill="url(#maraca-f3)"/>
+<ellipse cx="84" cy="78" rx="5" ry="3" fill="url(#maraca-f3)"/>
+<g transform="rotate(14 136 120)">
+<path d="M129 130 H143 L142 178 C142 184 130 184 130 178 Z" fill="url(#maraca-l4)" stroke="#6A4A1A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="136" cy="92" rx="34" ry="42" fill="url(#maraca-s5)" stroke="#0E5A2A" stroke-width="3.5"/>
+<path d="M104 92 L114 82 L124 92 L134 82 L144 92 L154 82 L164 92" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M106 108 Q136 118 166 108" fill="none" stroke="#E8405A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<ellipse cx="124" cy="66" rx="6" ry="8" fill="url(#maraca-e6)"/>
+<path d="M118.6 69.2 Q124 75.2 129.4 69.2 Q127.6 72.8 124 72.8 Q120.4 72.8 118.6 69.2 Z" fill="#6AD88A" opacity=".85"/>
+<circle cx="126.1" cy="62.8" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="121.6" cy="69.2" r="1.08" fill="#FFFFFF"/>
+<ellipse cx="148" cy="66" rx="6" ry="8" fill="url(#maraca-e7)"/>
+<path d="M142.6 69.2 Q148 75.2 153.4 69.2 Q151.6 72.8 148 72.8 Q144.4 72.8 142.6 69.2 Z" fill="#6AD88A" opacity=".85"/>
+<circle cx="150.1" cy="62.8" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="145.6" cy="69.2" r="1.08" fill="#FFFFFF"/>
+<path d="M130 78 Q136 87.0 142 78 Z" fill="#7A3E2E" stroke="#7A3E2E" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M133.0 81.72 Q136 79.8 139.0 81.72 Q136 84.3 133.0 81.72 Z" fill="#FF7F9B"/>
+<ellipse cx="116" cy="78" rx="5" ry="3" fill="url(#maraca-f8)"/>
+<ellipse cx="156" cy="78" rx="5" ry="3" fill="url(#maraca-f8)"/>
+<path class="fx" d="M94 40 q3 -6 6 0 q3 6 6 0" stroke="#B89AF0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path class="fx" d="M94 70 q3 -6 6 0 q3 6 6 0" stroke="#B89AF0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path class="fx" d="M18 30 q3 -6 6 0 q3 6 6 0" stroke="#B89AF0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path class="fx" d="M170 30 q3 -6 6 0 q3 6 6 0" stroke="#B89AF0" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>

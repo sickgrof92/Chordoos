@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="bassoon-l1" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#C88A4A"/><stop offset="1.00" stop-color="#7A4A1A"/></linearGradient><radialGradient id="bassoon-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8B880"/><stop offset="0.5" stop-color="#B87A3A"/><stop offset="1" stop-color="#7A4A1A"/></radialGradient><radialGradient id="bassoon-f3"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="56" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M60 180 C60 150 140 150 140 120 C140 90 60 96 60 66 C60 46 80 36 96 40" fill="none" stroke="#2A1408" stroke-width="34" stroke-linecap="round"/>
+<path d="M60 180 C60 150 140 150 140 120 C140 90 60 96 60 66 C60 46 80 36 96 40" fill="none" stroke="url(#bassoon-l1)" stroke-width="28" stroke-linecap="round"/>
+<circle cx="76" cy="162" r="5" fill="#E8ECF8" stroke="#4A5068" stroke-width="2"/>
+<circle cx="122" cy="138" r="5" fill="#E8ECF8" stroke="#4A5068" stroke-width="2"/>
+<circle cx="122" cy="104" r="5" fill="#E8ECF8" stroke="#4A5068" stroke-width="2"/>
+<circle cx="74" cy="84" r="5" fill="#E8ECF8" stroke="#4A5068" stroke-width="2"/>
+<path d="M64 150 L88 156 M118 118 L140 112" fill="none" stroke="#C8CCD8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94 26 C110 14 132 18 140 34 C146 48 136 62 120 62 C104 62 92 50 94 26 Z" fill="url(#bassoon-s2)" stroke="#2A1408" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M140 40 C156 40 168 30 172 18" fill="none" stroke="#C8CCD8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 20 L180 10 L178 22 Z" fill="#FFE8A0" stroke="#8A6A00" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M104 36 Q110 43.8 116 36" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M123 34 Q128 41.8 133 34" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="122" cy="52" rx="3.6" ry="4.4" fill="#2A1408"/>
+<ellipse cx="104" cy="48" rx="4" ry="3" fill="url(#bassoon-f3)"/>
+<ellipse cx="138" cy="46" rx="4" ry="3" fill="url(#bassoon-f3)"/>
+<g class="fx"><path d="M160 90 V63.6 Q164.8 73.2 174.4 75.6" stroke="#7A4A1A" stroke-width="3.12" fill="none" stroke-linecap="round"/><ellipse cx="155.2" cy="90" rx="6.0" ry="4.8" fill="#7A4A1A" transform="rotate(-20 155.2 90)"/></g>
+<g class="fx"><path d="M26 120 V95.8 L43.6 91.4 V115.6" stroke="#7A4A1A" stroke-width="2.8600000000000003" fill="none" stroke-linejoin="round"/><ellipse cx="21.6" cy="120" rx="5.5" ry="4.4" fill="#7A4A1A" transform="rotate(-20 21.6 120)"/><ellipse cx="39.2" cy="115.6" rx="5.5" ry="4.4" fill="#7A4A1A" transform="rotate(-20 39.2 115.6)"/></g>
+<text class="fx" x="132" y="150" font-size="14" font-weight="bold" font-family="sans-serif" fill="#7A4A1A">bwomp</text></svg>

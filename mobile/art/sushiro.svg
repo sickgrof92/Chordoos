@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="sushiro-l1" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFB89A"/><stop offset="1.00" stop-color="#FF7A5A"/></linearGradient><linearGradient id="sushiro-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFB89A"/><stop offset="1.00" stop-color="#FF7A5A"/></linearGradient><linearGradient id="sushiro-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#3A5A3A"/><stop offset="1.00" stop-color="#1A2E1A"/></linearGradient><radialGradient id="sushiro-s4" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#FAF8F2"/><stop offset="1" stop-color="#E0DCCC"/></radialGradient><linearGradient id="sushiro-l5" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFC0A8"/><stop offset="1.00" stop-color="#FF7A5A"/></linearGradient><radialGradient id="sushiro-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A1A1A"/><stop offset="1" stop-color="#060606"/></radialGradient><radialGradient id="sushiro-e7" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#1A1A1A"/><stop offset="1" stop-color="#060606"/></radialGradient><radialGradient id="sushiro-f8"><stop offset="0" stop-color="#FF8AA8" stop-opacity="0.7"/><stop offset="1" stop-color="#FF8AA8" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="60" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M152 120 L188 96 L184 124 L190 150 Z" fill="url(#sushiro-l1)" stroke="#8A3A1A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M90 64 C100 46 120 48 126 62 Z" fill="url(#sushiro-l2)" stroke="#8A3A1A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M30 120 C30 84 60 66 96 66 C132 66 160 84 160 120 C160 156 132 174 96 174 C60 174 30 156 30 120 Z" fill="url(#sushiro-l3)" stroke="#1A2A1A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="82" cy="120" r="42" fill="url(#sushiro-s4)" stroke="#C8C0A8" stroke-width="2.5"/>
+<ellipse cx="56" cy="104" rx="3.5" ry="2.4" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1" transform="rotate(8 56 104)"/>
+<ellipse cx="64" cy="140" rx="3.5" ry="2.4" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1" transform="rotate(22 64 140)"/>
+<ellipse cx="100" cy="148" rx="3.5" ry="2.4" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1" transform="rotate(40 100 148)"/>
+<ellipse cx="108" cy="96" rx="3.5" ry="2.4" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1" transform="rotate(54 108 96)"/>
+<ellipse cx="52" cy="124" rx="3.5" ry="2.4" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1" transform="rotate(46 52 124)"/>
+<ellipse cx="90" cy="86" rx="3.5" ry="2.4" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1"/>
+<ellipse cx="112" cy="132" rx="3.5" ry="2.4" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1" transform="rotate(16 112 132)"/>
+<path d="M64 112 C64 96 100 96 100 112 C100 128 64 128 64 112 Z" fill="url(#sushiro-l5)" stroke="#C04A2A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70 106 L94 118 M70 116 L86 124" fill="none" stroke="#FFE0D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="80" cy="136" rx="7" ry="5" fill="#7CC850" stroke="#2A5A1E" stroke-width="1.5"/>
+<ellipse cx="122" cy="116" rx="7" ry="9" fill="url(#sushiro-e6)"/>
+<path d="M115.7 119.6 Q122 126.35 128.3 119.6 Q126.2 123.65 122 123.65 Q117.8 123.65 115.7 119.6 Z" fill="#FF7A5A" opacity=".85"/>
+<circle cx="124.45" cy="112.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="119.2" cy="119.6" r="1.26" fill="#FFFFFF"/>
+<ellipse cx="144" cy="116" rx="7" ry="9" fill="url(#sushiro-e7)"/>
+<path d="M137.7 119.6 Q144 126.35 150.3 119.6 Q148.2 123.65 144 123.65 Q139.8 123.65 137.7 119.6 Z" fill="#FF7A5A" opacity=".85"/>
+<circle cx="146.45" cy="112.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="141.2" cy="119.6" r="1.26" fill="#FFFFFF"/>
+<path d="M128 134 Q134 138.8 140 134" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="118" cy="132" rx="5" ry="3" fill="url(#sushiro-f8)"/>
+<ellipse cx="150" cy="130" rx="5" ry="3" fill="url(#sushiro-f8)"/>
+<path d="M30 30 L94 72 M40 22 L100 66" fill="none" stroke="#C8A070" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="fx" d="M14 140 q8 -6 16 0 q8 6 16 0" stroke="#8AC8F0" stroke-width="2.5" fill="none"/></svg>

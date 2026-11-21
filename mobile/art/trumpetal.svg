@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="trumpetal-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D6F5A8"/><stop offset="0.5" stop-color="#7CC850"/><stop offset="1" stop-color="#3E8A2E"/></radialGradient><radialGradient id="trumpetal-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D6F5A8"/><stop offset="0.5" stop-color="#7CC850"/><stop offset="1" stop-color="#3E8A2E"/></radialGradient><radialGradient id="trumpetal-s3" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFF6C8"/><stop offset="0.5" stop-color="#FFC83A"/><stop offset="1" stop-color="#C88A00"/></radialGradient><radialGradient id="trumpetal-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A00"/><stop offset="1" stop-color="#0A0600"/></radialGradient><radialGradient id="trumpetal-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A00"/><stop offset="1" stop-color="#0A0600"/></radialGradient><radialGradient id="trumpetal-f6"><stop offset="0" stop-color="#FFB86A" stop-opacity="0.9"/><stop offset="1" stop-color="#FFB86A" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="40" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M100 184 V120" fill="none" stroke="#3E8A2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 160 C80 150 64 156 56 168 C74 172 88 168 100 160 Z" fill="url(#trumpetal-s1)" stroke="#2A5A1E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 146 C120 136 136 142 144 154 C126 158 112 154 100 146 Z" fill="url(#trumpetal-s2)" stroke="#2A5A1E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M92 126 L88 84 C68 80 40 66 34 40 C56 46 70 44 82 36 C90 50 110 50 118 36 C130 44 144 46 166 40 C160 66 132 80 112 84 L108 126 Z" fill="url(#trumpetal-s3)" stroke="#5A3A00" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M50 48 C70 60 130 60 150 48 C140 62 120 70 100 70 C80 70 60 62 50 48 Z" fill="#C88A00" opacity=".45"/>
+<path d="M94 96 V88" fill="none" stroke="#8A5A00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="94" cy="86" r="3" fill="#FFE8A0" stroke="#8A5A00" stroke-width="1.4"/>
+<path d="M100 96 V88" fill="none" stroke="#8A5A00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="100" cy="86" r="3" fill="#FFE8A0" stroke="#8A5A00" stroke-width="1.4"/>
+<path d="M106 96 V88" fill="none" stroke="#8A5A00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="106" cy="86" r="3" fill="#FFE8A0" stroke="#8A5A00" stroke-width="1.4"/>
+<ellipse cx="92" cy="106" rx="5" ry="6" fill="url(#trumpetal-e4)"/>
+<path d="M87.5 108.4 Q92 112.9 96.5 108.4 Q95.0 111.1 92 111.1 Q89.0 111.1 87.5 108.4 Z" fill="#FFC83A" opacity=".85"/>
+<circle cx="93.75" cy="103.6" r="2.0" fill="#FFFFFF"/>
+<circle cx="90.0" cy="108.4" r="0.8999999999999999" fill="#FFFFFF"/>
+<ellipse cx="108" cy="106" rx="5" ry="6" fill="url(#trumpetal-e5)"/>
+<path d="M103.5 108.4 Q108 112.9 112.5 108.4 Q111.0 111.1 108 111.1 Q105.0 111.1 103.5 108.4 Z" fill="#FFC83A" opacity=".85"/>
+<circle cx="109.75" cy="103.6" r="2.0" fill="#FFFFFF"/>
+<circle cx="106.0" cy="108.4" r="0.8999999999999999" fill="#FFFFFF"/>
+<ellipse cx="100" cy="118" rx="2.25" ry="2.75" fill="#5A3A00"/>
+<path d="M40 24 L28 12" fill="none" stroke="#FFC83A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<path d="M100 26 V8" fill="none" stroke="#FFC83A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<path d="M160 24 L172 12" fill="none" stroke="#FFC83A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<g class="fx"><path d="M26 92 V72.2 Q29.6 79.4 36.8 81.2" stroke="#C88A00" stroke-width="2.3400000000000003" fill="none" stroke-linecap="round"/><ellipse cx="22.4" cy="92" rx="4.5" ry="3.6" fill="#C88A00" transform="rotate(-20 22.4 92)"/></g>
+<g class="fx"><path d="M166 96 V76.2 L180.4 72.6 V92.4" stroke="#C88A00" stroke-width="2.3400000000000003" fill="none" stroke-linejoin="round"/><ellipse cx="162.4" cy="96" rx="4.5" ry="3.6" fill="#C88A00" transform="rotate(-20 162.4 96)"/><ellipse cx="176.8" cy="92.4" rx="4.5" ry="3.6" fill="#C88A00" transform="rotate(-20 176.8 92.4)"/></g>
+<circle cx="170" cy="170" r="16" fill="url(#trumpetal-f6)" class="fx"/></svg>
