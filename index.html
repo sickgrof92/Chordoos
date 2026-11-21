@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#EEEBFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17132A" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Kids finish tasks, earn stars, and open surprise characters to collect.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chordoos">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Chordoos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Layout: one-column "sticker book" app. Chunky tap targets, cards only for kids, tasks and collectibles. */
+:root{
+  --bg:#EEEBFF; --surface:#FFFFFF; --tile:#F6F4FF; --ink:#2B2340; --muted:#6B6488;
+  --line:#DCD6F5; --accent:#FF6B4A; --accent-ink:#FFFFFF; --star:#FFB703; --good:#22B573;
+  --sil:#CFC8EC; --shadow:0 3px 0 rgba(43,35,64,.12);
+  --display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r-common:#8A9BA8; --r-uncommon:#22B573; --r-rare:#3A86FF; --r-epic:#A24BFF; --r-legendary:#F5A300;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17132A; --surface:#231D3D; --tile:#2E2750; --ink:#F3EFFF; --muted:#ADA5CF;
+  --line:#3B3363; --accent:#FF7A5C; --accent-ink:#1B1530; --star:#FFC23D; --good:#3DDC97;
+  --sil:#463D70; --shadow:0 3px 0 rgba(0,0,0,.35); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#17132A; --surface:#231D3D; --tile:#2E2750; --ink:#F3EFFF; --muted:#ADA5CF;
+  --line:#3B3363; --accent:#FF7A5C; --accent-ink:#1B1530; --star:#FFC23D; --good:#3DDC97;
+  --sil:#463D70; --shadow:0 3px 0 rgba(0,0,0,.35); color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  -webkit-tap-highlight-color:transparent}
+#app{max-width:720px;margin:0 auto;padding-block:12px 48px;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800}
+h2{font-size:24px;font-weight:800}
+h3{font-size:18px;font-weight:700}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+input,select{font:inherit;color:var(--ink);background:var(--tile);border:2px solid var(--line);border-radius:12px;padding:10px 12px;min-height:46px;min-width:0}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.spacer{flex:1}
+
+/* top bar */
+.top{display:flex;align-items:center;gap:12px}
+.brand{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+.brand svg{width:38px;height:38px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:999px;font-weight:800;background:var(--surface);border:2px solid var(--line);box-shadow:var(--shadow)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn.big{min-height:60px;font-size:20px;padding:0 26px;font-family:var(--display)}
+.btn.danger{color:#E5484D}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn:active:not(:disabled){transform:translateY(2px);box-shadow:none}
+.icon-btn{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--surface);border:2px solid var(--line);font-size:22px;font-weight:800;box-shadow:var(--shadow)}
+.stars{display:inline-flex;align-items:center;gap:6px;font-family:var(--display);font-weight:800;font-size:22px;background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:4px 14px 4px 10px;font-variant-numeric:tabular-nums}
+.stars .s{color:var(--star);font-size:24px}
+.stars.bump{animation:bump .5s}
+@keyframes bump{40%{transform:scale(1.25)}}
+
+/* kid picker */
+.kids{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.kid-card{background:var(--surface);border:2px solid var(--line);border-radius:24px;padding:16px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;box-shadow:var(--shadow);text-align:center}
+.kid-card:active{transform:translateY(2px)}
+.avatar{width:84px;height:84px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:38px;color:#fff;background:var(--tile);overflow:hidden}
+.avatar svg{width:92%;height:92%}
+.avatar.sm{width:52px;height:52px;font-size:24px}
+.kid-card .nm{font-family:var(--display);font-weight:800;font-size:22px}
+.meter{height:10px;border-radius:99px;background:var(--tile);overflow:hidden;width:100%}
+.meter i{display:block;height:100%;background:var(--good);border-radius:99px}
+
+/* kid screen */
+.kidhead{display:flex;align-items:center;gap:12px}
+.kidhead .who{display:flex;align-items:center;gap:10px;min-width:0}
+.kidhead .who h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.surprise{background:var(--surface);border:2px solid var(--line);border-radius:28px;padding:18px;display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center;box-shadow:var(--shadow)}
+.surprise .pod{width:110px;height:auto}
+.surprise.ready .pod{animation:wiggle 1.6s ease-in-out infinite}
+.surprise .info{display:flex;flex-direction:column;gap:10px;min-width:0}
+.pips{display:flex;gap:6px;flex-wrap:wrap}
+.pips span{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--tile);color:var(--line);font-size:18px;border:2px solid var(--line)}
+.pips span.on{background:var(--star);color:#fff;border-color:var(--star)}
+@keyframes wiggle{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(-7deg)}82%{transform:rotate(7deg)}89%{transform:rotate(-4deg)}95%{transform:rotate(3deg)}}
+
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:4px}
+.tabs button{min-height:46px;border-radius:999px;font-weight:800;font-size:17px}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+
+.tasks{display:flex;flex-direction:column;gap:10px}
+.task{display:flex;align-items:center;gap:14px;background:var(--surface);border:2px solid var(--line);border-radius:20px;padding:12px 14px;text-align:left;width:100%;min-height:72px;box-shadow:var(--shadow)}
+.task .ic{font-size:30px;width:44px;text-align:center;flex:none}
+.task .tx{flex:1;min-width:0}
+.task .tn{font-weight:800;font-size:18px;display:block}
+.task .tm{font-size:14px;color:var(--muted)}
+.task .chk{flex:none;width:44px;height:44px;border-radius:50%;border:3px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:24px;color:transparent;font-weight:900}
+.task.done{background:var(--tile);box-shadow:none}
+.task.done .tn{text-decoration:line-through;text-decoration-thickness:2px;color:var(--muted)}
+.task.done .chk{background:var(--good);border-color:var(--good);color:#fff}
+.task.pop .chk{animation:bump .45s}
+.alldone{text-align:center;padding:18px;border-radius:20px;border:2px dashed var(--line);font-weight:700}
+
+/* collection */
+.rgroup{display:flex;flex-direction:column;gap:10px}
+.rgroup header{display:flex;align-items:baseline;gap:10px}
+.rpill{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#fff;padding:3px 10px;border-radius:999px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+.tile{position:relative;background:var(--tile);border:3px solid var(--line);border-radius:18px;padding:6px 4px 8px;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.tile svg{width:100%;max-width:86px;height:auto;aspect-ratio:1}
+.tile .tn{font-size:13px;font-weight:800;text-align:center;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.tile.locked .tn{color:var(--muted)}
+.tile .cnt{position:absolute;top:4px;right:6px;font-size:12px;font-weight:800;background:var(--ink);color:var(--bg);border-radius:99px;padding:0 6px}
+.tile.legendary:not(.locked){background:linear-gradient(160deg,#FFF3C4,#FFD6F0 60%,#D8E8FF)}
+.tile.legendary:not(.locked) .tn{color:#2B2340}
+.sil *{fill:var(--sil)!important;stroke:var(--sil)!important}
+
+/* characters */
+.ch .tw{animation:tw 1.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.ch .tw:nth-of-type(2){animation-delay:.5s}.ch .tw:nth-of-type(3){animation-delay:1s}.ch .tw:nth-of-type(4){animation-delay:1.4s}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.6)}50%{opacity:1;transform:scale(1.1)}}
+
+/* overlays */
+.overlay{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;
+  padding:calc(env(safe-area-inset-top,0px) + 20px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 20px) max(16px,env(safe-area-inset-left,0px));
+  background:rgba(23,19,42,.6);overflow-y:auto}
+.sheet{background:var(--surface);border-radius:28px;padding:22px;max-width:420px;width:100%;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center;border:2px solid var(--line);margin:auto}
+.sheet .ch{width:180px;height:180px}
+.flavor{font-size:16px;max-width:34ch}
+
+.reveal{background:radial-gradient(circle at 50% 45%,#3A2F6E,#140F26 70%);flex-direction:column;gap:18px;color:#fff;text-align:center}
+.reveal .podbtn{position:relative;width:min(220px,58vw)}
+.reveal .podbtn .pod{width:100%;height:auto;filter:drop-shadow(0 0 0 transparent);transition:filter .4s}
+.reveal[data-stage="1"] .podbtn .pod{animation:shake .4s}
+.reveal[data-stage="2"] .podbtn .pod{animation:shake .35s 2;filter:drop-shadow(0 0 22px var(--rc))}
+.reveal .hint{font-family:var(--display);font-size:26px;font-weight:800}
+.pod .cr{opacity:0;transition:opacity .2s}
+.reveal[data-stage="1"] .pod .cr.a,.reveal[data-stage="2"] .pod .cr{opacity:1}
+@keyframes shake{20%{transform:rotate(-9deg)}40%{transform:rotate(8deg)}60%{transform:rotate(-6deg)}80%{transform:rotate(4deg)}}
+.flash{position:fixed;inset:0;background:#fff;z-index:60;pointer-events:none;animation:flash .7s forwards}
+@keyframes flash{from{opacity:1}to{opacity:0}}
+.result{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;max-width:420px;width:100%}
+.rays{position:absolute;left:50%;top:120px;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;
+  background:repeating-conic-gradient(from 0deg,var(--rc) 0 10deg,transparent 10deg 24deg);opacity:.35;
+  -webkit-mask:radial-gradient(circle,#000 20%,transparent 68%);mask:radial-gradient(circle,#000 20%,transparent 68%);animation:spin 14s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.result .ch{position:relative;width:240px;height:240px;max-width:70vw;animation:popin .7s cubic-bezier(.2,1.6,.4,1)}
+@keyframes popin{from{transform:scale(.2) rotate(-20deg);opacity:0}to{transform:none;opacity:1}}
+.result h2{font-size:40px;position:relative}
+.result .rpill{font-size:15px;position:relative}
+.result p{position:relative;color:#E5E0FF}
+.newtag{position:relative;font-family:var(--display);font-weight:800;font-size:20px;color:#1B1530;background:#7CFFB2;padding:2px 14px;border-radius:99px;transform:rotate(-4deg)}
+.dupetag{position:relative;font-weight:800;color:#1B1530;background:#E5E0FF;padding:2px 12px;border-radius:99px}
+.result .btn{position:relative}
+.reveal .btn:not(.primary){color:var(--ink)}
+.prow .acts{grid-column:1 / -1;justify-content:flex-start}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:55}
+.confetti i{position:absolute;top:-20px;width:10px;height:16px;border-radius:3px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+
+/* parent */
+.panel{background:var(--surface);border:2px solid var(--line);border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.panel h2{font-size:22px}
+.prow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:center;padding-block:10px;border-top:2px solid var(--tile)}
+.prow:first-of-type{border-top:0}
+.tline{display:grid;grid-template-columns:64px minmax(0,1fr) 76px;gap:8px;align-items:center;padding-block:10px;border-top:2px solid var(--tile)}
+.tline .opts{grid-column:1 / -1;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tline select.ic{font-size:22px;padding:6px;text-align:center}
+.field{display:flex;flex-direction:column;gap:6px;font-weight:700}
+.odds{display:flex;flex-wrap:wrap;gap:6px}
+.keypad{display:grid;grid-template-columns:repeat(3,72px);gap:12px;justify-content:center}
+.keypad button{height:72px;border-radius:50%;background:var(--tile);font-family:var(--display);font-size:30px;font-weight:800;border:2px solid var(--line)}
+.dots{display:flex;gap:14px;justify-content:center}
+.dots i{width:18px;height:18px;border-radius:50%;border:3px solid var(--ink)}
+.dots i.on{background:var(--ink)}
+.dots.err{animation:shake .4s}
+
+.welcome{display:flex;flex-direction:column;gap:16px}
+.showcase{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.showcase svg{width:min(18vw,96px);height:auto}
+.check{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--tile);font-weight:700}
+.check input{width:22px;height:22px;min-height:0;accent-color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--tile);border-radius:99px;padding:6px 8px 6px 14px;font-weight:800}
+.chip button{width:28px;height:28px;border-radius:50%;background:var(--surface)}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:99px;font-weight:800;z-index:80;max-width:calc(100% - 32px);text-align:center;animation:toast 2.6s forwards}
+@keyframes toast{0%{opacity:0;transform:translate(-50%,10px)}10%,85%{opacity:1;transform:translate(-50%,0)}100%{opacity:0}}
+.note{font-size:14px;color:var(--muted);background:var(--tile);border-radius:14px;padding:10px 12px}
+@media (max-width:420px){.surprise{grid-template-columns:84px 1fr;padding:14px}.surprise .pod{width:84px}.kids{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+(function(){
+"use strict";
+/* ---------- Characters ---------- */
+const RAR=[
+  {key:"common",label:"Common",odds:50},
+  {key:"uncommon",label:"Uncommon",odds:28},
+  {key:"rare",label:"Rare",odds:14},
+  {key:"epic",label:"Epic",odds:6},
+  {key:"legendary",label:"Legendary",odds:2}
+];
+const RCOL=["#8A9BA8","#22B573","#3A86FF","#A24BFF","#F5A300"];
+const C=(id,name,r,style,flavor,p)=>({id,name,r,style,flavor,p});
+const CHARS=[
+  C("mossy","Mossy",0,"Nature","Grows a tiny bit taller every time someone waters a plant.",{body:"bean",c1:"#8BD17C",c2:"#5BAA55",eyes:"dot",mouth:"smile",top:"sprout",ex:["blush"]}),
+  C("puddle","Puddle",0,"Cute","Loves rainy days and big splashy baths.",{body:"drop",c1:"#6EC6FF",c2:"#BDE7FF",eyes:"big",mouth:"o",ex:[]}),
+  C("bunbun","Bun Bun",0,"Cute","Hops three times before every nap.",{body:"round",c1:"#FFC2A8",c2:"#FF9E9E",eyes:"happy",mouth:"smile",top:"ears",ex:["blush"]}),
+  C("pebble","Pebble",0,"Chill","Can stay still longer than anyone. Anyone!",{body:"square",c1:"#B9B3D6",c2:"#9A93C2",eyes:"sleepy",mouth:"smile",ex:["spots"]}),
+  C("toasty","Toasty",0,"Snack","Always pops up right at breakfast time.",{body:"square",c1:"#F2B36D",c2:"#FFE3A3",eyes:"dot",mouth:"grin",ex:["belly"]}),
+  C("fizz","Fizz",0,"Silly","Bubbles over when it gets excited, which is always.",{body:"round",c1:"#C6F05A",c2:"#FF6FB5",eyes:"big",mouth:"open",top:"antenna",ex:[]}),
+  C("wobble","Wobble",0,"Silly","Jiggles every time it giggles.",{body:"blob",c1:"#FF9CCB",c2:"#FFD1E6",eyes:"one",mouth:"tongue",ex:["spots"]}),
+  C("nibbles","Nibbles",0,"Cute","Will trade any toy for one crunchy cracker.",{body:"round",c1:"#E0B48A",c2:"#FFE6CC",eyes:"dot",mouth:"cat",top:"cat",ex:["blush","belly"]}),
+  C("drizzle","Drizzle",0,"Spooky","A sleepy little cloud ghost. Mostly harmless.",{body:"ghost",c1:"#DDEBFF",c2:"#A8C8FF",eyes:"sleepy",mouth:"o",ex:[]}),
+  C("sprig","Sprig",0,"Nature","Smells like fresh-cut grass on a sunny day.",{body:"blob",c1:"#9EE6C9",c2:"#4CC38A",eyes:"happy",mouth:"smile",top:"leaf",ex:["blush"]}),
+
+  C("booberry","Boo-Berry",1,"Spooky","Says boo, then says sorry.",{body:"ghost",c1:"#9B7BFF",c2:"#C9B8FF",eyes:"big",mouth:"fang",ex:["blush"]}),
+  C("ziggy","Ziggy",1,"Cool","Skates everywhere, even in the kitchen.",{body:"blob",c1:"#FFD84D",c2:"#FF7A3D",eyes:"dot",mouth:"grin",top:"mohawk",ex:["stripes"]}),
+  C("crumb","Captain Crumb",1,"Hero","Saves the day, one crumb at a time.",{body:"round",c1:"#FF9F43",c2:"#FFE0B8",eyes:"big",mouth:"grin",ex:["cape","belly"]}),
+  C("glimmer","Glimmer",1,"Cute","Leaves a trail of glitter wherever it goes.",{body:"drop",c1:"#FF8FD8",c2:"#FFD6F2",eyes:"star",mouth:"smile",top:"bow",ex:["sparkles","blush"]}),
+  C("chomp","Chomp",1,"Monster","Its roar is much bigger than its bite.",{body:"square",c1:"#2EC4B6",c2:"#CFF7F2",eyes:"one",mouth:"fang",top:"horns",ex:[]}),
+  C("marsh","Marsh",1,"Snack","Soft, squishy, and the best at hugs.",{body:"round",c1:"#FFF6F0",c2:"#FFD0D9",eyes:"sleepy",mouth:"smile",ex:["blush"]}),
+  C("volt","Volt",1,"Cool","Runs on 100% kid energy.",{body:"bean",c1:"#FFE14D",c2:"#3D5AFE",eyes:"visor",mouth:"smile",top:"antenna",ex:["stripes"]}),
+  C("snuggle","Snuggle",1,"Cute","Keeps everyone cozy on chilly nights.",{body:"blob",c1:"#C7B2FF",c2:"#F7C6FF",eyes:"happy",mouth:"cat",top:"ears",ex:["scarf","blush"]}),
+
+  C("shade","Shade",2,"Cool","Too cool for bedtime. Goes anyway.",{body:"round",c1:"#4A51A0",c2:"#9AA0FF",eyes:"shades",mouth:"grin",top:"mohawk",ex:[]}),
+  C("ember","Ember",2,"Elemental","Warm heart, even warmer head.",{body:"drop",c1:"#FF5E3A",c2:"#FFC15E",eyes:"big",mouth:"open",top:"flame",ex:[],glow:"#FF8A3D"}),
+  C("frostbite","Frostbite",2,"Elemental","Makes snowflakes every time it sneezes.",{body:"ghost",c1:"#B8F3FF",c2:"#FFFFFF",eyes:"big",mouth:"fang",top:"horns",ex:["sparkles"]}),
+  C("pixel","Pixel",2,"Robot","Beep boop means good job in robot.",{body:"square",c1:"#4ADE80",c2:"#2F8F5B",eyes:"visor",mouth:"smile",top:"antenna",ex:["spots"]}),
+  C("moonbeam","Moonbeam",2,"Cosmic","Only shows up after the whole bedtime routine is done.",{body:"bean",c1:"#5865E0",c2:"#FFE9A8",eyes:"sleepy",mouth:"smile",top:"halo",ex:["sparkles"]}),
+  C("rexjr","Rex Jr.",2,"Dino","Tiny arms, enormous heart.",{body:"blob",c1:"#6BCB77",c2:"#FFD166",eyes:"dot",mouth:"fang",top:"spikes",ex:["belly"]}),
+
+  C("nova","Nova",3,"Cosmic","Born from a wish on a shooting star.",{body:"round",c1:"#8E5CFF",c2:"#FFE14D",eyes:"star",mouth:"open",top:"antenna",ex:["sparkles"],glow:"#B68CFF"}),
+  C("thunderpaw","Thunderpaw",3,"Cool","Fastest paws in the whole galaxy.",{body:"bean",c1:"#2F80ED",c2:"#FFE14D",eyes:"shades",mouth:"grin",top:"cat",ex:["stripes"],glow:"#7FB2FF"}),
+  C("gloomsy","Gloomsy",3,"Spooky","A gentle ghost who guards your dreams.",{body:"ghost",c1:"#3B3357",c2:"#7CFFB2",eyes:"one",eye:"#2BD47F",mouth:"o",top:"halo",ex:[],glow:"#7CFFB2"}),
+  C("sprinkles","Sir Sprinkles",3,"Snack","Royal ruler of Dessert Land.",{body:"round",c1:"#FF9EC7",c2:"#7BDFF2",eyes:"dot",mouth:"grin",top:"crown",ex:["spots","blush"]}),
+
+  C("aurora","Aurora",4,"Mythic","Paints the sky with colors nobody has named yet.",{body:"drop",c1:"#A98BFF",grad:["#7CF7E4","#A98BFF","#FF9BD5"],c2:"#FFFFFF",eyes:"star",mouth:"smile",top:"crown",ex:["sparkles","blush"],glow:"#C8A8FF"}),
+  C("blazeking","Blaze King",4,"Mythic","A mighty little dragon who only appears for the hardest workers.",{body:"blob",c1:"#FF8A3D",grad:["#FFD54A","#FF8A3D","#FF4D6D"],c2:"#FFF1B8",eyes:"big",mouth:"grin",top:["horns","crown"],ex:["belly","sparkles"],glow:"#FFB13D"})
+];
+const CBY=Object.fromEntries(CHARS.map(c=>[c.id,c]));
+
+const OUT="#2B2340";
+let gidN=0;
+function star5(cx,cy,r,fill){let pts=[];for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,rr=i%2?r*.45:r;pts.push((cx+rr*Math.cos(a)).toFixed(1)+","+(cy+rr*Math.sin(a)).toFixed(1))}return `<polygon points="${pts.join(" ")}" fill="${fill}" stroke="${OUT}" stroke-width="1.6" stroke-linejoin="round"/>`}
+function spark(x,y,r,fill){return `<path class="tw" d="M${x} ${y-r}Q${x} ${y} ${x+r} ${y}Q${x} ${y} ${x} ${y+r}Q${x} ${y} ${x-r} ${y}Q${x} ${y} ${x} ${y-r}Z" fill="${fill}"/>`}
+function charSVG(c,sil){
+  const p=c.p,g="g"+(++gidN),S3=`stroke="${OUT}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"`;
+  let c1=p.c1,c2=p.c2,defs="";
+  if(p.grad&&!sil){defs+=`<linearGradient id="${g}" x1="0" y1="0" x2="1" y2="1">${p.grad.map((s,i)=>`<stop offset="${i/(p.grad.length-1)}" stop-color="${s}"/>`).join("")}</linearGradient>`;c1=`url(#${g})`}
+  if(p.glow&&!sil)defs+=`<radialGradient id="${g}r"><stop offset="0" stop-color="${p.glow}" stop-opacity=".8"/><stop offset="1" stop-color="${p.glow}" stop-opacity="0"/></radialGradient>`;
+  const T={round:28,blob:30,bean:30,square:32,ghost:28,drop:22}[p.body];
+  const D={
+    round:"M20 58a30 30 0 1 0 60 0a30 30 0 1 0-60 0Z",
+    bean:"M24 60a26 30 0 1 0 52 0a26 30 0 1 0-52 0Z",
+    blob:"M20 70Q18 34 50 30Q82 34 80 70Q78 88 50 88Q22 88 20 70Z",
+    square:"M38 32H62Q78 32 78 48V72Q78 88 62 88H38Q22 88 22 72V48Q22 32 38 32Z",
+    ghost:"M24 88V55Q24 28 50 28Q76 28 76 55V88L67 81L58 88L50 81L42 88L33 81Z",
+    drop:"M50 22Q78 54 77 68Q75 88 50 88Q25 88 23 68Q22 54 50 22Z"
+  }[p.body];
+  const ey=p.body==="drop"?61:55,my=ey+13;
+  const tops=[].concat(p.top||[]);
+  let back="",front="";
+  for(const t of tops){
+    if(t==="ears")back+=`<ellipse cx="37" cy="${T-4}" rx="7" ry="17" transform="rotate(-14 37 ${T-4})" fill="${c1}" ${S3}/><ellipse cx="63" cy="${T-4}" rx="7" ry="17" transform="rotate(14 63 ${T-4})" fill="${c1}" ${S3}/><ellipse cx="37" cy="${T-6}" rx="3" ry="10" transform="rotate(-14 37 ${T-6})" fill="${c2}"/><ellipse cx="63" cy="${T-6}" rx="3" ry="10" transform="rotate(14 63 ${T-6})" fill="${c2}"/>`;
+    if(t==="cat")back+=`<path d="M26 ${T+18}L29 ${T-8}L46 ${T+4}Z" fill="${c1}" ${S3}/><path d="M74 ${T+18}L71 ${T-8}L54 ${T+4}Z" fill="${c1}" ${S3}/><path d="M31 ${T+8}L32 ${T-1}L38 ${T+4}Z" fill="${c2}"/><path d="M69 ${T+8}L68 ${T-1}L62 ${T+4}Z" fill="${c2}"/>`;
+    if(t==="horns")back+=`<path d="M36 ${T+7}Q25 ${T-5} 31 ${T-17}Q37 ${T-6} 45 ${T+3}Z" fill="${c2}" ${S3}/><path d="M64 ${T+7}Q75 ${T-5} 69 ${T-17}Q63 ${T-6} 55 ${T+3}Z" fill="${c2}" ${S3}/>`;
+    if(t==="antenna")back+=`<path d="M44 ${T+3}L36 ${T-13}M56 ${T+3}L64 ${T-13}" ${S3} fill="none"/><circle cx="35" cy="${T-15}" r="5" fill="${c2}" ${S3}/><circle cx="65" cy="${T-15}" r="5" fill="${c2}" ${S3}/>`;
+    if(t==="sprout")back+=`<path d="M50 ${T+3}V${T-10}" ${S3} fill="none"/><path d="M50 ${T-9}Q40 ${T-22} 33 ${T-12}Q42 ${T-3} 50 ${T-9}Z" fill="#6BCB77" ${S3}/><path d="M50 ${T-9}Q60 ${T-24} 68 ${T-14}Q58 ${T-3} 50 ${T-9}Z" fill="#6BCB77" ${S3}/>`;
+    if(t==="leaf")back+=`<path d="M50 ${T+4}Q35 ${T-13} 53 ${T-25}Q65 ${T-9} 50 ${T+4}Z" fill="${c2}" ${S3}/><path d="M50 ${T+1}Q50 ${T-10} 53 ${T-20}" stroke="${OUT}" stroke-width="2" fill="none"/>`;
+    if(t==="flame")back+=`<path d="M50 ${T-28}Q67 ${T-12} 62 ${T+8}L38 ${T+8}Q33 ${T-12} 50 ${T-28}Z" fill="#FF7A1A" ${S3}/><path d="M50 ${T-15}Q58 ${T-5} 56 ${T+8}L44 ${T+8}Q42 ${T-5} 50 ${T-15}Z" fill="#FFD23F"/>`;
+    if(t==="spikes")back+=`<path d="M30 ${T+14}L34 ${T-5}L42 ${T+5}L50 ${T-12}L58 ${T+5}L66 ${T-5}L70 ${T+14}Z" fill="${c2}" ${S3}/>`;
+    if(t==="mohawk")back+=`<path d="M41 ${T+5}L43 ${T-14}L50 ${T-1}L55 ${T-17}L59 ${T+5}Z" fill="${c2}" ${S3}/>`;
+    if(t==="crown")front+=`<path d="M36 ${T+5}L36 ${T-12}L43 ${T-4}L50 ${T-16}L57 ${T-4}L64 ${T-12}L64 ${T+5}Z" fill="#FFC93C" ${S3}/><circle cx="50" cy="${T-2}" r="2.8" fill="#FF4D8D"/>`;
+    if(t==="halo")front+=`<ellipse cx="50" cy="${T-10}" rx="15" ry="4.5" fill="none" stroke="#FFD95A" stroke-width="4"/>`;
+    if(t==="bow")front+=`<path d="M63 ${T+7}L75 ${T-2}L75 ${T+15}Z M63 ${T+7}L51 ${T-2}L51 ${T+15}Z" fill="${c2}" ${S3}/><circle cx="63" cy="${T+7}" r="3.6" fill="${c2}" ${S3}/>`;
+  }
+  const ex=sil?[]:(p.ex||[]);
+  let under="";
+  if(p.glow&&!sil)under+=`<circle cx="50" cy="56" r="49" fill="url(#${g}r)"/>`;
+  if(ex.includes("cape"))under+=`<path d="M31 50Q20 80 15 95L85 95Q80 80 69 50Z" fill="#E63946" ${S3}/>`;
+  const feet=p.body==="ghost"?"":`<ellipse cx="37" cy="88" rx="8" ry="5" fill="${c1}" ${S3}/><ellipse cx="63" cy="88" rx="8" ry="5" fill="${c1}" ${S3}/>`;
+  const body=`<path d="${D}" fill="${c1}" ${S3}/>`;
+  if(sil)return `<svg viewBox="0 0 100 100" class="ch sil" aria-hidden="true">${back}${feet}${body}${front}</svg>`;
+  let deco="";
+  if(ex.includes("belly"))deco+=`<ellipse cx="50" cy="80" rx="15" ry="6.5" fill="${c2}"/>`;
+  if(ex.includes("spots"))deco+=`<circle cx="29" cy="66" r="3.5" fill="${c2}"/><circle cx="71" cy="72" r="4" fill="${c2}"/><circle cx="62" cy="83" r="3" fill="${c2}"/><circle cx="34" cy="80" r="2.6" fill="${c2}"/>`;
+  if(ex.includes("stripes"))deco+=`<path d="M43 ${T+7}L45 ${T+14}M50 ${T+5}V${T+14}M57 ${T+7}L55 ${T+14}" stroke="${c2}" stroke-width="3.5" stroke-linecap="round"/>`;
+  if(ex.includes("scarf"))deco+=`<path d="M27 78Q50 86 73 78L73 84Q50 92 27 84Z" fill="#FF5A5F" ${S3}/><path d="M61 85L64 96L71 94L68 84Z" fill="#FF5A5F" ${S3}/>`;
+  if(ex.includes("blush"))deco+=`<ellipse cx="31" cy="${ey+9}" rx="5" ry="3" fill="#FF6FA0" opacity=".55"/><ellipse cx="69" cy="${ey+9}" rx="5" ry="3" fill="#FF6FA0" opacity=".55"/>`;
+  let face="";
+  const E=p.eyes;
+  if(E==="dot")for(const x of[40,60])face+=`<circle cx="${x}" cy="${ey}" r="4.5" fill="${OUT}"/><circle cx="${x+1.5}" cy="${ey-1.6}" r="1.5" fill="#fff"/>`;
+  if(E==="big")for(const x of[39,61])face+=`<circle cx="${x}" cy="${ey}" r="8" fill="#fff" ${S3}/><circle cx="${x+1}" cy="${ey+1}" r="4.6" fill="${OUT}"/><circle cx="${x+2.6}" cy="${ey-.8}" r="1.7" fill="#fff"/>`;
+  if(E==="sleepy")for(const x of[40,60])face+=`<path d="M${x-5} ${ey}Q${x} ${ey+5} ${x+5} ${ey}" fill="none" ${S3}/>`;
+  if(E==="happy")for(const x of[40,60])face+=`<path d="M${x-5} ${ey+2}Q${x} ${ey-5} ${x+5} ${ey+2}" fill="none" ${S3}/>`;
+  if(E==="star")for(const x of[39,61])face+=star5(x,ey,7,"#FFE14D");
+  if(E==="one")face+=`<circle cx="50" cy="${ey}" r="11" fill="#fff" ${S3}/><circle cx="50" cy="${ey+1}" r="6" fill="${p.eye||OUT}"/><circle cx="52.6" cy="${ey-2}" r="2.2" fill="#fff"/>`;
+  if(E==="shades")face+=`<path d="M29 ${ey-6}H71V${ey-2}Q71 ${ey+7} 60 ${ey+7}Q53 ${ey+7} 52 ${ey}H48Q47 ${ey+7} 40 ${ey+7}Q29 ${ey+7} 29 ${ey-2}Z" fill="#15112A" stroke="${OUT}" stroke-width="2"/><path d="M34 ${ey-3}H39M56 ${ey-3}H61" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>`;
+  if(E==="visor")face+=`<rect x="30" y="${ey-6}" width="40" height="11" rx="5.5" fill="#53F3FF" ${S3}/><rect x="34" y="${ey-3}" width="10" height="3" rx="1.5" fill="#fff" opacity=".85"/>`;
+  const M=p.mouth;
+  if(M==="smile")face+=`<path d="M44 ${my}Q50 ${my+6} 56 ${my}" fill="none" ${S3}/>`;
+  if(M==="open")face+=`<path d="M43 ${my-1}Q50 ${my+12} 57 ${my-1}Z" fill="${OUT}" ${S3}/><path d="M46.5 ${my+4}Q50 ${my+1} 53.5 ${my+4}Q50 ${my+7} 46.5 ${my+4}Z" fill="#FF6F91"/>`;
+  if(M==="grin")face+=`<path d="M40 ${my-1}Q50 ${my+11} 60 ${my-1}Z" fill="#fff" ${S3}/>`;
+  if(M==="o")face+=`<ellipse cx="50" cy="${my+2}" rx="3.5" ry="4" fill="${OUT}"/>`;
+  if(M==="fang")face+=`<path d="M43 ${my}Q50 ${my+6} 57 ${my}" fill="none" ${S3}/><path d="M45 ${my+1.6}L47 ${my+6}L49 ${my+2.8}Z" fill="#fff" stroke="${OUT}" stroke-width="1.5" stroke-linejoin="round"/>`;
+  if(M==="tongue")face+=`<path d="M48 ${my+2}Q48 ${my+10} 53 ${my+10}Q57 ${my+9} 56 ${my+2}Z" fill="#FF5C8A" ${S3}/><path d="M42 ${my}Q50 ${my+6} 58 ${my}" fill="none" ${S3}/>`;
+  if(M==="cat")face+=`<path d="M43 ${my}Q46.5 ${my+5} 50 ${my}Q53.5 ${my+5} 57 ${my}" fill="none" ${S3}/>`;
+  let sp="";
+  if(ex.includes("sparkles"))sp=spark(14,30,6,"#FFE14D")+spark(88,38,5,"#FFFFFF")+spark(84,84,6,"#FFE14D")+spark(12,72,4,"#FFFFFF");
+  return `<svg viewBox="0 0 100 100" class="ch" aria-hidden="true"><defs>${defs}</defs>${under}${back}${feet}${body}${deco}${face}${front}${sp}</svg>`;
+}
+function podSVG(){
+  return `<svg viewBox="0 0 100 120" class="pod" aria-hidden="true"><ellipse cx="50" cy="113" rx="28" ry="5" fill="rgba(0,0,0,.18)"/>
+  <path d="M50 8C78 8 88 44 88 70C88 96 72 108 50 108C28 108 12 96 12 70C12 44 22 8 50 8Z" fill="#FFFFFF" stroke="${OUT}" stroke-width="3"/>
+  <path d="M12.5 62C14 40 25 8 50 8C75 8 86 40 87.5 62L76 56L64 66L50 56L36 66L24 56Z" style="fill:var(--rc,#FF6B4A)" stroke="${OUT}" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="30" cy="34" r="5" fill="#fff" opacity=".55"/><circle cx="66" cy="26" r="3.5" fill="#fff" opacity=".55"/>
+  <text x="50" y="94" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="800" font-size="26" fill="${OUT}">?</text>
+  <path class="cr a" d="M40 66L46 76L40 84" fill="none" stroke="${OUT}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="cr" d="M66 64L60 74L68 80L62 90" fill="none" stroke="${OUT}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="cr" d="M24 72L30 80L24 88" fill="none" stroke="${OUT}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+
+/* ---------- State & storage ---------- */
+const ICONS=["🦷","📖","🛏️","🧸","👕","✏️","🍽️","🛁","🧹","🥦","🐶","🌱","🎹","⚽","🎒","💧","🙏","⭐"];
+const SUGGEST=[
+  {name:"Brush teeth (morning)",icon:"🦷",stars:1,on:true},
+  {name:"Brush teeth (bedtime)",icon:"🦷",stars:1,on:true},
+  {name:"Read a chapter of a book",icon:"📖",stars:2,on:true},
+  {name:"Make your bed",icon:"🛏️",stars:1,on:true},
+  {name:"Tidy up your toys",icon:"🧸",stars:1,on:true},
+  {name:"Get dressed by yourself",icon:"👕",stars:1,on:false},
+  {name:"Do your homework",icon:"✏️",stars:2,on:false},
+  {name:"Help set the table",icon:"🍽️",stars:1,on:false}
+];
+const KCOL=["#FF6B4A","#3A86FF","#22B573","#A24BFF","#F5A300","#FF4D8D","#14B8A6"];
+const LSK="tasklings-family-v1";
+let mode="loading",db=null;
+let S={settings:null,kids:{}};
+const loaded={settings:false,kids:false};
+const ui={screen:"home",kid:null,tab:"tasks",unlocked:false,pin:"",pinErr:false,modal:null,reveal:null,slow:false,setup:null,newPin:""};
+
+const $app=document.getElementById("app");
+const clone=o=>JSON.parse(JSON.stringify(o));
+const uid=()=>Math.random().toString(36).slice(2,10);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function today(){const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+
+function saveLocal(){try{localStorage.setItem(LSK,JSON.stringify(S))}catch(e){}}
+function loadLocal(){try{const v=JSON.parse(localStorage.getItem(LSK)||"null");if(v&&typeof v==="object"){S.settings=v.settings||null;S.kids=v.kids||{}}}catch(e){}}
+const chains={};
+function write(path,data){
+  if(mode!=="db"){saveLocal();return}
+  const body=clone(data);
+  chains[path]=(chains[path]||Promise.resolve()).then(()=>db.doc(path).set(body)).catch(e=>{
+    toast(e&&e.code==="invalid_argument"?"This page is view-only for you, so changes can't be saved.":e&&e.code==="quota_exceeded"?"Storage is full, so this change wasn't saved.":"Couldn't save that. Check the connection and try again.");
+  });
+}
+function saveKid(k){S.kids[k.id]=k;write("kids/"+k.id,k)}
+function saveSettings(){write("family/settings",S.settings)}
+function removeKid(id){delete S.kids[id];if(mode==="db"){db.doc("kids/"+id).delete().catch(()=>toast("Couldn't remove. Try again."))}else saveLocal()}
+
+async function init(){
+  render();
+  let d=null;
+  try{if(window.claude&&typeof window.claude.use==="function")d=await window.claude.use("db")}catch(e){d=null}
+  if(d){
+    db=d;mode="db";
+    const timer=setTimeout(()=>{ui.slow=true;render()},10000);
+    const done=()=>{if(loaded.settings&&loaded.kids){clearTimeout(timer);ui.slow=false}};
+    db.doc("family/settings").onSnapshot(s=>{S.settings=s.exists?clone(s.data()):null;if(!s.metadata.fromCache)loaded.settings=true;done();render()},e=>{clearTimeout(timer);ui.dbErr=true;loaded.settings=true;render()});
+    db.collection("kids").onSnapshot(q=>{const k={};q.docs.forEach(x=>{k[x.id]=clone(x.data())});S.kids=k;if(!q.metadata.fromCache)loaded.kids=true;done();render()},e=>{clearTimeout(timer);ui.dbErr=true;loaded.kids=true;render()});
+  }else{mode="local";loadLocal();render()}
+}
+const ready=()=>mode==="local"||(loaded.settings&&loaded.kids)||!!S.settings;
+
+/* ---------- Game logic ---------- */
+const kidsList=()=>Object.values(S.kids).sort((a,b)=>(a.created||0)-(b.created||0));
+const cost=()=>Math.max(1,(S.settings&&S.settings.cost)||3);
+const tasks=()=>(S.settings&&S.settings.tasks)||[];
+function isDone(k,t){const v=k.done&&k.done[t.id];return t.repeat==="once"?!!v:v===today()}
+function owned(k){return Object.keys(k.coll||{}).filter(id=>CBY[id]).length}
+function newKid(name,i){return{id:uid(),name:name.trim().slice(0,24),color:KCOL[i%KCOL.length],stars:0,coll:{},done:{},pulls:0,sinceRare:0,avatar:null,created:Date.now()+i}}
+
+function pull(k){
+  k.stars-=cost();k.pulls=(k.pulls||0)+1;k.sinceRare=(k.sinceRare||0)+1;
+  let roll=Math.random()*100,r=0,acc=0;
+  for(let i=0;i<RAR.length;i++){acc+=RAR[i].odds;if(roll<acc){r=i;break}}
+  if(k.sinceRare>=10&&r<2)r=2; // every 10th surprise is at least Rare
+  if(r>=2)k.sinceRare=0;
+  const pool=CHARS.filter(c=>c.r===r);
+  let pick=pool[Math.floor(Math.random()*pool.length)];
+  const coll=k.coll||(k.coll={});
+  if(coll[pick.id]&&Math.random()<.6){const fresh=pool.filter(c=>!coll[c.id]);if(fresh.length)pick=fresh[Math.floor(Math.random()*fresh.length)]}
+  const isNew=!coll[pick.id];
+  coll[pick.id]=(coll[pick.id]||0)+1;
+  if(!k.avatar&&isNew&&owned(k)===1)k.avatar=pick.id;
+  return{c:pick,isNew};
+}
+
+/* ---------- Sound (after a tap only) ---------- */
+let actx=null;
+function beep(freqs,dur=.12,type="triangle",gap=.09){
+  try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();const t0=actx.currentTime;
+    freqs.forEach((f,i)=>{const o=actx.createOscillator(),g=actx.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(.0001,t0+i*gap);g.gain.exponentialRampToValueAtTime(.18,t0+i*gap+.02);g.gain.exponentialRampToValueAtTime(.0001,t0+i*gap+dur);o.connect(g).connect(actx.destination);o.start(t0+i*gap);o.stop(t0+i*gap+dur+.05)})}catch(e){}
+}
+const soundOn=()=>!(S.settings&&S.settings.mute);
+
+/* ---------- Rendering ---------- */
+let pendingRender=false;
+function render(force){
+  const a=document.activeElement;
+  if(!force&&a&&$app.contains(a)&&(a.tagName==="INPUT"||a.tagName==="SELECT")){pendingRender=true;return}
+  pendingRender=false;
+  let h="";
+  if(!ready())h=loadingView();
+  else if(!S.settings||ui.screen==="setup")h=setupView();
+  else if(ui.screen==="kid"&&S.kids[ui.kid])h=kidView(S.kids[ui.kid]);
+  else if(ui.screen==="parent")h=parentView();
+  else{ui.screen="home";h=homeView()}
+  $app.innerHTML=h;
+  renderOverlay();
+}
+document.addEventListener("focusout",()=>setTimeout(()=>{if(pendingRender)render()},0));
+
+function brand(){return `<div class="brand">${charSVG(CBY.bunbun)}<span>Chordoos</span></div>`}
+function avatar(k,sm){
+  const c=k.avatar&&CBY[k.avatar]&&k.coll&&k.coll[k.avatar]?CBY[k.avatar]:null;
+  return c?`<div class="avatar${sm?" sm":""}" style="background:var(--tile)">${charSVG(c)}</div>`:`<div class="avatar${sm?" sm":""}" style="background:${esc(k.color)}">${esc((k.name||"?").charAt(0).toUpperCase())}</div>`;
+}
+function loadingView(){
+  return `<header class="top">${brand()}</header><div class="panel" style="align-items:center;text-align:center"><div class="showcase">${["mossy","glimmer","shade"].map(id=>charSVG(CBY[id],true)).join("")}</div><h2>Loading your family…</h2>${ui.slow?`<p class="muted">This is taking longer than usual. Your saved tasks and collections can't be reached yet. Check the connection; the page keeps trying.</p>`:""}</div>`;
+}
+function homeView(){
+  const ks=kidsList();
+  return `<header class="top">${brand()}<span class="spacer"></span><button class="btn" data-a="parent" aria-label="Grown-up settings">🔒 Grown-ups</button></header>
+  <h1>Who's doing tasks today?</h1>
+  ${ks.length?`<div class="kids">${ks.map(k=>{const tl=tasks().filter(t=>!isDone(k,t)).length;return `<button class="kid-card" data-a="kid" data-id="${k.id}">${avatar(k)}<span class="nm">${esc(k.name)}</span><span class="stars small"><span class="s">★</span>${k.stars||0}</span><span class="muted small">${tl?tl+" task"+(tl>1?"s":"")+" left":"All done today!"}</span><span class="meter" aria-label="${owned(k)} of ${CHARS.length} collected"><i style="width:${owned(k)/CHARS.length*100}%"></i></span><span class="muted small">${owned(k)} of ${CHARS.length} Chordoos</span></button>`}).join("")}</div>`
+  :`<div class="panel" style="text-align:center;align-items:center"><h2>No kids added yet</h2><p class="muted">A grown-up can add kids in Grown-ups.</p><button class="btn primary" data-a="parent">Open Grown-ups</button></div>`}
+  ${mode==="local"?`<p class="note">Progress is saved on this device. Tip: add Chordoos to your home screen so it opens like an app.</p>`:""}`;
+}
+function kidView(k){
+  const c=cost(),st=k.stars||0,can=st>=c;
+  const ts=tasks();
+  const left=ts.filter(t=>!isDone(k,t));
+  const pips=Array.from({length:c},(_,i)=>`<span class="${i<Math.min(st,c)?"on":""}">★</span>`).join("");
+  let body="";
+  if(ui.tab==="tasks"){
+    body=`<div class="tasks">${ts.map(t=>{const d=isDone(k,t);return `<button class="task${d?" done":""}" data-a="toggle" data-t="${t.id}" aria-pressed="${d}"><span class="ic">${esc(t.icon||"⭐")}</span><span class="tx"><span class="tn">${esc(t.name)}</span><span class="tm">+${t.stars} ★ · ${t.repeat==="once"?"One time":"Every day"}</span></span><span class="chk">✓</span></button>`}).join("")}
+    ${!ts.length?`<p class="alldone">No tasks yet. Ask a grown-up to add some.</p>`:!left.length?`<p class="alldone">You finished everything today. Amazing work!</p>`:""}</div>`;
+  }else{
+    body=collectionView(k);
+  }
+  return `<header class="kidhead"><button class="icon-btn" data-a="home" aria-label="Back">‹</button><div class="who">${avatar(k,true)}<h2>${esc(k.name)}</h2></div><span class="spacer"></span><span class="stars" id="starcount"><span class="s">★</span>${st}</span></header>
+  <section class="surprise${can?" ready":""}">${podSVG()}<div class="info"><h3>${can?"A surprise is ready!":"Next surprise"}</h3><div class="pips" aria-label="${Math.min(st,c)} of ${c} stars">${pips}</div>
+  ${can?`<button class="btn primary big" data-a="open">Open it!</button>`:`<p class="muted">Finish tasks to earn ${c-st} more star${c-st>1?"s":""}.</p>`}</div></section>
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="${ui.tab==="tasks"}" data-a="tab" data-v="tasks">Tasks${left.length?` (${left.length})`:""}</button><button role="tab" aria-selected="${ui.tab==="coll"}" data-a="tab" data-v="coll">Collection ${owned(k)}/${CHARS.length}</button></div>
+  ${body}`;
+}
+function collectionView(k){
+  const coll=k.coll||{};
+  let h="";
+  for(let r=RAR.length-1;r>=0;r--){
+    const list=CHARS.filter(c=>c.r===r),have=list.filter(c=>coll[c.id]).length;
+    h+=`<section class="rgroup"><header><span class="rpill" style="background:${RCOL[r]}">${RAR[r].label}</span><span class="muted small">${have} of ${list.length}</span></header><div class="grid">${list.map(c=>{const n=coll[c.id]||0;return n?`<button class="tile ${RAR[r].key}" style="border-color:${RCOL[r]}" data-a="char" data-id="${c.id}">${n>1?`<span class="cnt">×${n}</span>`:""}${charSVG(c)}<span class="tn">${esc(c.name)}</span></button>`:`<div class="tile locked">${charSVG(c,true)}<span class="tn">???</span></div>`}).join("")}</div></section>`;
+  }
+  if(owned(k)===CHARS.length)h=`<p class="alldone">You collected every single Chordoo. Legend!</p>`+h;
+  return `<div style="display:flex;flex-direction:column;gap:18px">${h}</div>`;
+}
+
+/* ----- setup ----- */
+function setupView(){
+  const s=ui.setup||(ui.setup={kids:[],name:"",tasks:SUGGEST.map(t=>({...t})),cost:3});
+  return `<header class="top">${brand()}</header>
+  <div class="welcome">
+   <div class="panel" style="align-items:center;text-align:center"><div class="showcase">${[0,1,2,3,4].map(r=>charSVG(CHARS.find(c=>c.r===r&&c.id!=="bunbun"&&c.id!=="mossy")||CHARS[0])).join("")}</div>
+    <h1>Finish tasks. Open surprises. Collect them all.</h1>
+    <p class="muted">Kids tick off tasks like brushing teeth to earn stars. Stars open a surprise pod with one of ${CHARS.length} Chordoos inside, from Common to Legendary.</p></div>
+   <div class="panel"><h2>1. Who's playing?</h2>
+    <form class="row" data-form="addkid"><input id="setup-kid" placeholder="Kid's name" maxlength="24" value="${esc(s.name)}" style="flex:1"><button class="btn" type="submit">Add</button></form>
+    <div class="chips">${s.kids.map((n,i)=>`<span class="chip">${esc(n)}<button data-a="setup-rmkid" data-i="${i}" aria-label="Remove ${esc(n)}">×</button></span>`).join("")||`<span class="muted small">Add at least one kid.</span>`}</div></div>
+   <div class="panel"><h2>2. Pick the tasks</h2><p class="muted small">You can change these any time in Grown-ups.</p>
+    <div style="display:flex;flex-direction:column;gap:8px">${s.tasks.map((t,i)=>`<label class="check"><input type="checkbox" id="st-${i}" data-f="setup-task" data-i="${i}" ${t.on?"checked":""}><span style="font-size:22px">${t.icon}</span><span style="flex:1">${esc(t.name)}</span><span class="muted">+${t.stars}★</span></label>`).join("")}</div></div>
+   <div class="panel"><h2>3. Stars per surprise</h2>
+    <div class="row"><select id="setup-cost" data-f="setup-cost">${[1,2,3,4,5,6,8,10].map(n=>`<option value="${n}" ${n===s.cost?"selected":""}>${n} star${n>1?"s":""}</option>`).join("")}</select><span class="muted small">With the tasks above, about ${Math.max(1,Math.round(s.tasks.filter(t=>t.on).reduce((a,t)=>a+t.stars,0)/s.cost*10)/10)} surprises a day.</span></div></div>
+   <button class="btn primary big" data-a="setup-go" ${s.kids.length?"":"disabled"}>Start collecting</button>
+  </div>`;
+}
+
+/* ----- parent ----- */
+function parentView(){
+  const st=S.settings;
+  if(st.pin&&!ui.unlocked){
+    return `<header class="kidhead"><button class="icon-btn" data-a="home" aria-label="Back">‹</button><h2>Grown-ups only</h2></header>
+    <div class="panel" style="align-items:center"><p class="muted">Enter the 4-digit code.</p><div class="dots${ui.pinErr?" err":""}">${[0,1,2,3].map(i=>`<i class="${i<ui.pin.length?"on":""}"></i>`).join("")}</div>
+    <div class="keypad">${[1,2,3,4,5,6,7,8,9].map(n=>`<button data-a="key" data-v="${n}">${n}</button>`).join("")}<span></span><button data-a="key" data-v="0">0</button><button data-a="key" data-v="del" aria-label="Delete">⌫</button></div></div>`;
+  }
+  const ks=kidsList();
+  return `<header class="kidhead"><button class="icon-btn" data-a="home" aria-label="Back">‹</button><h2>Grown-ups</h2><span class="spacer"></span><button class="btn" data-a="lock">Done</button></header>
+  <section class="panel"><h2>Kids</h2>
+   ${ks.map(k=>`<div class="prow">${avatar(k,true)}<div style="min-width:0;display:flex;flex-direction:column;gap:4px"><input id="kn-${k.id}" value="${esc(k.name)}" maxlength="24" data-f="kidname" data-id="${k.id}" aria-label="Name"><span class="muted small">★ ${k.stars||0} · ${owned(k)}/${CHARS.length} collected · ${k.pulls||0} surprise${(k.pulls||0)===1?"":"s"} opened</span></div>
+    <div class="row acts"><button class="btn" data-a="bonus" data-id="${k.id}" aria-label="Give ${esc(k.name)} a bonus star">+1 ★</button><button class="btn" data-a="minus" data-id="${k.id}" aria-label="Take a star from ${esc(k.name)}">−1 ★</button><button class="btn danger" data-a="rmkid" data-id="${k.id}">Remove</button></div></div>`).join("")}
+   <form class="row" data-form="addkid2"><input id="new-kid" placeholder="Add a kid" maxlength="24" style="flex:1"><button class="btn primary" type="submit">Add</button></form>
+  </section>
+  <section class="panel"><h2>Tasks</h2><p class="muted small">Every-day tasks reset each morning. One-time tasks stay done.</p>
+   ${tasks().map(t=>`<div class="tline"><select class="ic" id="ti-${t.id}" data-f="ticon" data-id="${t.id}" aria-label="Icon">${ICONS.map(i=>`<option ${i===t.icon?"selected":""}>${i}</option>`).join("")}</select><input id="tn-${t.id}" value="${esc(t.name)}" maxlength="40" data-f="tname" data-id="${t.id}" aria-label="Task name"><select id="ts-${t.id}" data-f="tstars" data-id="${t.id}" aria-label="Stars">${[1,2,3,4,5].map(n=>`<option value="${n}" ${n===t.stars?"selected":""}>${n} ★</option>`).join("")}</select>
+     <div class="opts"><select id="tr-${t.id}" data-f="trepeat" data-id="${t.id}" aria-label="How often"><option value="daily" ${t.repeat!=="once"?"selected":""}>Every day</option><option value="once" ${t.repeat==="once"?"selected":""}>One time</option></select><span class="spacer"></span><button class="btn danger" data-a="rmtask" data-id="${t.id}">Remove</button></div></div>`).join("")}
+   <button class="btn" data-a="addtask">+ Add a task</button>
+  </section>
+  <section class="panel"><h2>Surprises</h2>
+   <label class="field" for="cost">Stars needed for one surprise<select id="cost" data-f="cost">${[1,2,3,4,5,6,8,10].map(n=>`<option value="${n}" ${n===cost()?"selected":""}>${n}</option>`).join("")}</select></label>
+   <div><p class="small muted" style="margin-bottom:6px">Chances in each surprise. Every 10th surprise is at least Rare, and new Chordoos are favored over repeats.</p><div class="odds">${RAR.map((r,i)=>`<span class="rpill" style="background:${RCOL[i]}">${r.label} ${r.odds}%</span>`).join("")}</div></div>
+   <label class="check"><input type="checkbox" id="mute" data-f="mute" ${st.mute?"checked":""}><span>Turn sounds off</span></label>
+  </section>
+  <section class="panel"><h2>Grown-up code</h2><p class="muted small">${st.pin?"A code is set. Kids need it to open this page.":"No code yet. Add one so kids can't change tasks or stars."} This keeps little hands out. It isn't a password.</p>
+   <form class="row" data-form="pin"><input id="newpin" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="4 digits" style="width:140px"><button class="btn primary" type="submit">${st.pin?"Change code":"Set code"}</button>${st.pin?`<button class="btn" type="button" data-a="clearpin">Remove code</button>`:""}</form>
+  </section>
+  <p class="note">${mode==="db"?"Progress saves to this page, so it's the same on every device where you open it signed in.":"Progress is saved on this device only. Each phone or tablet keeps its own family."}</p>`;
+}
+
+/* ----- overlays ----- */
+function renderOverlay(){
+  let o=document.getElementById("ov");
+  const m=ui.modal,rv=ui.reveal;
+  if(!m&&!rv){if(o)o.remove();return}
+  if(!o){o=document.createElement("div");o.id="ov";document.body.appendChild(o)}
+  if(rv){
+    const col=RCOL[rv.c.r];
+    if(rv.stage<3){
+      o.className="overlay reveal";o.dataset.stage=rv.stage;o.style.setProperty("--rc",rv.stage>=2?col:"#FF6B4A");
+      o.innerHTML=`<button class="podbtn" data-a="tap-pod" aria-label="Tap the surprise pod to open it">${podSVG()}</button><p class="hint">${["Tap to open!","Keep tapping!","Almost there!"][rv.stage]}</p>`;
+    }else{
+      o.className="overlay reveal";o.dataset.stage="3";o.style.setProperty("--rc",col);
+      o.innerHTML=`<div class="result"><div class="rays"></div>${charSVG(rv.c)}<span class="rpill" style="background:${col}">${RAR[rv.c.r].label}</span>${rv.isNew?`<span class="newtag">NEW!</span>`:`<span class="dupetag">You have ${rv.count} of these</span>`}<h2>${esc(rv.c.name)}</h2><p><b>${esc(rv.c.style)}</b> · ${esc(rv.c.flavor)}</p><div class="row" style="justify-content:center"><button class="btn primary big" data-a="close-reveal">Yay!</button>${rv.canAgain?`<button class="btn big" data-a="again">Open another</button>`:""}</div></div>`;
+    }
+    return;
+  }
+  o.className="overlay";o.removeAttribute("data-stage");
+  if(m.type==="char"){
+    const c=CBY[m.id],k=S.kids[ui.kid],n=k&&k.coll?k.coll[c.id]||0:0;
+    o.innerHTML=`<div class="sheet" role="dialog" aria-label="${esc(c.name)}">${charSVG(c)}<span class="rpill" style="background:${RCOL[c.r]}">${RAR[c.r].label}</span><h2>${esc(c.name)}</h2><p class="flavor"><b>${esc(c.style)}</b> · ${esc(c.flavor)}</p><p class="muted small">You have ${n}.</p><div class="row" style="justify-content:center">${k&&k.avatar===c.id?`<span class="muted">This is your buddy!</span>`:`<button class="btn primary" data-a="buddy" data-id="${c.id}">Make my buddy</button>`}<button class="btn" data-a="close">Close</button></div></div>`;
+  }else if(m.type==="confirm"){
+    o.innerHTML=`<div class="sheet" role="dialog" aria-label="Confirm"><h2>${esc(m.title)}</h2><p class="muted">${esc(m.text)}</p><div class="row" style="justify-content:center"><button class="btn danger" data-a="confirm-yes">${esc(m.yes)}</button><button class="btn" data-a="close">Cancel</button></div></div>`;
+  }
+}
+function confetti(color){
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  const box=document.createElement("div");box.className="confetti";
+  const cols=[color,"#FFE14D","#7CFFB2","#FF8FD8","#53F3FF","#FFFFFF"];
+  for(let i=0;i<70;i++){const p=document.createElement("i");p.style.left=Math.random()*100+"%";p.style.background=cols[i%cols.length];p.style.animationDuration=(1.6+Math.random()*1.8)+"s";p.style.animationDelay=(Math.random()*.4)+"s";p.style.transform=`rotate(${Math.random()*360}deg)`;box.appendChild(p)}
+  document.body.appendChild(box);setTimeout(()=>box.remove(),4200);
+}
+function toast(t){document.querySelectorAll(".toast").forEach(x=>x.remove());const el=document.createElement("div");el.className="toast";el.textContent=t;document.body.appendChild(el);setTimeout(()=>el.remove(),2700)}
+
+/* ---------- Events ---------- */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-a]");if(!b)return;
+  const a=b.dataset.a,id=b.dataset.id;
+  const k=ui.kid&&S.kids[ui.kid];
+  switch(a){
+    case "home":ui.screen="home";ui.kid=null;ui.unlocked=false;ui.pin="";break;
+    case "kid":ui.screen="kid";ui.kid=id;ui.tab="tasks";window.scrollTo(0,0);break;
+    case "tab":ui.tab=b.dataset.v;break;
+    case "parent":ui.screen="parent";ui.pin="";ui.pinErr=false;window.scrollTo(0,0);break;
+    case "lock":ui.screen="home";ui.unlocked=false;break;
+    case "key":{
+      if(b.dataset.v==="del")ui.pin=ui.pin.slice(0,-1);else if(ui.pin.length<4)ui.pin+=b.dataset.v;
+      ui.pinErr=false;
+      if(ui.pin.length===4){if(ui.pin===String(S.settings.pin)){ui.unlocked=true;ui.pin=""}else{ui.pinErr=true;ui.pin=""}}
+      break}
+    case "toggle":{
+      if(!k)return;const t=tasks().find(x=>x.id===b.dataset.t);if(!t)return;
+      const nk=clone(k);nk.done=nk.done||{};
+      if(isDone(nk,t)){
+        if((nk.stars||0)<t.stars){toast("Those stars were already used for a surprise.");return}
+        delete nk.done[t.id];nk.stars-=t.stars;
+      }else{
+        nk.done[t.id]=t.repeat==="once"?"once:"+today():today();nk.stars=(nk.stars||0)+t.stars;
+        if(soundOn())beep([660,880],.12);
+        toast(`+${t.stars} ★ Nice job!`);
+        ui.popTask=t.id;
+      }
+      saveKid(nk);render(true);
+      const sc=document.getElementById("starcount");if(sc){sc.classList.remove("bump");void sc.offsetWidth;sc.classList.add("bump")}
+      if(ui.popTask){const el=document.querySelector(`[data-t="${ui.popTask}"]`);if(el)el.classList.add("pop");ui.popTask=null}
+      return}
+    case "open":case "again":{
+      if(!k||(k.stars||0)<cost())return;
+      const nk=clone(k);const res=pull(nk);saveKid(nk);
+      ui.reveal={c:res.c,isNew:res.isNew,count:nk.coll[res.c.id],stage:0,canAgain:nk.stars>=cost()};
+      if(soundOn())beep([520],.1);
+      break}
+    case "tap-pod":{
+      const rv=ui.reveal;if(!rv)return;rv.stage++;
+      if(soundOn())beep([400+rv.stage*140],.1,"square");
+      if(rv.stage>=3){
+        const f=document.createElement("div");f.className="flash";document.body.appendChild(f);setTimeout(()=>f.remove(),800);
+        confetti(RCOL[rv.c.r]);
+        if(soundOn())beep(rv.c.r>=3?[523,659,784,1047,1319]:[523,659,784,1047],.22,"triangle",.1);
+      }
+      renderOverlay();return}
+    case "close-reveal":ui.reveal=null;ui.tab=ui.tab;break;
+    case "char":ui.modal={type:"char",id};break;
+    case "buddy":{if(!k)return;const nk=clone(k);nk.avatar=id;saveKid(nk);ui.modal=null;toast("New buddy!");break}
+    case "close":ui.modal=null;break;
+    case "confirm-yes":{const m=ui.modal;ui.modal=null;if(m&&m.run)m.run();break}
+    /* setup */
+    case "setup-rmkid":ui.setup.kids.splice(+b.dataset.i,1);break;
+    case "setup-go":{
+      const s=ui.setup;if(!s.kids.length)return;
+      S.settings={tasks:s.tasks.filter(t=>t.on).map(t=>({id:uid(),name:t.name,icon:t.icon,stars:t.stars,repeat:"daily"})),cost:s.cost,pin:"",mute:false,created:Date.now()};
+      saveSettings();
+      s.kids.forEach((n,i)=>saveKid(newKid(n,i+kidsList().length)));
+      ui.setup=null;ui.screen="home";toast("All set! Pick a kid to start.");break}
+    /* parent */
+    case "bonus":case "minus":{const kk=S.kids[id];if(!kk)return;const nk=clone(kk);nk.stars=Math.max(0,(nk.stars||0)+(a==="bonus"?1:-1));saveKid(nk);break}
+    case "rmkid":{const kk=S.kids[id];if(!kk)return;ui.modal={type:"confirm",title:`Remove ${kk.name}?`,text:`Their stars and their collection of ${owned(kk)} Chordoos will be deleted. This can't be undone.`,yes:"Remove",run:()=>removeKid(id)};break}
+    case "addtask":S.settings.tasks=[...tasks(),{id:uid(),name:"New task",icon:"⭐",stars:1,repeat:"daily"}];saveSettings();render(true);
+      setTimeout(()=>{const ins=document.querySelectorAll('[data-f="tname"]');const last=ins[ins.length-1];if(last){last.focus();last.select()}},0);return;
+    case "rmtask":{const t=tasks().find(x=>x.id===id);if(!t)return;ui.modal={type:"confirm",title:`Remove "${t.name}"?`,text:"Stars already earned from it stay.",yes:"Remove",run:()=>{S.settings.tasks=tasks().filter(x=>x.id!==id);saveSettings()}};break}
+    case "clearpin":S.settings.pin="";saveSettings();toast("Code removed");break;
+    default:return;
+  }
+  render(true);
+});
+document.addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=e.target.dataset.form;
+  if(f==="addkid"){const v=document.getElementById("setup-kid").value.trim();if(v){ui.setup.kids.push(v.slice(0,24));ui.setup.name=""}render(true);const i=document.getElementById("setup-kid");if(i)i.focus();pendingRender=false}
+  if(f==="addkid2"){const v=document.getElementById("new-kid").value.trim();if(!v)return;saveKid(newKid(v,kidsList().length));render(true);toast(`Added ${v}`)}
+  if(f==="pin"){const v=document.getElementById("newpin").value.trim();if(!/^\d{4}$/.test(v)){toast("Use exactly 4 digits.");return}S.settings.pin=v;saveSettings();ui.unlocked=true;render(true);toast("Code saved")}
+});
+document.addEventListener("input",e=>{if(e.target.id==="setup-kid"&&ui.setup)ui.setup.name=e.target.value});
+document.addEventListener("change",e=>{
+  const el=e.target,f=el.dataset.f;if(!f)return;const id=el.dataset.id;
+  if(f==="setup-task"){ui.setup.tasks[+el.dataset.i].on=el.checked;render(true);return}
+  if(f==="setup-cost"){ui.setup.cost=+el.value;render(true);return}
+  if(f==="kidname"){const kk=S.kids[id];const v=el.value.trim();if(kk&&v&&v!==kk.name){const nk=clone(kk);nk.name=v.slice(0,24);saveKid(nk)}return}
+  const upd=(fn)=>{S.settings.tasks=tasks().map(t=>t.id===id?fn({...t}):t);saveSettings()};
+  if(f==="tname"){const v=el.value.trim();if(v)upd(t=>(t.name=v.slice(0,40),t));return}
+  if(f==="ticon"){upd(t=>(t.icon=el.value,t));return}
+  if(f==="tstars"){upd(t=>(t.stars=+el.value,t));return}
+  if(f==="trepeat"){upd(t=>(t.repeat=el.value,t));return}
+  if(f==="cost"){S.settings.cost=+el.value;saveSettings();return}
+  if(f==="mute"){S.settings.mute=el.checked;saveSettings();return}
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&ui.modal){ui.modal=null;render(true)}});
+// Re-render when a new day starts so daily tasks reset on a tablet left open.
+let lastDay=today();setInterval(()=>{if(today()!==lastDay){lastDay=today();render()}},60000);
+
+init();
+try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
+if("serviceWorker" in navigator&&location.protocol!=="file:"){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}))}
+})();
+</script>
+
+</body>
+</html>
