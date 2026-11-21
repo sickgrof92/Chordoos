@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="moonbeam-f1"><stop offset="0" stop-color="#FFF6C8" stop-opacity="0.55"/><stop offset="1" stop-color="#FFF6C8" stop-opacity="0"/></radialGradient><radialGradient id="moonbeam-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFF0"/><stop offset="0.5" stop-color="#FFE88A"/><stop offset="1" stop-color="#D8B040"/></radialGradient><radialGradient id="moonbeam-f3"><stop offset="0" stop-color="#FFA8A8" stop-opacity="0.7"/><stop offset="1" stop-color="#FFA8A8" stop-opacity="0"/></radialGradient><linearGradient id="moonbeam-l4" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#8AB8FF"/><stop offset="1.00" stop-color="#3A6AD0"/></linearGradient></defs><circle cx="100" cy="96" r="80" fill="url(#moonbeam-f1)" class="fx"/>
+<ellipse cx="100" cy="184" rx="40" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M120 24 C70 24 40 64 44 108 C48 150 84 178 126 172 C96 160 76 132 78 100 C80 64 100 36 120 24 Z" fill="url(#moonbeam-s2)" stroke="#5A4A1A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="62" cy="80" r="6" fill="#E8C860" opacity=".6"/>
+<circle cx="70" cy="130" r="5" fill="#E8C860" opacity=".6"/>
+<circle cx="88" cy="156" r="4" fill="#E8C860" opacity=".6"/>
+<path d="M62 104 Q70 111.8 78 104" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 124 Q66 128.8 72 124" fill="none" stroke="#5A4A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="56" cy="118" rx="6" ry="4" fill="url(#moonbeam-f3)"/>
+<circle cx="53.9" cy="115.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<path d="M112 30 C120 18 138 20 150 34 C160 46 162 62 168 72 C154 64 142 50 132 44 Z" fill="url(#moonbeam-l4)" stroke="#1E3A7A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="168" cy="74" r="6" fill="#FFFFFF" stroke="#1E3A7A" stroke-width="2"/>
+<text class="fx" x="138" y="120" font-size="20" font-weight="bold" font-family="sans-serif" fill="#C8B060">z</text>
+<text class="fx" x="154" y="104" font-size="14" font-weight="bold" font-family="sans-serif" fill="#C8B060">z</text>
+<path class="fx" d="M160.0 155.0 L161.5 158.0 L164.8 158.5 L162.4 160.8 L162.9 164.0 L160.0 162.5 L157.1 164.0 L157.6 160.8 L155.2 158.5 L158.5 158.0 Z" fill="#FFE88A"/>
+<path class="fx" d="M30.0 35.0 L31.5 38.0 L34.8 38.5 L32.4 40.8 L32.9 44.0 L30.0 42.5 L27.1 44.0 L27.6 40.8 L25.2 38.5 L28.5 38.0 Z" fill="#FFE88A"/>
+<path class="fx" d="M150.0 135.0 L151.5 138.0 L154.8 138.5 L152.4 140.8 L152.9 144.0 L150.0 142.5 L147.1 144.0 L147.6 140.8 L145.2 138.5 L148.5 138.0 Z" fill="#FFE88A"/></svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="peekaberry-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8D8FF"/><stop offset="0.5" stop-color="#A06AE0"/><stop offset="1" stop-color="#5A2AA0"/></radialGradient><radialGradient id="peekaberry-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D6F5A8"/><stop offset="0.5" stop-color="#7CC850"/><stop offset="1" stop-color="#3E8A2E"/></radialGradient><radialGradient id="peekaberry-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A4A"/><stop offset="1" stop-color="#0A0614"/></radialGradient><radialGradient id="peekaberry-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A4A"/><stop offset="1" stop-color="#0A0614"/></radialGradient><radialGradient id="peekaberry-f5"><stop offset="0" stop-color="#FF8AC0" stop-opacity="0.7"/><stop offset="1" stop-color="#FF8AC0" stop-opacity="0"/></radialGradient><radialGradient id="peekaberry-s6" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8D8FF"/><stop offset="0.5" stop-color="#A06AE0"/><stop offset="1" stop-color="#5A2AA0"/></radialGradient><radialGradient id="peekaberry-s7" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#E8D8FF"/><stop offset="0.5" stop-color="#A06AE0"/><stop offset="1" stop-color="#5A2AA0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="36" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M50 164 V84 C50 44 150 44 150 84 V164 Q143.75 174 137.5 164 Q131.25 154 125.0 164 Q118.75 174 112.5 164 Q106.25 154 100.0 164 Q93.75 174 87.5 164 Q81.25 154 75.0 164 Q68.75 174 62.5 164 Q56.25 154 50.0 164 Z" fill="url(#peekaberry-s1)" stroke="#3A1A5A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="74" cy="140" r="2.5" fill="#E8D8FF" opacity=".7"/>
+<circle cx="120" cy="146" r="2.5" fill="#E8D8FF" opacity=".7"/>
+<circle cx="100" cy="70" r="2.5" fill="#E8D8FF" opacity=".7"/>
+<circle cx="132" cy="96" r="2.5" fill="#E8D8FF" opacity=".7"/>
+<circle cx="66" cy="94" r="2.5" fill="#E8D8FF" opacity=".7"/>
+<path d="M100 46 C100 36 104 30 110 26" fill="none" stroke="#3E8A2E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="118" cy="30" rx="14" ry="6" fill="url(#peekaberry-s2)" stroke="#2A5A1E" stroke-width="2.5" transform="rotate(-20 118 30)"/>
+<ellipse cx="82" cy="104" rx="10" ry="12" fill="url(#peekaberry-e3)"/>
+<path d="M73.0 108.8 Q82 117.8 91.0 108.8 Q88.0 114.2 82 114.2 Q76.0 114.2 73.0 108.8 Z" fill="#C8A8FF" opacity=".85"/>
+<circle cx="85.5" cy="99.2" r="4.0" fill="#FFFFFF"/>
+<circle cx="78.0" cy="108.8" r="1.7999999999999998" fill="#FFFFFF"/>
+<ellipse cx="118" cy="104" rx="10" ry="12" fill="url(#peekaberry-e4)"/>
+<path d="M109.0 108.8 Q118 117.8 127.0 108.8 Q124.0 114.2 118 114.2 Q112.0 114.2 109.0 108.8 Z" fill="#C8A8FF" opacity=".85"/>
+<circle cx="121.5" cy="99.2" r="4.0" fill="#FFFFFF"/>
+<circle cx="114.0" cy="108.8" r="1.7999999999999998" fill="#FFFFFF"/>
+<path d="M92 126 Q100 138.0 108 126 Z" fill="#5A1A3A" stroke="#5A1A3A" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M96.0 130.96 Q100 128.4 104.0 130.96 Q100 134.4 96.0 130.96 Z" fill="#FF7F9B"/>
+<ellipse cx="68" cy="120" rx="9" ry="6" fill="url(#peekaberry-f5)"/>
+<circle cx="64.85" cy="116.4" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<ellipse cx="132" cy="120" rx="9" ry="6" fill="url(#peekaberry-f5)"/>
+<circle cx="128.85" cy="116.4" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<path d="M50 110 C36 104 32 90 40 84 C46 82 50 90 52 96" fill="url(#peekaberry-s6)" stroke="#3A1A5A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150 110 C164 104 168 90 160 84 C154 82 150 90 148 96" fill="url(#peekaberry-s7)" stroke="#3A1A5A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M146 64 C150 72 150 76 146 78 C142 76 142 72 146 64 Z" fill="#8AD0FF" stroke="#3A8AD0" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text class="fx" x="14" y="50" font-size="20" font-weight="bold" font-family="sans-serif" fill="#A06AE0">boo!</text></svg>
