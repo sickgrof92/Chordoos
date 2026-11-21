@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="boltie-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFE0C0"/><stop offset="0.5" stop-color="#FF9A4A"/><stop offset="1" stop-color="#C85A14"/></radialGradient><linearGradient id="boltie-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFE88A"/><stop offset="1.00" stop-color="#D8A020"/></linearGradient><radialGradient id="boltie-s3" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#F0F6FF"/><stop offset="0.5" stop-color="#B8C8E8"/><stop offset="1" stop-color="#7A88B0"/></radialGradient><radialGradient id="boltie-f4"><stop offset="0" stop-color="#FF7F9B" stop-opacity="0.7"/><stop offset="1" stop-color="#FF7F9B" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="40" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M146 110 H168" fill="none" stroke="#8A6A2A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M168 92 C186 86 192 104 176 110 C192 116 186 134 168 128 Z" fill="url(#boltie-l2)" stroke="#6A4A00" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M76 150 H92 V176 H76 Z" fill="#C8CCD8" stroke="#2A3044" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M72 174 H96 V182 H72 Z" fill="#3A4058" stroke="#2A3044" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M108 150 H124 V176 H108 Z" fill="#C8CCD8" stroke="#2A3044" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M104 174 H128 V182 H104 Z" fill="#3A4058" stroke="#2A3044" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56 100 C56 84 144 84 144 100 V148 C144 160 56 160 56 148 Z" fill="url(#boltie-s1)" stroke="#5A2A0A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56 110 H144 M56 140 H144" fill="none" stroke="#C85A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<circle cx="64" cy="125" r="2" fill="#E8ECF8" stroke="#2A3044" stroke-width="1.4"/>
+<circle cx="76" cy="125" r="2" fill="#E8ECF8" stroke="#2A3044" stroke-width="1.4"/>
+<circle cx="88" cy="125" r="2" fill="#E8ECF8" stroke="#2A3044" stroke-width="1.4"/>
+<circle cx="100" cy="125" r="2" fill="#E8ECF8" stroke="#2A3044" stroke-width="1.4"/>
+<circle cx="112" cy="125" r="2" fill="#E8ECF8" stroke="#2A3044" stroke-width="1.4"/>
+<circle cx="124" cy="125" r="2" fill="#E8ECF8" stroke="#2A3044" stroke-width="1.4"/>
+<circle cx="136" cy="125" r="2" fill="#E8ECF8" stroke="#2A3044" stroke-width="1.4"/>
+<path d="M66 92 C66 50 134 50 134 92 Z" fill="url(#boltie-s3)" stroke="#2A3044" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M78 76 Q86 83.8 94 76" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106 76 Q114 83.8 122 76" fill="none" stroke="#2B2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M95 84 Q100 88.0 105 84" fill="none" stroke="#2A3044" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="84" rx="5" ry="3" fill="url(#boltie-f4)"/>
+<ellipse cx="124" cy="84" rx="5" ry="3" fill="url(#boltie-f4)"/>
+<path d="M100 54 V42" fill="none" stroke="#2A3044" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="100" cy="38" r="5" fill="#FFD84D" stroke="#2A3044" stroke-width="2"/>
+<path d="M58 112 L40 128" fill="none" stroke="#2A3044" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M58 112 L40 128" fill="none" stroke="#C8CCD8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M142 112 L156 134" fill="none" stroke="#2A3044" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M142 112 L156 134" fill="none" stroke="#C8CCD8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text class="fx" x="22" y="56" font-size="18" font-weight="bold" font-family="sans-serif" fill="#8A78C8">z</text>
+<text class="fx" x="34" y="42" font-size="13" font-weight="bold" font-family="sans-serif" fill="#8A78C8">z</text></svg>

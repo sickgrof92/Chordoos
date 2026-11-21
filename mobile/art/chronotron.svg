@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="chronotron-f1"><stop offset="0" stop-color="#FFE8A8" stop-opacity="0.45"/><stop offset="1" stop-color="#FFE8A8" stop-opacity="0"/></radialGradient><radialGradient id="chronotron-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFF6C8"/><stop offset="0.5" stop-color="#E8B840"/><stop offset="1" stop-color="#A87A10"/></radialGradient><linearGradient id="chronotron-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#7A4A2A"/><stop offset="1.00" stop-color="#4A2A10"/></linearGradient><radialGradient id="chronotron-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A0A"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="chronotron-e5" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A0A"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="chronotron-f6"><stop offset="0" stop-color="#FF9AA8" stop-opacity="0.7"/><stop offset="1" stop-color="#FF9AA8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="90" r="92" fill="url(#chronotron-f1)" class="fx"/>
+<ellipse cx="100" cy="184" rx="56" ry="6.5" fill="#2B2340" opacity=".13"/>
+<g transform="translate(130 96) scale(1 1) rotate(-30)"><path d="M0 -5 L58.8 -5 L60.48 -12 L84 0 L60.48 12 L58.8 5 L0 5 Z" fill="#3A2A4A" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round"/></g>
+<g transform="translate(130 96) scale(1 1) rotate(0)"><path d="M0 -5 L44.8 -5 L46.08 -12 L64 0 L46.08 12 L44.8 5 L0 5 Z" fill="#5A4A6A" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round"/></g>
+<g transform="translate(130 96) scale(1 1) rotate(28)"><path d="M0 -5 L35.0 -5 L36.0 -12 L50 0 L36.0 12 L35.0 5 L0 5 Z" fill="#7A6A8A" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round"/></g>
+<g transform="translate(70 96) scale(-1 1) rotate(-30)"><path d="M0 -5 L58.8 -5 L60.48 -12 L84 0 L60.48 12 L58.8 5 L0 5 Z" fill="#3A2A4A" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round"/></g>
+<g transform="translate(70 96) scale(-1 1) rotate(0)"><path d="M0 -5 L44.8 -5 L46.08 -12 L64 0 L46.08 12 L44.8 5 L0 5 Z" fill="#5A4A6A" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round"/></g>
+<g transform="translate(70 96) scale(-1 1) rotate(28)"><path d="M0 -5 L35.0 -5 L36.0 -12 L50 0 L36.0 12 L35.0 5 L0 5 Z" fill="#7A6A8A" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round"/></g>
+<path d="M76 150 H92 V176 H76 Z" fill="url(#chronotron-s2)" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M72 174 H96 V182 H72 Z" fill="#3A2A4A" stroke="#2A1A0A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M108 150 H124 V176 H108 Z" fill="url(#chronotron-s2)" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M104 174 H128 V182 H104 Z" fill="#3A2A4A" stroke="#2A1A0A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70 120 H130 V160 H70 Z" fill="url(#chronotron-l3)" stroke="#2A1A0A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100 120 V146" fill="none" stroke="#E8B840" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="100" cy="150" r="7" fill="url(#chronotron-s2)" stroke="#2A1A0A" stroke-width="2"/>
+<circle cx="100" cy="76" r="48" fill="url(#chronotron-s2)" stroke="#2A1A0A" stroke-width="3.5"/>
+<circle cx="100" cy="76" r="38" fill="#FFFBF0" stroke="#2A1A0A" stroke-width="2.5"/>
+<path d="M100.0 43.0 L100.0 39.0" fill="none" stroke="#2A1A0A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M116.5 47.4 L118.5 44.0" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M128.6 59.5 L132.0 57.5" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M133.0 76.0 L137.0 76.0" fill="none" stroke="#2A1A0A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M128.6 92.5 L132.0 94.5" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M116.5 104.6 L118.5 108.0" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.0 109.0 L100.0 113.0" fill="none" stroke="#2A1A0A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M83.5 104.6 L81.5 108.0" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M71.4 92.5 L68.0 94.5" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M67.0 76.0 L63.0 76.0" fill="none" stroke="#2A1A0A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M71.4 59.5 L68.0 57.5" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M83.5 47.4 L81.5 44.0" fill="none" stroke="#2A1A0A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 76 L100 52" fill="none" stroke="#2A1A0A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 76 L80 88" fill="none" stroke="#2A1A0A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="84" cy="70" rx="7" ry="8" fill="url(#chronotron-e4)"/>
+<path d="M77.7 73.2 Q84 79.2 90.3 73.2 Q88.2 76.8 84 76.8 Q79.8 76.8 77.7 73.2 Z" fill="#A87A10" opacity=".85"/>
+<circle cx="86.45" cy="66.8" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="81.2" cy="73.2" r="1.26" fill="#FFFFFF"/>
+<ellipse cx="116" cy="70" rx="7" ry="8" fill="url(#chronotron-e5)"/>
+<path d="M109.7 73.2 Q116 79.2 122.3 73.2 Q120.2 76.8 116 76.8 Q111.8 76.8 109.7 73.2 Z" fill="#A87A10" opacity=".85"/>
+<circle cx="118.45" cy="66.8" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="113.2" cy="73.2" r="1.26" fill="#FFFFFF"/>
+<path d="M92 96 Q100 102.4 108 96" fill="none" stroke="#2A1A0A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="88" rx="6" ry="4" fill="url(#chronotron-f6)"/>
+<ellipse cx="124" cy="88" rx="6" ry="4" fill="url(#chronotron-f6)"/>
+<circle cx="100" cy="76" r="3" fill="#2A1A0A"/>
+<path d="M56 34 C56 16 80 16 80 34 Z" fill="url(#chronotron-s2)" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120 34 C120 16 144 16 144 34 Z" fill="url(#chronotron-s2)" stroke="#2A1A0A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path class="fx" d="M20 24 Q20 30 26 30 Q20 30 20 36 Q20 30 14 30 Q20 30 20 24 Z" fill="#FFE14D"/>
+<path class="fx" d="M180 24 Q180 30 186 30 Q180 30 180 36 Q180 30 174 30 Q180 30 180 24 Z" fill="#FFE14D"/>
+<path class="fx" d="M24 154 Q24 160 30 160 Q24 160 24 166 Q24 160 18 160 Q24 160 24 154 Z" fill="#FFE14D"/></svg>

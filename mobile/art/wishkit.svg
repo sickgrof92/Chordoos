@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="wishkit-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFF8E8"/><stop offset="0.5" stop-color="#FFD8A0"/><stop offset="1" stop-color="#D89A50"/></radialGradient><radialGradient id="wishkit-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFF0"/><stop offset="0.5" stop-color="#FFE84D"/><stop offset="1" stop-color="#E0A800"/></radialGradient><radialGradient id="wishkit-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A2010"/><stop offset="1" stop-color="#120804"/></radialGradient><radialGradient id="wishkit-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A2010"/><stop offset="1" stop-color="#120804"/></radialGradient><radialGradient id="wishkit-f5"><stop offset="0" stop-color="#FFA8B8" stop-opacity="0.7"/><stop offset="1" stop-color="#FFA8B8" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="50" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M140 150 C164 146 172 124 164 104" fill="none" stroke="#6A3A14" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M140 150 C164 146 172 124 164 104" fill="none" stroke="#FFD8A0" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M164.0 78.0 L168.7 87.5 L179.2 89.1 L171.6 96.5 L173.4 106.9 L164.0 102.0 L154.6 106.9 L156.4 96.5 L148.8 89.1 L159.3 87.5 Z" fill="url(#wishkit-s2)" stroke="#8A6A00" stroke-width="2.5" stroke-linejoin="round"/>
+<path class="fx" d="M176 80 L190 66 M180 92 L196 88 M166 76 L170 60" stroke="#FFE88A" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M56 150 C52 122 72 106 100 106 C128 106 148 122 144 150 C142 172 124 180 100 180 C76 180 58 172 56 150 Z" fill="url(#wishkit-s1)" stroke="#6A3A14" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M80 140 C80 124 120 124 120 140 C120 162 110 172 100 172 C90 172 80 162 80 140 Z" fill="#FFFBF2" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="80" cy="178" rx="12" ry="6" fill="#FFFBF2" stroke="#6A3A14" stroke-width="2.5"/>
+<ellipse cx="120" cy="178" rx="12" ry="6" fill="#FFFBF2" stroke="#6A3A14" stroke-width="2.5"/>
+<circle cx="100" cy="76" r="34" fill="url(#wishkit-s1)" stroke="#6A3A14" stroke-width="3"/>
+<path d="M72 58 L66 26 L92 46 Z" fill="url(#wishkit-s1)" stroke="#6A3A14" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M128 58 L134 26 L108 46 Z" fill="url(#wishkit-s1)" stroke="#6A3A14" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M74 52 L71 34 L84 45 Z" fill="#FFB0C0"/>
+<path d="M126 52 L129 34 L116 45 Z" fill="#FFB0C0"/>
+<path d="M92 44 L96 54 M100 42 V54 M108 44 L104 54" fill="none" stroke="#D89A50" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="86" cy="78" rx="9" ry="11" fill="url(#wishkit-e3)"/>
+<path d="M77.9 82.4 Q86 90.65 94.1 82.4 Q91.4 87.35 86 87.35 Q80.6 87.35 77.9 82.4 Z" fill="#FFC83A" opacity=".85"/>
+<path d="M89.15 69.65 Q89.15 74.15 93.65 74.15 Q89.15 74.15 89.15 78.65 Q89.15 74.15 84.65 74.15 Q89.15 74.15 89.15 69.65 Z" fill="#FFFFFF"/>
+<circle cx="82.4" cy="82.4" r="1.6199999999999999" fill="#FFFFFF"/>
+<ellipse cx="114" cy="78" rx="9" ry="11" fill="url(#wishkit-e4)"/>
+<path d="M105.9 82.4 Q114 90.65 122.1 82.4 Q119.4 87.35 114 87.35 Q108.6 87.35 105.9 82.4 Z" fill="#FFC83A" opacity=".85"/>
+<path d="M117.15 69.65 Q117.15 74.15 121.65 74.15 Q117.15 74.15 117.15 78.65 Q117.15 74.15 112.65 74.15 Q117.15 74.15 117.15 69.65 Z" fill="#FFFFFF"/>
+<circle cx="110.4" cy="82.4" r="1.6199999999999999" fill="#FFFFFF"/>
+<path d="M96 90 L104 90 L100 94 Z" fill="#FF8AA8" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M95 96 Q97.5 99.0 100 96 Q102.5 99.0 105 96" fill="none" stroke="#6A3A14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="74" cy="94" rx="7" ry="4" fill="url(#wishkit-f5)"/>
+<circle cx="71.55" cy="91.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<ellipse cx="126" cy="94" rx="7" ry="4" fill="url(#wishkit-f5)"/>
+<circle cx="123.55" cy="91.6" r="1.5" fill="#FFFFFF" opacity=".9"/>
+<path class="fx" d="M24 55 Q24 60 29 60 Q24 60 24 65 Q24 60 19 60 Q24 60 24 55 Z" fill="#FFE14D"/>
+<path class="fx" d="M30 135 Q30 140 35 140 Q30 140 30 145 Q30 140 25 140 Q30 140 30 135 Z" fill="#FFE14D"/>
+<path class="fx" d="M150 25 Q150 30 155 30 Q150 30 150 35 Q150 30 145 30 Q150 30 150 25 Z" fill="#FFE14D"/></svg>

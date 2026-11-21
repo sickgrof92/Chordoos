@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="pegapony-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#FFF4E8"/><stop offset="1" stop-color="#F0D0B0"/></radialGradient><radialGradient id="pegapony-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFF0FA"/><stop offset="0.5" stop-color="#FFA8D8"/><stop offset="1" stop-color="#E060A8"/></radialGradient><radialGradient id="pegapony-s3" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#F0FAFF"/><stop offset="0.5" stop-color="#8AD0FF"/><stop offset="1" stop-color="#3A88D0"/></radialGradient><radialGradient id="pegapony-s4" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFFBE0"/><stop offset="0.5" stop-color="#FFD86A"/><stop offset="1" stop-color="#E09A2A"/></radialGradient><radialGradient id="pegapony-s5" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#F0FFF0"/><stop offset="0.5" stop-color="#9AE8A8"/><stop offset="1" stop-color="#3AA85A"/></radialGradient><linearGradient id="pegapony-l6" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFA8D8"/><stop offset="1.00" stop-color="#8AD0FF"/></linearGradient><linearGradient id="pegapony-l7" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFA8D8"/><stop offset="0.50" stop-color="#C8A8FF"/><stop offset="1.00" stop-color="#8AD0FF"/></linearGradient><radialGradient id="pegapony-e8" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A2A5A"/><stop offset="1" stop-color="#0A0A1A"/></radialGradient><radialGradient id="pegapony-f9"><stop offset="0" stop-color="#FFB0D0" stop-opacity="0.7"/><stop offset="1" stop-color="#FFB0D0" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="60" ry="6.5" fill="#2B2340" opacity=".13"/>
+<ellipse cx="112" cy="74" rx="34" ry="24" fill="url(#pegapony-s2)" stroke="#4A2A5A" stroke-width="2.5" transform="rotate(-30 112 74)"/>
+<circle cx="112" cy="74" r="4" fill="#FFFFFF" opacity=".8"/>
+<ellipse cx="146" cy="68" rx="30" ry="22" fill="url(#pegapony-s3)" stroke="#4A2A5A" stroke-width="2.5" transform="rotate(20 146 68)"/>
+<circle cx="146" cy="68" r="4" fill="#FFFFFF" opacity=".8"/>
+<ellipse cx="110" cy="104" rx="22" ry="14" fill="url(#pegapony-s4)" stroke="#4A2A5A" stroke-width="2.5" transform="rotate(-10 110 104)"/>
+<circle cx="110" cy="104" r="4" fill="#FFFFFF" opacity=".8"/>
+<ellipse cx="138" cy="102" rx="20" ry="12" fill="url(#pegapony-s5)" stroke="#4A2A5A" stroke-width="2.5" transform="rotate(30 138 102)"/>
+<circle cx="138" cy="102" r="4" fill="#FFFFFF" opacity=".8"/>
+<path d="M56 140 L56 176 H68 L68 140" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M55 172 H69 V180 H55 Z" fill="#FFB0D0" stroke="#7A4A3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M74 140 L74 176 H86 L86 140" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M73 172 H87 V180 H73 Z" fill="#FFB0D0" stroke="#7A4A3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M114 140 L114 176 H126 L126 140" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M113 172 H127 V180 H113 Z" fill="#FFB0D0" stroke="#7A4A3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M132 140 L132 176 H144 L144 140" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M131 172 H145 V180 H131 Z" fill="#FFB0D0" stroke="#7A4A3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="100" cy="128" rx="48" ry="26" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="3.5"/>
+<path d="M146 120 C170 112 180 132 170 150 C166 136 160 132 150 134 Z" fill="url(#pegapony-l6)" stroke="#7A4A3A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M58 120 C50 100 50 86 54 74 L78 76 C76 90 78 104 84 114 Z" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M26 70 C24 48 42 38 58 40 C76 42 82 56 78 70 C74 86 58 90 44 90 C32 88 26 80 26 70 Z" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="34" cy="80" rx="9" ry="7" fill="#FFE0EC"/>
+<circle cx="30" cy="78" r="1.6" fill="#7A4A3A"/>
+<circle cx="36" cy="82" r="1.6" fill="#7A4A3A"/>
+<path d="M50 38 C62 28 82 36 80 52 C86 64 80 76 78 88 C72 78 72 68 68 60 C62 52 52 48 50 38 Z" fill="url(#pegapony-l7)" stroke="#7A4A3A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="62" cy="38" rx="5" ry="10" fill="url(#pegapony-s1)" stroke="#7A4A3A" stroke-width="2.5" transform="rotate(20 62 38)"/>
+<ellipse cx="56" cy="62" rx="7" ry="9" fill="url(#pegapony-e8)"/>
+<path d="M49.7 65.6 Q56 72.35 62.3 65.6 Q60.2 69.65 56 69.65 Q51.8 69.65 49.7 65.6 Z" fill="#8AD0FF" opacity=".85"/>
+<circle cx="58.45" cy="58.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="53.2" cy="65.6" r="1.26" fill="#FFFFFF"/>
+<path d="M62.65 57.05 L68.65 53.05" fill="none" stroke="#0A0A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M62.65 63.05 L68.65 61.05" fill="none" stroke="#0A0A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 86 Q40 89.2 44 86" fill="none" stroke="#7A4A3A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="64" cy="76" rx="5" ry="3" fill="url(#pegapony-f9)"/>
+<path class="fx" d="M20 125 Q20 130 25 130 Q20 130 20 135 Q20 130 15 130 Q20 130 20 125 Z" fill="#FFA8D8"/>
+<path class="fx" d="M176 25 Q176 30 181 30 Q176 30 176 35 Q176 30 171 30 Q176 30 176 25 Z" fill="#FFA8D8"/>
+<path class="fx" d="M100 25 Q100 30 105 30 Q100 30 100 35 Q100 30 95 30 Q100 30 100 25 Z" fill="#FFA8D8"/></svg>
