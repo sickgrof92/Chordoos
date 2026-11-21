@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="graffito-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#D8D8E0"/><stop offset="0.5" stop-color="#8A8A9A"/><stop offset="1" stop-color="#4A4A5A"/></radialGradient><radialGradient id="graffito-e2" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A3A5A"/><stop offset="1" stop-color="#0A0A14"/></radialGradient><radialGradient id="graffito-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A3A5A"/><stop offset="1" stop-color="#0A0A14"/></radialGradient><linearGradient id="graffito-l4" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#FF6AB0"/><stop offset="1.00" stop-color="#C82A88"/></linearGradient></defs><path d="M0 30 H200 V150 H0 Z" fill="#E8E0D8" class="fx"/>
+<path class="fx" d="M20 120 C30 60 70 50 90 80 C110 40 150 50 160 100" stroke="#FF6AB0" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path class="fx" d="M130 60 l10 20 l14 -24" stroke="#3AC8E8" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="100" cy="184" rx="56" ry="6.5" fill="#2B2340" opacity=".13"/>
+<ellipse cx="150" cy="156" rx="10" ry="8" fill="#C8C8D0" stroke="#1E1A2E" stroke-width="2.5" transform="rotate(-50 150 156)"/>
+<ellipse cx="156" cy="146" rx="10" ry="8" fill="#4A4A5A" stroke="#1E1A2E" stroke-width="2.5" transform="rotate(-50 156 146)"/>
+<ellipse cx="162" cy="136" rx="10" ry="8" fill="#C8C8D0" stroke="#1E1A2E" stroke-width="2.5" transform="rotate(-50 162 136)"/>
+<ellipse cx="168" cy="126" rx="10" ry="8" fill="#4A4A5A" stroke="#1E1A2E" stroke-width="2.5" transform="rotate(-50 168 126)"/>
+<ellipse cx="174" cy="116" rx="10" ry="8" fill="#C8C8D0" stroke="#1E1A2E" stroke-width="2.5" transform="rotate(-50 174 116)"/>
+<path d="M56 154 C52 124 74 110 100 110 C126 110 148 124 144 154 C142 174 124 182 100 182 C76 182 58 174 56 154 Z" fill="url(#graffito-s1)" stroke="#1E1A2E" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M82 148 C82 132 118 132 118 148 C118 166 110 174 100 174 C90 174 82 166 82 148 Z" fill="#E8E8EE" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M52 80 C52 58 72 46 100 46 C128 46 148 58 148 80 C148 104 128 116 100 116 C72 116 52 104 52 80 Z" fill="url(#graffito-s1)" stroke="#1E1A2E" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M60 46 L58 20 L82 40 Z M140 46 L142 20 L118 40 Z" fill="url(#graffito-s1)" stroke="#1E1A2E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56 78 C64 66 92 66 100 76 C108 66 136 66 144 78 C138 92 112 94 100 86 C88 94 62 92 56 78 Z" fill="#2A2A3A" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="80" cy="80" rx="8" ry="10" fill="#FFFFFF" stroke="#2B2340" stroke-width="2.5"/>
+<ellipse cx="80" cy="81" rx="4.4" ry="5.5" fill="url(#graffito-e2)"/>
+<circle cx="82.0" cy="78.0" r="1.76" fill="#FFFFFF"/>
+<ellipse cx="120" cy="80" rx="8" ry="10" fill="#FFFFFF" stroke="#2B2340" stroke-width="2.5"/>
+<ellipse cx="120" cy="81" rx="4.4" ry="5.5" fill="url(#graffito-e3)"/>
+<circle cx="122.0" cy="78.0" r="1.76" fill="#FFFFFF"/>
+<path d="M82 96 C86 90 114 90 118 96 C114 108 86 108 82 96 Z" fill="#F4F4F8" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="100" cy="96" r="4" fill="#1E1A2E"/>
+<path d="M94 102 Q100 106.8 106 102" fill="none" stroke="#1E1A2E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="70" cy="140" r="5" fill="#FF6AB0"/>
+<circle cx="76" cy="136" r="2" fill="#FF6AB0"/>
+<circle cx="126" cy="132" r="5" fill="#3AC8E8"/>
+<circle cx="132" cy="128" r="2" fill="#3AC8E8"/>
+<circle cx="88" cy="60" r="5" fill="#FFD84D"/>
+<circle cx="94" cy="56" r="2" fill="#FFD84D"/>
+<circle cx="116" cy="164" r="5" fill="#8AE06A"/>
+<circle cx="122" cy="160" r="2" fill="#8AE06A"/>
+<path d="M140 130 L156 116" fill="none" stroke="#1E1A2E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 130 L156 116" fill="none" stroke="#8A8A9A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M154 88 H170 V116 H154 Z" fill="url(#graffito-l4)" stroke="#1E1A2E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M158 82 H166 V88 H158 Z" fill="#C8CCD8" stroke="#1E1A2E" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>

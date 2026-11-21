@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="fennix-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFF4DC"/><stop offset="0.5" stop-color="#F0C890"/><stop offset="1" stop-color="#C08A4A"/></radialGradient><radialGradient id="fennix-e2" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1808"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="fennix-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1808"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="fennix-f4"><stop offset="0" stop-color="#FFA8A8" stop-opacity="0.7"/><stop offset="1" stop-color="#FFA8A8" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="50" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M136 150 C164 152 178 130 172 108 C168 96 156 100 158 112 C162 126 150 138 132 140 Z" fill="url(#fennix-s1)" stroke="#5A3410" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M170 108 C168 96 156 100 158 112" fill="#FFFBF2" stroke="#5A3410" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M62 152 C58 126 78 112 100 112 C122 112 142 126 138 152 C136 172 120 180 100 180 C80 180 64 172 62 152 Z" fill="url(#fennix-s1)" stroke="#5A3410" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M84 146 C84 130 116 130 116 146 C116 166 108 174 100 174 C92 174 84 166 84 146 Z" fill="#FFFBF2" stroke="#2B2340" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="82" cy="178" rx="11" ry="6" fill="#FFFBF2" stroke="#5A3410" stroke-width="2.5"/>
+<ellipse cx="118" cy="178" rx="11" ry="6" fill="#FFFBF2" stroke="#5A3410" stroke-width="2.5"/>
+<path d="M74 70 C52 56 34 20 40 8 C60 12 84 40 90 62 Z" fill="url(#fennix-s1)" stroke="#5A3410" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M126 70 C148 56 166 20 160 8 C140 12 116 40 110 62 Z" fill="url(#fennix-s1)" stroke="#5A3410" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M74 62 C58 50 48 28 48 18 C62 24 78 42 84 58 Z" fill="#FFC8B8"/>
+<path d="M126 62 C142 50 152 28 152 18 C138 24 122 42 116 58 Z" fill="#FFC8B8"/>
+<path d="M64 84 C64 62 80 54 100 54 C120 54 136 62 136 84 C136 104 120 120 100 122 C80 120 64 104 64 84 Z" fill="url(#fennix-s1)" stroke="#5A3410" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M82 96 C86 90 114 90 118 96 C114 112 106 120 100 120 C94 120 86 112 82 96 Z" fill="#FFFBF2"/>
+<ellipse cx="86" cy="84" rx="8" ry="10" fill="url(#fennix-e2)"/>
+<path d="M78.8 88.0 Q86 95.5 93.2 88.0 Q90.8 92.5 86 92.5 Q81.2 92.5 78.8 88.0 Z" fill="#C08A4A" opacity=".85"/>
+<circle cx="88.8" cy="80.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="82.8" cy="88.0" r="1.44" fill="#FFFFFF"/>
+<ellipse cx="114" cy="84" rx="8" ry="10" fill="url(#fennix-e3)"/>
+<path d="M106.8 88.0 Q114 95.5 121.2 88.0 Q118.8 92.5 114 92.5 Q109.2 92.5 106.8 88.0 Z" fill="#C08A4A" opacity=".85"/>
+<circle cx="116.8" cy="80.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="110.8" cy="88.0" r="1.44" fill="#FFFFFF"/>
+<circle cx="100" cy="104" r="4" fill="#3A2010"/>
+<path d="M95 110 Q97.5 113.0 100 110 Q102.5 113.0 105 110" fill="none" stroke="#5A3410" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="100" rx="6" ry="4" fill="url(#fennix-f4)"/>
+<ellipse cx="124" cy="100" rx="6" ry="4" fill="url(#fennix-f4)"/>
+<path class="fx" d="M20 50 q6 10 0 20 M28 54 q4 6 0 12" stroke="#C8A050" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path class="fx" d="M180 50 q-6 10 0 20 M172 54 q-4 6 0 12" stroke="#C8A050" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>

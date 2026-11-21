@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="mirajj-f1"><stop offset="0" stop-color="#FFD8A8" stop-opacity="0.6"/><stop offset="1" stop-color="#FFD8A8" stop-opacity="0"/></radialGradient><radialGradient id="mirajj-e2" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A1A3A"/><stop offset="1" stop-color="#120612"/></radialGradient><radialGradient id="mirajj-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#3A1A3A"/><stop offset="1" stop-color="#120612"/></radialGradient><radialGradient id="mirajj-f4"><stop offset="0" stop-color="#FF9AC8" stop-opacity="0.7"/><stop offset="1" stop-color="#FF9AC8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="96" r="80" fill="url(#mirajj-f1)" class="fx"/>
+<ellipse cx="100" cy="184" rx="30" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M60 170 C50 130 80 120 70 90 C62 60 84 34 100 34 C116 34 138 60 130 90 C120 120 150 130 140 170 C120 160 110 176 100 166 C90 176 80 160 60 170 Z" fill="#FFE8C0" stroke="#6A2A6A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity="0.90"/>
+<path d="M66 166 C56 130 84 120 74 90 C62 60 84 34 100 34 C116 34 138 60 126 90 C116 120 144 130 134 166 C120 156 110 172 100 162 C90 172 80 156 66 166 Z" fill="#FFC8A8" opacity="0.75"/>
+<path d="M72 162 C62 130 88 120 78 90 C62 60 84 34 100 34 C116 34 138 60 122 90 C112 120 138 130 128 162 C120 152 110 168 100 158 C90 168 80 152 72 162 Z" fill="#FFB0D0" opacity="0.60"/>
+<path d="M70 120 q8 -5 15 0 q8 5 15 0 q8 -5 15 0 q8 5 15 0" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity=".8"/>
+<path d="M70 140 q8 -5 15 0 q8 5 15 0 q8 -5 15 0 q8 5 15 0" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity=".8"/>
+<path d="M70 156 q8 -5 15 0 q8 5 15 0 q8 -5 15 0 q8 5 15 0" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity=".8"/>
+<ellipse cx="88" cy="80" rx="8" ry="10" fill="url(#mirajj-e2)"/>
+<path d="M80.8 84.0 Q88 91.5 95.2 84.0 Q92.8 88.5 88 88.5 Q83.2 88.5 80.8 84.0 Z" fill="#FF9AC8" opacity=".85"/>
+<circle cx="93.8" cy="76.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="87.8" cy="84.0" r="1.44" fill="#FFFFFF"/>
+<ellipse cx="112" cy="80" rx="8" ry="10" fill="url(#mirajj-e3)"/>
+<path d="M104.8 84.0 Q112 91.5 119.2 84.0 Q116.8 88.5 112 88.5 Q107.2 88.5 104.8 84.0 Z" fill="#FF9AC8" opacity=".85"/>
+<circle cx="117.8" cy="76.0" r="3.2" fill="#FFFFFF"/>
+<circle cx="111.8" cy="84.0" r="1.44" fill="#FFFFFF"/>
+<path d="M93 100 Q101.4 102.2 107 95.2" fill="none" stroke="#6A2A6A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76" cy="94" rx="6" ry="4" fill="url(#mirajj-f4)"/>
+<ellipse cx="124" cy="94" rx="6" ry="4" fill="url(#mirajj-f4)"/>
+<path d="M150 60 C150 40 180 40 180 60 C180 80 168 92 165 100 C160 92 150 80 150 60 Z" fill="#FFC8A8" class="fx" opacity=".35"/>
+<circle cx="160" cy="58" r="2.5" fill="#6A2A6A" class="fx" opacity=".5"/>
+<circle cx="170" cy="58" r="2.5" fill="#6A2A6A" class="fx" opacity=".5"/>
+<path class="fx" d="M24 55 Q24 60 29 60 Q24 60 24 65 Q24 60 19 60 Q24 60 24 55 Z" fill="#FFFFFF"/>
+<path class="fx" d="M30 135 Q30 140 35 140 Q30 140 30 145 Q30 140 25 140 Q30 140 30 135 Z" fill="#FFFFFF"/></svg>

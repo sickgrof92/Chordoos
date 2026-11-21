@@ -1,3 +1,5 @@
+import { ROSTER } from './rosterData.ts';
+
 export type Rarity = 0 | 1 | 2 | 3 | 4;
 
 export interface RarityInfo {
@@ -24,33 +26,11 @@ export interface CharacterInfo {
   flavor: string;
 }
 
-const c = (id: string, name: string, rarity: Rarity, style: string, flavor: string): CharacterInfo => ({
-  id,
-  name,
-  rarity,
-  style,
-  flavor,
-});
-
 /**
- * The roster. Every entry needs a matching art/<id>.svg (then run `npm run art`).
- * New batches are added here as they are drawn.
+ * The roster lives in roster/roster.py. Running `npm run roster` regenerates
+ * rosterData.ts with every Chordoo that has art/<id>.svg (then run `npm run art`).
  */
-export const CHARACTERS: readonly CharacterInfo[] = [
-  c('puddle', 'Puddle', 0, 'Water', 'Smiles all day and blows bubbles when it is happy.'),
-  c('bunbun', 'Bun Bun', 0, 'Cute', 'Hops three times before every nap, and never shares the carrot.'),
-  c('sprig', 'Sprig', 0, 'Nature', 'A fox with a leaf for a tail. Grows a little every time it rains.'),
-  c('pip', 'Pip', 0, 'Sky', 'Sings the wake-up song every morning, right on time.'),
-
-  c('glimmer', 'Glimmer', 1, 'Fairy', 'A fairy drop who leaves a trail of glitter wherever it goes.'),
-  c('volt', 'Volt', 1, 'Electric', 'A beetle that runs on 100% kid energy.'),
-
-  c('shade', 'Shade', 2, 'Cool', 'Too cool for bedtime. Skates there anyway.'),
-
-  c('geode', 'Geode', 3, 'Crystal', 'A gentle rock giant with a glowing crystal heart.'),
-
-  c('blazeking', 'Blaze King', 4, 'Dragon', 'A mighty little dragon who only appears for the hardest workers.'),
-];
+export const CHARACTERS: readonly CharacterInfo[] = ROSTER;
 
 export const CHARACTER_BY_ID: Readonly<Record<string, CharacterInfo>> = Object.fromEntries(
   CHARACTERS.map((ch) => [ch.id, ch]),

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="dunewyrm-l1" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#FFE8B0"/><stop offset="1.00" stop-color="#E8C070"/></linearGradient><radialGradient id="dunewyrm-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#FFE8B8"/><stop offset="0.5" stop-color="#E8B060"/><stop offset="1" stop-color="#A06A20"/></radialGradient><radialGradient id="dunewyrm-e3" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A0A"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="dunewyrm-e4" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#2A1A0A"/><stop offset="1" stop-color="#0A0602"/></radialGradient><radialGradient id="dunewyrm-f5"><stop offset="0" stop-color="#FFA8A8" stop-opacity="0.7"/><stop offset="1" stop-color="#FFA8A8" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="80" ry="6.5" fill="#2B2340" opacity=".13"/>
+<path d="M0 150 C40 138 70 156 100 146 C130 136 160 152 200 142 V200 H0 Z" fill="url(#dunewyrm-l1)" stroke="#A87A30" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" class="fx"/>
+<path d="M18 150 C18 92 70 92 70 150" fill="none" stroke="#6A4210" stroke-width="30" stroke-linecap="butt"/>
+<path d="M18 150 C18 92 70 92 70 150" fill="none" stroke="url(#dunewyrm-s2)" stroke-width="24" stroke-linecap="butt"/>
+<path d="M18 150 C18 92 70 92 70 150" fill="none" stroke="#C88A30" stroke-width="4" stroke-dasharray="3 9" transform="translate(0 -6)"/>
+<path d="M110 150 C110 100 160 100 160 150" fill="none" stroke="#6A4210" stroke-width="30" stroke-linecap="butt"/>
+<path d="M110 150 C110 100 160 100 160 150" fill="none" stroke="url(#dunewyrm-s2)" stroke-width="24" stroke-linecap="butt"/>
+<path d="M110 150 C110 100 160 100 160 150" fill="none" stroke="#C88A30" stroke-width="4" stroke-dasharray="3 9" transform="translate(0 -6)"/>
+<path d="M150 146 C146 112 150 80 164 64" fill="none" stroke="#6A4210" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150 146 C146 112 150 80 164 64" fill="none" stroke="url(#dunewyrm-s2)" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M142 60 C140 38 158 28 174 32 C192 36 198 54 190 70 C182 84 160 86 150 78 C144 74 142 68 142 60 Z" fill="url(#dunewyrm-s2)" stroke="#6A4210" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150 40 C156 24 168 18 176 22 C170 26 168 32 172 36 Z" fill="#C88A30" stroke="#6A4210" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="162" cy="52" rx="7" ry="9" fill="url(#dunewyrm-e3)"/>
+<path d="M155.7 55.6 Q162 62.35 168.3 55.6 Q166.2 59.65 162 59.65 Q157.8 59.65 155.7 55.6 Z" fill="#E8B060" opacity=".85"/>
+<circle cx="164.45" cy="48.4" r="2.8000000000000003" fill="#FFFFFF"/>
+<circle cx="159.2" cy="55.6" r="1.26" fill="#FFFFFF"/>
+<ellipse cx="180" cy="52" rx="6" ry="8" fill="url(#dunewyrm-e4)"/>
+<path d="M174.6 55.2 Q180 61.2 185.4 55.2 Q183.6 58.8 180 58.8 Q176.4 58.8 174.6 55.2 Z" fill="#E8B060" opacity=".85"/>
+<circle cx="182.1" cy="48.8" r="2.4000000000000004" fill="#FFFFFF"/>
+<circle cx="177.6" cy="55.2" r="1.08" fill="#FFFFFF"/>
+<path d="M164 70 Q172 76.4 180 70" fill="none" stroke="#6A4210" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="152" cy="66" rx="5" ry="3" fill="url(#dunewyrm-f5)"/>
+<ellipse cx="190" cy="64" rx="5" ry="3" fill="url(#dunewyrm-f5)"/>
+<path d="M10 150 C6 140 8 130 14 126 C16 136 20 142 24 150 Z" fill="url(#dunewyrm-s2)" stroke="#6A4210" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="80" cy="130" r="2.5" fill="#E8C070" class="fx"/>
+<circle cx="96" cy="120" r="2.5" fill="#E8C070" class="fx"/>
+<circle cx="40" cy="170" r="2.5" fill="#E8C070" class="fx"/></svg>

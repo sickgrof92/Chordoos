@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="neonninja-s1" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#C8F0B8"/><stop offset="0.5" stop-color="#5AB84A"/><stop offset="1" stop-color="#2A7A2A"/></radialGradient><radialGradient id="neonninja-s2" cx="0.38" cy="0.3" r="0.85"><stop offset="0" stop-color="#5A5A7A"/><stop offset="0.5" stop-color="#2A2A40"/><stop offset="1" stop-color="#10101C"/></radialGradient><linearGradient id="neonninja-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0.00" stop-color="#E8B070"/><stop offset="1.00" stop-color="#A86A2A"/></linearGradient><linearGradient id="neonninja-l4" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#6AFFE8"/><stop offset="1.00" stop-color="#FF6AD8"/></linearGradient><radialGradient id="neonninja-f5"><stop offset="0" stop-color="#6AFFE8" stop-opacity="0.4"/><stop offset="1" stop-color="#6AFFE8" stop-opacity="0"/></radialGradient><radialGradient id="neonninja-e6" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#0A1A1A"/><stop offset="1" stop-color="#020606"/></radialGradient><radialGradient id="neonninja-e7" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#0A1A1A"/><stop offset="1" stop-color="#020606"/></radialGradient><radialGradient id="neonninja-f8"><stop offset="0" stop-color="#FF8AC0" stop-opacity="0.7"/><stop offset="1" stop-color="#FF8AC0" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="184" rx="46" ry="6.5" fill="#2B2340" opacity=".13"/>
+<ellipse cx="66" cy="170" rx="22" ry="10" fill="url(#neonninja-s1)" stroke="#0A1A0A" stroke-width="3"/>
+<ellipse cx="134" cy="170" rx="22" ry="10" fill="url(#neonninja-s1)" stroke="#0A1A0A" stroke-width="3"/>
+<path d="M52 150 C48 116 70 100 100 100 C130 100 152 116 148 150 C146 170 126 176 100 176 C74 176 54 170 52 150 Z" fill="url(#neonninja-s2)" stroke="#0A1A0A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M72 128 H128 V136 H72 Z" fill="#2A2A40"/>
+<path d="M58 126 C42 120 36 110 36 100" fill="none" stroke="#0A1A0A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M58 126 C42 120 36 110 36 100" fill="none" stroke="#5AB84A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="34" cy="92" r="12" fill="url(#neonninja-l3)" stroke="#5A3410" stroke-width="2.5"/>
+<circle cx="30" cy="88" r="2" fill="#4A2A10"/>
+<circle cx="38" cy="94" r="2" fill="#4A2A10"/>
+<circle cx="32" cy="98" r="2" fill="#4A2A10"/>
+<path d="M142 126 C156 132 160 140 158 150" fill="none" stroke="#0A1A0A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M142 126 C156 132 160 140 158 150" fill="none" stroke="#5AB84A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48 90 C46 64 70 52 100 52 C130 52 154 64 152 90 C150 108 130 118 100 118 C70 118 50 108 48 90 Z" fill="url(#neonninja-s1)" stroke="#0A1A0A" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="74" cy="60" r="16" fill="url(#neonninja-s1)" stroke="#0A1A0A" stroke-width="3"/>
+<circle cx="126" cy="60" r="16" fill="url(#neonninja-s1)" stroke="#0A1A0A" stroke-width="3"/>
+<path d="M48 80 C70 72 130 72 152 80 V96 C130 90 70 90 48 96 Z" fill="url(#neonninja-s2)" stroke="#0A1A0A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M52 70 C74 62 126 62 148 70 L148 78 C126 70 74 70 52 78 Z" fill="url(#neonninja-l4)" stroke="#0A1A0A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150 72 C166 64 178 70 186 60 M150 76 C168 76 178 84 190 80" fill="none" stroke="#6AFFE8" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="100" cy="70" r="40" fill="url(#neonninja-f5)" class="fx"/>
+<ellipse cx="74" cy="60" rx="8" ry="9" fill="url(#neonninja-e6)"/>
+<path d="M66.8 63.6 Q74 70.35 81.2 63.6 Q78.8 67.65 74 67.65 Q69.2 67.65 66.8 63.6 Z" fill="#6AFFE8" opacity=".85"/>
+<circle cx="76.8" cy="56.4" r="3.2" fill="#FFFFFF"/>
+<circle cx="70.8" cy="63.6" r="1.44" fill="#FFFFFF"/>
+<ellipse cx="126" cy="60" rx="8" ry="9" fill="url(#neonninja-e7)"/>
+<path d="M118.8 63.6 Q126 70.35 133.2 63.6 Q130.8 67.65 126 67.65 Q121.2 67.65 118.8 63.6 Z" fill="#6AFFE8" opacity=".85"/>
+<circle cx="128.8" cy="56.4" r="3.2" fill="#FFFFFF"/>
+<circle cx="122.8" cy="63.6" r="1.44" fill="#FFFFFF"/>
+<path d="M88 106 Q102.4 111.2 112 99.2" fill="none" stroke="#0A1A0A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="64" cy="104" rx="6" ry="3" fill="url(#neonninja-f8)"/>
+<ellipse cx="136" cy="104" rx="6" ry="3" fill="url(#neonninja-f8)"/>
+<text class="fx" x="16" y="56" font-size="14" font-weight="bold" font-family="sans-serif" fill="#8AA0C8">shh</text></svg>
