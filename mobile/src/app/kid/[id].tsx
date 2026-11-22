@@ -5,7 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Avatar, Body, Button, H2, Points, Squish } from '../../components/ui.tsx';
 import { sliverColor, Wheel } from '../../components/Wheel.tsx';
 import { haptic, play } from '../../feedback.ts';
-import { buySliver, canSpin, isDone, MAX_SLIVERS, MIN_SLIVERS, pendingWins, refundSliver, toggleTask, type Prize } from '../../game/rules.ts';
+import { buySliver, canSpin, isDone, MIN_SLIVERS, onWheel, pendingWins, toggleTask, type Prize } from '../../game/rules.ts';
 import { useFamily } from '../../state/family.tsx';
 import { colors, fonts, shadow } from '../../theme.ts';
 
@@ -77,7 +77,7 @@ export default function KidScreen() {
     const r = buySliver(kid, p);
     if (!r.ok) {
       haptic.warn();
-      setNote(r.reason === 'full' ? `Your wheel is full (${MAX_SLIVERS} slices). Spin it first!` : `You need ${p.cost - kid.points} more points.`);
+      setNote(r.reason === 'owned' ? `${p.name} is already on your wheel.` : `You need ${p.cost - kid.points} more points.`);
       return;
     }
     saveKid(r.kid);
@@ -161,44 +161,32 @@ export default function KidScreen() {
           </View>
         ) : (
           <View style={{ gap: 10 }}>
-            <Body muted>Each prize you buy becomes a slice of your wheel. Buy the same one again to make it likelier.</Body>
+            <Body muted>Each prize you buy becomes a slice of your wheel. When you spin, you win one slice and the wheel starts fresh.</Body>
+            {prizes.length > 0 && prizes.length < MIN_SLIVERS ? (
+              <Body style={st.empty}>Ask a grown-up to add {MIN_SLIVERS - prizes.length} more prize{MIN_SLIVERS - prizes.length > 1 ? 's' : ''}. The wheel needs {MIN_SLIVERS} to spin.</Body>
+            ) : null}
             {[...prizes].sort((a, b) => a.cost - b.cost).map((p) => {
               const afford = kid.points >= p.cost;
-              const have = kid.wheel.filter((w) => w.prizeId === p.id).length;
+              const have = onWheel(kid, p.id);
               return (
                 <View key={p.id} style={st.row}>
                   <Text style={st.icon}>{p.icon}</Text>
                   <View style={{ flex: 1 }}>
                     <Text style={st.rowName}>{p.name}</Text>
                     <Body muted style={{ fontSize: 14 }}>
-                      {p.cost} ★{have ? ` · ${have} on your wheel` : ''}
+                      {p.cost} ★{have ? ' · on your wheel' : ''}
                     </Body>
                   </View>
-                  <Button title={afford ? 'Buy' : `${p.cost - kid.points} more`} kind={afford ? 'primary' : 'plain'} disabled={!afford} onPress={() => onBuy(p)} />
+                  {have ? (
+                    <Text style={st.owned}>✓ On wheel</Text>
+                  ) : (
+                    <Button title={afford ? 'Buy' : `${p.cost - kid.points} more`} kind={afford ? 'primary' : 'plain'} disabled={!afford} onPress={() => onBuy(p)} />
+                  )}
                 </View>
               );
             })}
             {prizes.length === 0 ? <Body muted style={st.empty}>No prizes yet. Ask a grown-up to add some.</Body> : null}
 
-            {kid.wheel.length ? (
-              <View style={{ gap: 8, marginTop: 8 }}>
-                <H2>On your wheel ({kid.wheel.length})</H2>
-                {kid.wheel.map((s, i) => (
-                  <View key={s.id} style={st.slice}>
-                    <View style={[st.swatch, { backgroundColor: sliverColor(kid.wheel, i) }]} />
-                    <Text style={{ fontSize: 22 }}>{s.icon}</Text>
-                    <Text style={[st.rowName, { flex: 1, fontSize: 16 }]} numberOfLines={1}>{s.name}</Text>
-                    <Button
-                      title={`Undo +${s.cost}★`}
-                      onPress={() => {
-                        saveKid(refundSliver(kid, s.id));
-                        setNote(`Took ${s.name} off. You got ${s.cost} points back.`);
-                      }}
-                    />
-                  </View>
-                ))}
-              </View>
-            ) : null}
           </View>
         )}
       </ScrollView>
@@ -237,8 +225,7 @@ const st = StyleSheet.create({
   chkOn: { backgroundColor: colors.good, borderColor: colors.good },
   chkMark: { color: '#fff', fontSize: 24, fontFamily: fonts.bodyBold },
   empty: { textAlign: 'center', padding: 18, borderRadius: 20, borderWidth: 2, borderStyle: 'dashed', borderColor: colors.line },
-  slice: { flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: colors.surface, borderRadius: 16, borderWidth: 2, borderColor: colors.line, padding: 8 },
-  swatch: { width: 14, alignSelf: 'stretch', borderRadius: 6 },
+  owned: { fontFamily: fonts.bodyBold, fontSize: 15, color: colors.good, paddingHorizontal: 6 },
   toast: { position: 'absolute', alignSelf: 'center', backgroundColor: colors.ink, borderRadius: 99, paddingHorizontal: 20, paddingVertical: 12, maxWidth: '90%' },
   toastText: { color: colors.bg, fontFamily: fonts.bodyBold, fontSize: 16, textAlign: 'center' },
 });

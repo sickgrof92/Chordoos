@@ -5,7 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { PointsField, PrizeEditor, TaskEditor } from '../components/Editors.tsx';
 import { Avatar, Body, Button, H2, Panel, Squish } from '../components/ui.tsx';
 import { haptic } from '../feedback.ts';
-import { makeKid, markGiven, pendingWins, type Settings } from '../game/rules.ts';
+import { makeKid, markGiven, MIN_SLIVERS, pendingWins, type Settings } from '../game/rules.ts';
 import { useFamily } from '../state/family.tsx';
 import { colors, fonts } from '../theme.ts';
 
@@ -185,8 +185,13 @@ export default function Grownups() {
             <Panel>
               <H2>Prizes</H2>
               <Body muted style={{ fontSize: 14 }}>
-                Kids spend points to add a prize as a slice of their wheel, and can buy the same prize more than once to make it likelier. The wheel needs at least 4 slices to spin. The slice the wheel lands on is used up and shows in Prizes to hand out.
+                Kids spend points to add a prize as a slice of their wheel, one slice per prize. Purchases are final. The wheel needs at least 4 slices to spin, and spinning is free. The kid wins the slice it lands on, which shows in Prizes to hand out, and the whole wheel clears.
               </Body>
+              {settings.prizes.length < MIN_SLIVERS ? (
+                <Body style={{ color: colors.danger, fontFamily: fonts.bodyBold }}>
+                  Add at least {MIN_SLIVERS} prizes, or kids can't fill a wheel to spin.
+                </Body>
+              ) : null}
               <PrizeEditor prizes={settings.prizes} onChange={(prizes) => set({ prizes })} confirm={ask} />
               <View style={[st.btnRow, { justifyContent: 'space-between' }]}>
                 <Body>Sounds</Body>

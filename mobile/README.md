@@ -2,7 +2,7 @@
 
 The iOS and Android version of Chordoos, built with Expo (SDK 58) and React Native.
 
-Grown-ups set everything: the tasks, how many points each one earns, and the prizes with their costs. Nothing is premade. Kids tick off tasks to earn points and spend them to put prizes on their wheel, one slice per purchase (buying the same prize again makes it likelier). Once the wheel has at least 4 slices (at most 12) the kid can spin it. The slice it lands on is used up and goes to the grown-ups' "Prizes to hand out" list; the other slices stay. A kid can take a slice back off the wheel for a full refund before spinning.
+Grown-ups set everything: the tasks, how many points each one earns, and the prizes with their costs. Nothing is premade. Kids tick off tasks to earn points and spend them to put prizes on their wheel, one slice per prize. Purchases are final. Once the wheel has at least 4 slices the kid can spin it for free. They win the slice it lands on, which goes to the grown-ups' "Prizes to hand out" list, and the whole wheel clears.
 
 ## Run it
 ```bash
@@ -14,7 +14,7 @@ The app uses native modules (audio, haptics, SVG), so use a development build: `
 ## Checks
 ```bash
 npm run typecheck       # TypeScript
-npm test                # game rules: points, buying slices, spinning, wheel angles
+npm test                # game rules: points, buying slices, spinning and clearing, wheel angles
 ```
 
 ## Layout

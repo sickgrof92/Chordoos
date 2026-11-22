@@ -61,8 +61,6 @@ export interface FamilyState {
 
 /** The wheel needs this many slivers before it can spin. */
 export const MIN_SLIVERS = 4;
-/** Most slivers a wheel can hold, so the labels stay readable. */
-export const MAX_SLIVERS = 12;
 export const MAX_POINTS = 999;
 
 export const KID_COLORS = ['#FF6B4A', '#3A86FF', '#22B573', '#A24BFF', '#F5A300', '#FF4D8D', '#14B8A6'];
@@ -118,21 +116,18 @@ export function toggleTask(kid: Kid, task: Task, today = localDate()): ToggleRes
   };
 }
 
-export type BuyResult = { ok: true; kid: Kid } | { ok: false; reason: 'points' | 'full' };
+export type BuyResult = { ok: true; kid: Kid } | { ok: false; reason: 'points' | 'owned' };
 
-/** Spend points to put one sliver of a prize on the wheel. The same prize can be bought again. */
+export function onWheel(kid: Kid, prizeId: string): boolean {
+  return kid.wheel.some((w) => w.prizeId === prizeId);
+}
+
+/** Spend points to put a prize on the wheel as one sliver. Each prize can be on the wheel once. Purchases are final. */
 export function buySliver(kid: Kid, prize: Prize): BuyResult {
-  if (kid.wheel.length >= MAX_SLIVERS) return { ok: false, reason: 'full' };
+  if (onWheel(kid, prize.id)) return { ok: false, reason: 'owned' };
   if (kid.points < prize.cost) return { ok: false, reason: 'points' };
   const sliver: Sliver = { id: newId(), prizeId: prize.id, name: prize.name, icon: prize.icon, cost: prize.cost };
   return { ok: true, kid: { ...kid, points: kid.points - prize.cost, wheel: [...kid.wheel, sliver] } };
-}
-
-/** Take a sliver back off the wheel and get its points back. */
-export function refundSliver(kid: Kid, sliverId: string): Kid {
-  const s = kid.wheel.find((w) => w.id === sliverId);
-  if (!s) return kid;
-  return { ...kid, points: kid.points + s.cost, wheel: kid.wheel.filter((w) => w.id !== sliverId) };
 }
 
 export function canSpin(kid: Kid): boolean {
@@ -147,8 +142,8 @@ export interface SpinResult {
 }
 
 /**
- * Spin the wheel. Every sliver has the same chance. The winning sliver is used up and
- * becomes a prize to hand out; the other slivers stay on the wheel.
+ * Spin the wheel. Spinning is free and every sliver has the same chance. The winning sliver
+ * becomes a prize to hand out, and the whole wheel clears so the kid starts a new one.
  */
 export function spin(kid: Kid, rand: () => number = Math.random, now = Date.now()): SpinResult | null {
   if (!canSpin(kid)) return null;
@@ -158,7 +153,7 @@ export function spin(kid: Kid, rand: () => number = Math.random, now = Date.now(
   return {
     index,
     sliver,
-    kid: { ...kid, wheel: kid.wheel.filter((_, i) => i !== index), wins: [win, ...kid.wins].slice(0, 100) },
+    kid: { ...kid, wheel: [], wins: [win, ...kid.wins].slice(0, 100) },
   };
 }
 

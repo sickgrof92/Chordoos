@@ -26,7 +26,12 @@ export default function Setup() {
     setDraft('');
   };
 
-  const missing = [!names.length && 'a kid', !tasks.length && 'a task', !prizes.length && 'a prize'].filter(Boolean);
+  const morePrizes = MIN_SLIVERS - prizes.length;
+  const missing = [
+    !names.length && 'a kid',
+    !tasks.length && 'a task',
+    morePrizes > 0 && `${morePrizes} more prize${morePrizes > 1 ? 's' : ''} (the wheel needs ${MIN_SLIVERS} to spin)`,
+  ].filter(Boolean);
 
   const start = () => {
     saveSettings({ tasks, prizes, pin: '', sound: true });
@@ -40,7 +45,7 @@ export default function Setup() {
         <Wheel wheel={DECOR} size={150} />
         <H1 style={{ textAlign: 'center' }}>Do tasks. Earn points. Spin for prizes.</H1>
         <Body muted style={{ textAlign: 'center' }}>
-          You choose the tasks, how many points each one is worth, and the prizes. Kids spend points to put prizes on their wheel, and once it has {MIN_SLIVERS} slices they can spin it.
+          You choose the tasks, how many points each one is worth, and the prizes. Kids spend points to put prizes on their wheel. Once it has {MIN_SLIVERS} slices they spin it for free, win one prize, and start a new wheel.
         </Body>
       </Panel>
 
@@ -82,7 +87,7 @@ export default function Setup() {
       <Panel>
         <H2>3. Prizes and what they cost</H2>
         <Body muted>
-          For example, a piece of chocolate for 5 points or an hour of video games for 20. Each prize a kid buys becomes one slice of their wheel.
+          For example, a piece of chocolate for 5 points or an hour of video games for 20. Each prize a kid buys becomes one slice of their wheel. Add at least {MIN_SLIVERS} so the wheel can fill up.
         </Body>
         <PrizeEditor prizes={prizes} onChange={setPrizes} />
       </Panel>

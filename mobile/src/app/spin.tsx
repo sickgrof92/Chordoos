@@ -97,12 +97,6 @@ export default function Spin() {
     });
   };
 
-  const again = () => {
-    setShown(kid.wheel);
-    rotation.setValue(0);
-    setWon(null);
-    setPhase('ready');
-  };
 
   const size = Math.min(width - 40, height * 0.55, 440);
   const ready = phase === 'ready' && canSpin(kid);
@@ -137,10 +131,9 @@ export default function Spin() {
             <Text style={st.youWon}>You won!</Text>
             <Text style={{ fontSize: 84 }}>{won.icon}</Text>
             <Text style={st.prize}>{won.name}</Text>
-            <Text style={st.hint}>Show a grown-up to get your prize.</Text>
+            <Text style={st.hint}>Show a grown-up to get your prize. Your wheel starts fresh now.</Text>
             <View style={{ flexDirection: 'row', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
               <Button title="Yay!" kind="primary" big onPress={() => router.back()} />
-              {canSpin(kid) ? <Button title="Spin again" big onPress={again} /> : null}
             </View>
           </Animated.View>
         </View>
