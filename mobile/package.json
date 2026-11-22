@@ -34,9 +34,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "node --experimental-strip-types --test src/game/*.test.ts",
-    "typecheck": "tsc --noEmit",
-    "art": "node scripts/build-art.mjs",
-    "roster": "python3 roster/roster.py"
+    "typecheck": "tsc --noEmit"
   },
   "private": true
 }

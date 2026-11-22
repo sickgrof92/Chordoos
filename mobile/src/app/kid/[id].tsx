@@ -1,13 +1,11 @@
 import { Redirect, router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { Animated, Modal, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Animated, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Character } from '../../characters/Character.tsx';
-import { Pod } from '../../components/Pod.tsx';
-import { Avatar, Body, Button, H2, RarityPill, StarCount, Squish } from '../../components/ui.tsx';
+import { Avatar, Body, Button, H2, Points, Squish } from '../../components/ui.tsx';
+import { sliverColor, Wheel } from '../../components/Wheel.tsx';
 import { haptic, play } from '../../feedback.ts';
-import { CHARACTER_BY_ID, CHARACTERS, RARITIES, type Rarity } from '../../game/characters.ts';
-import { isDone, openSurprise, ownedCount, toggleTask } from '../../game/rules.ts';
+import { buySliver, canSpin, isDone, MAX_SLIVERS, MIN_SLIVERS, pendingWins, refundSliver, toggleTask, type Prize } from '../../game/rules.ts';
 import { useFamily } from '../../state/family.tsx';
 import { colors, fonts, shadow } from '../../theme.ts';
 
@@ -16,25 +14,22 @@ export default function KidScreen() {
   const { kid: getKid, state, today, saveKid } = useFamily();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const [tab, setTab] = useState<'tasks' | 'collection'>('tasks');
-  const [detail, setDetail] = useState<string | null>(null);
+  const [tab, setTab] = useState<'tasks' | 'shop'>('tasks');
   const [note, setNote] = useState<string | null>(null);
-  const starScale = useRef(new Animated.Value(1)).current;
+  const pointScale = useRef(new Animated.Value(1)).current;
   const wiggle = useRef(new Animated.Value(0)).current;
 
   const kid = getKid(id);
   const settings = state.settings;
-  const cost = settings?.cost ?? 3;
-  const ready = !!kid && kid.stars >= cost;
+  const ready = !!kid && canSpin(kid);
 
   useEffect(() => {
     if (!ready) return;
     const loop = Animated.loop(
       Animated.sequence([
-        Animated.delay(900),
+        Animated.delay(1200),
         Animated.timing(wiggle, { toValue: 1, duration: 90, useNativeDriver: true }),
         Animated.timing(wiggle, { toValue: -1, duration: 120, useNativeDriver: true }),
-        Animated.timing(wiggle, { toValue: 0.6, duration: 110, useNativeDriver: true }),
         Animated.timing(wiggle, { toValue: 0, duration: 110, useNativeDriver: true }),
       ]),
     );
@@ -49,13 +44,15 @@ export default function KidScreen() {
   }, [note]);
 
   if (!kid || !settings) return <Redirect href="/" />;
-  const tasks = settings.tasks;
+  const { tasks, prizes } = settings;
   const left = tasks.filter((t) => !isDone(kid, t, today));
+  const waiting = pendingWins(kid);
+  const need = Math.max(0, MIN_SLIVERS - kid.wheel.length);
 
-  const bumpStars = () =>
+  const bump = () =>
     Animated.sequence([
-      Animated.spring(starScale, { toValue: 1.3, useNativeDriver: true, speed: 40 }),
-      Animated.spring(starScale, { toValue: 1, useNativeDriver: true, speed: 20 }),
+      Animated.spring(pointScale, { toValue: 1.3, useNativeDriver: true, speed: 40 }),
+      Animated.spring(pointScale, { toValue: 1, useNativeDriver: true, speed: 20 }),
     ]).start();
 
   const onTask = (taskId: string) => {
@@ -64,27 +61,33 @@ export default function KidScreen() {
     const r = toggleTask(kid, task, today);
     if (r.change === 'blocked') {
       haptic.warn();
-      setNote('Those stars were already used for a surprise.');
+      setNote('Those points were already spent on the wheel.');
       return;
     }
     saveKid(r.kid);
     if (r.change === 'done') {
       play('ding', settings.sound);
       haptic.success();
-      setNote(`+${task.stars} ★ Nice job!`);
-      bumpStars();
+      setNote(`+${task.points} ★ Nice job!`);
+      bump();
     }
   };
 
-  const onOpen = () => {
-    const r = openSurprise(kid, cost);
-    if (!r) return;
+  const onBuy = (p: Prize) => {
+    const r = buySliver(kid, p);
+    if (!r.ok) {
+      haptic.warn();
+      setNote(r.reason === 'full' ? `Your wheel is full (${MAX_SLIVERS} slices). Spin it first!` : `You need ${p.cost - kid.points} more points.`);
+      return;
+    }
     saveKid(r.kid);
-    router.push({ pathname: '/reveal', params: { kid: kid.id, char: r.character.id, isNew: r.isNew ? '1' : '0', count: String(r.count) } });
+    play('ding', settings.sound);
+    haptic.success();
+    const n = r.kid.wheel.length;
+    setNote(n < MIN_SLIVERS ? `${p.name} added! ${MIN_SLIVERS - n} more to spin.` : `${p.name} added to your wheel!`);
   };
 
-  const rotate = wiggle.interpolate({ inputRange: [-1, 1], outputRange: ['-8deg', '8deg'] });
-  const tileW = Math.floor((Math.min(width, 760) - 32 - 10 * 2) / 3);
+  const rotate = wiggle.interpolate({ inputRange: [-1, 1], outputRange: ['-10deg', '10deg'] });
 
   return (
     <View style={{ flex: 1 }}>
@@ -93,40 +96,47 @@ export default function KidScreen() {
           <Squish label="Back" onPress={() => router.back()} style={st.back}>
             <Text style={st.backText}>‹</Text>
           </Squish>
-          <Avatar color={kid.color} name={kid.name} size={52}>
-            {kid.buddy && kid.collection[kid.buddy] ? <Character id={kid.buddy} size={50} /> : undefined}
-          </Avatar>
+          <Avatar color={kid.color} name={kid.name} size={52} />
           <H2 style={{ flex: 1 }}>{kid.name}</H2>
-          <StarCount value={kid.stars} scale={starScale} />
+          <Points value={kid.points} scale={pointScale} />
         </View>
 
-        <View style={st.surprise}>
+        <Squish label={ready ? 'Spin the wheel' : 'Your wheel'} onPress={() => (ready ? router.push({ pathname: '/spin', params: { kid: kid.id } }) : setTab('shop'))} style={st.wheelCard}>
           <Animated.View style={{ transform: [{ rotate }] }}>
-            <Pod size={width < 400 ? 84 : 104} />
+            <Wheel wheel={kid.wheel} size={width < 400 ? 112 : 136} />
           </Animated.View>
-          <View style={{ flex: 1, gap: 10 }}>
-            <Text style={st.surpriseTitle}>{ready ? 'A surprise is ready!' : 'Next surprise'}</Text>
-            <View style={st.pips} accessibilityLabel={`${Math.min(kid.stars, cost)} of ${cost} stars`}>
-              {Array.from({ length: cost }, (_, i) => (
-                <View key={i} style={[st.pip, i < kid.stars && st.pipOn]}>
-                  <Text style={[st.pipStar, i < kid.stars && { color: '#fff' }]}>★</Text>
-                </View>
+          <View style={{ flex: 1, gap: 8 }}>
+            <Text style={st.wheelTitle}>{ready ? 'Your wheel is ready!' : 'Your prize wheel'}</Text>
+            <View style={st.pips} accessibilityLabel={`${Math.min(kid.wheel.length, MIN_SLIVERS)} of ${MIN_SLIVERS} slices`}>
+              {Array.from({ length: MIN_SLIVERS }, (_, i) => (
+                <View key={i} style={[st.pip, i < kid.wheel.length && { backgroundColor: sliverColor(kid.wheel, i), borderColor: colors.ink }]} />
               ))}
+              {kid.wheel.length > MIN_SLIVERS ? <Text style={st.more}>+{kid.wheel.length - MIN_SLIVERS}</Text> : null}
             </View>
             {ready ? (
-              <Button title="Open it!" kind="primary" big onPress={onOpen} />
+              <View pointerEvents="none">
+                <Button title="Spin it!" kind="primary" big onPress={() => {}} />
+              </View>
             ) : (
-              <Body muted>Finish tasks to earn {cost - kid.stars} more star{cost - kid.stars > 1 ? 's' : ''}.</Body>
+              <Body muted>
+                {kid.wheel.length === 0 ? 'Buy prizes in the shop to fill your wheel.' : `Add ${need} more prize${need > 1 ? 's' : ''} to spin.`}
+              </Body>
             )}
           </View>
-        </View>
+        </Squish>
+
+        {waiting.length ? (
+          <View style={st.waiting}>
+            <Text style={st.waitTitle}>Prizes you won 🎉</Text>
+            <Body style={{ fontSize: 15 }}>{waiting.map((w) => `${w.icon} ${w.name}`).join('   ')}</Body>
+            <Body muted style={{ fontSize: 14 }}>Show a grown-up to get them.</Body>
+          </View>
+        ) : null}
 
         <View style={st.tabs} accessibilityRole="tablist">
-          {(['tasks', 'collection'] as const).map((t) => (
+          {(['tasks', 'shop'] as const).map((t) => (
             <Pressable key={t} accessibilityRole="tab" accessibilityState={{ selected: tab === t }} onPress={() => setTab(t)} style={[st.tab, tab === t && st.tabOn]}>
-              <Text style={[st.tabText, tab === t && { color: colors.bg }]}>
-                {t === 'tasks' ? `Tasks${left.length ? ` (${left.length})` : ''}` : `Collection ${ownedCount(kid)}/${CHARACTERS.length}`}
-              </Text>
+              <Text style={[st.tabText, tab === t && { color: colors.bg }]}>{t === 'tasks' ? `Tasks${left.length ? ` (${left.length})` : ''}` : 'Prize shop'}</Text>
             </Pressable>
           ))}
         </View>
@@ -136,50 +146,59 @@ export default function KidScreen() {
             {tasks.map((t) => {
               const done = isDone(kid, t, today);
               return (
-                <Squish key={t.id} silent label={`${t.name}, ${done ? 'done' : 'not done'}`} onPress={() => onTask(t.id)} style={[st.task, done && st.taskDone]}>
-                  <Text style={st.taskIcon}>{t.icon}</Text>
+                <Squish key={t.id} silent label={`${t.name}, ${done ? 'done' : 'not done'}`} onPress={() => onTask(t.id)} style={[st.row, done && st.rowDone]}>
+                  <Text style={st.icon}>{t.icon}</Text>
                   <View style={{ flex: 1 }}>
-                    <Text style={[st.taskName, done && st.taskNameDone]}>{t.name}</Text>
-                    <Body muted style={{ fontSize: 14 }}>+{t.stars} ★ · {t.repeat === 'once' ? 'One time' : 'Every day'}</Body>
+                    <Text style={[st.rowName, done && st.rowNameDone]}>{t.name}</Text>
+                    <Body muted style={{ fontSize: 14 }}>+{t.points} ★ · {t.repeat === 'once' ? 'One time' : 'Every day'}</Body>
                   </View>
                   <View style={[st.chk, done && st.chkOn]}>{done ? <Text style={st.chkMark}>✓</Text> : null}</View>
                 </Squish>
               );
             })}
-            {tasks.length === 0 ? <Body muted style={st.allDone}>No tasks yet. Ask a grown-up to add some.</Body> : null}
-            {tasks.length > 0 && left.length === 0 ? <Body style={st.allDone}>You finished everything today. Amazing work!</Body> : null}
+            {tasks.length === 0 ? <Body muted style={st.empty}>No tasks yet. Ask a grown-up to add some.</Body> : null}
+            {tasks.length > 0 && left.length === 0 ? <Body style={st.empty}>You finished everything today. Amazing work!</Body> : null}
           </View>
         ) : (
-          <View style={{ gap: 18 }}>
-            {([4, 3, 2, 1, 0] as Rarity[]).map((r) => {
-              const list = CHARACTERS.filter((c) => c.rarity === r);
-              const have = list.filter((c) => kid.collection[c.id]).length;
+          <View style={{ gap: 10 }}>
+            <Body muted>Each prize you buy becomes a slice of your wheel. Buy the same one again to make it likelier.</Body>
+            {[...prizes].sort((a, b) => a.cost - b.cost).map((p) => {
+              const afford = kid.points >= p.cost;
+              const have = kid.wheel.filter((w) => w.prizeId === p.id).length;
               return (
-                <View key={r} style={{ gap: 10 }}>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                    <RarityPill rarity={r} />
-                    <Body muted style={{ fontSize: 14 }}>{have} of {list.length}</Body>
+                <View key={p.id} style={st.row}>
+                  <Text style={st.icon}>{p.icon}</Text>
+                  <View style={{ flex: 1 }}>
+                    <Text style={st.rowName}>{p.name}</Text>
+                    <Body muted style={{ fontSize: 14 }}>
+                      {p.cost} ★{have ? ` · ${have} on your wheel` : ''}
+                    </Body>
                   </View>
-                  <View style={st.grid}>
-                    {list.map((c) => {
-                      const n = kid.collection[c.id] ?? 0;
-                      return n ? (
-                        <Squish key={c.id} label={c.name} onPress={() => setDetail(c.id)} style={[st.tile, { width: tileW, borderColor: RARITIES[r].color }]}>
-                          {n > 1 ? <Text style={st.count}>×{n}</Text> : null}
-                          <Character id={c.id} size={tileW - 16} />
-                          <Text style={st.tileName} numberOfLines={1}>{c.name}</Text>
-                        </Squish>
-                      ) : (
-                        <View key={c.id} style={[st.tile, { width: tileW }]} accessibilityLabel="Not found yet">
-                          <Character id={c.id} size={tileW - 16} locked />
-                          <Text style={[st.tileName, { color: colors.muted }]}>???</Text>
-                        </View>
-                      );
-                    })}
-                  </View>
+                  <Button title={afford ? 'Buy' : `${p.cost - kid.points} more`} kind={afford ? 'primary' : 'plain'} disabled={!afford} onPress={() => onBuy(p)} />
                 </View>
               );
             })}
+            {prizes.length === 0 ? <Body muted style={st.empty}>No prizes yet. Ask a grown-up to add some.</Body> : null}
+
+            {kid.wheel.length ? (
+              <View style={{ gap: 8, marginTop: 8 }}>
+                <H2>On your wheel ({kid.wheel.length})</H2>
+                {kid.wheel.map((s, i) => (
+                  <View key={s.id} style={st.slice}>
+                    <View style={[st.swatch, { backgroundColor: sliverColor(kid.wheel, i) }]} />
+                    <Text style={{ fontSize: 22 }}>{s.icon}</Text>
+                    <Text style={[st.rowName, { flex: 1, fontSize: 16 }]} numberOfLines={1}>{s.name}</Text>
+                    <Button
+                      title={`Undo +${s.cost}★`}
+                      onPress={() => {
+                        saveKid(refundSliver(kid, s.id));
+                        setNote(`Took ${s.name} off. You got ${s.cost} points back.`);
+                      }}
+                    />
+                  </View>
+                ))}
+              </View>
+            ) : null}
           </View>
         )}
       </ScrollView>
@@ -189,37 +208,6 @@ export default function KidScreen() {
           <Text style={st.toastText}>{note}</Text>
         </View>
       ) : null}
-
-      <Modal visible={!!detail} transparent animationType="fade" onRequestClose={() => setDetail(null)}>
-        <Pressable style={st.scrim} onPress={() => setDetail(null)}>
-          {detail ? (
-            <Pressable style={st.sheet} onPress={() => {}}>
-              <Character id={detail} size={200} />
-              <RarityPill rarity={CHARACTER_BY_ID[detail].rarity} big center />
-              <H2>{CHARACTER_BY_ID[detail].name}</H2>
-              <Body muted style={{ textAlign: 'center' }}>
-                {CHARACTER_BY_ID[detail].style} · {CHARACTER_BY_ID[detail].flavor}
-              </Body>
-              <View style={{ flexDirection: 'row', gap: 10 }}>
-                {kid.buddy === detail ? (
-                  <Body muted>This is your buddy!</Body>
-                ) : (
-                  <Button
-                    title="Make my buddy"
-                    kind="primary"
-                    onPress={() => {
-                      saveKid({ ...kid, buddy: detail });
-                      setDetail(null);
-                      setNote('New buddy!');
-                    }}
-                  />
-                )}
-                <Button title="Close" onPress={() => setDetail(null)} />
-              </View>
-            </Pressable>
-          ) : null}
-        </Pressable>
-      </Modal>
     </View>
   );
 }
@@ -229,54 +217,28 @@ const st = StyleSheet.create({
   head: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   back: { width: 48, height: 48, borderRadius: 24, backgroundColor: colors.surface, borderWidth: 2, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' },
   backText: { fontFamily: fonts.display, fontSize: 30, color: colors.ink, marginTop: -4 },
-  surprise: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 16,
-    backgroundColor: colors.surface,
-    borderRadius: 28,
-    borderWidth: 2,
-    borderColor: colors.line,
-    padding: 16,
-    ...shadow,
-  },
-  surpriseTitle: { fontFamily: fonts.displayBold, fontSize: 19, color: colors.ink },
-  pips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  pip: { width: 28, height: 28, borderRadius: 14, borderWidth: 2, borderColor: colors.line, backgroundColor: colors.tile, alignItems: 'center', justifyContent: 'center' },
-  pipOn: { backgroundColor: colors.star, borderColor: colors.star },
-  pipStar: { color: colors.line, fontSize: 16 },
+  wheelCard: { flexDirection: 'row', alignItems: 'center', gap: 16, backgroundColor: colors.surface, borderRadius: 28, borderWidth: 2, borderColor: colors.line, padding: 16, ...shadow },
+  wheelTitle: { fontFamily: fonts.displayBold, fontSize: 20, color: colors.ink },
+  pips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, alignItems: 'center' },
+  pip: { width: 26, height: 26, borderRadius: 8, borderWidth: 2, borderColor: colors.line, backgroundColor: colors.tile },
+  more: { fontFamily: fonts.bodyBold, fontSize: 15, color: colors.muted },
+  waiting: { backgroundColor: '#FFF6DB', borderRadius: 20, borderWidth: 2, borderColor: colors.star, padding: 14, gap: 4 },
+  waitTitle: { fontFamily: fonts.displayBold, fontSize: 18, color: colors.ink },
   tabs: { flexDirection: 'row', backgroundColor: colors.surface, borderRadius: 999, borderWidth: 2, borderColor: colors.line, padding: 4 },
   tab: { flex: 1, minHeight: 46, borderRadius: 999, alignItems: 'center', justifyContent: 'center' },
   tabOn: { backgroundColor: colors.ink },
   tabText: { fontFamily: fonts.bodyBold, fontSize: 16, color: colors.ink },
-  task: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 14,
-    backgroundColor: colors.surface,
-    borderRadius: 20,
-    borderWidth: 2,
-    borderColor: colors.line,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-    minHeight: 74,
-    ...shadow,
-  },
-  taskDone: { backgroundColor: colors.tile, shadowOpacity: 0, elevation: 0 },
-  taskIcon: { fontSize: 30, width: 44, textAlign: 'center' },
-  taskName: { fontFamily: fonts.bodyBold, fontSize: 18, color: colors.ink },
-  taskNameDone: { textDecorationLine: 'line-through', color: colors.muted },
+  row: { flexDirection: 'row', alignItems: 'center', gap: 14, backgroundColor: colors.surface, borderRadius: 20, borderWidth: 2, borderColor: colors.line, paddingHorizontal: 14, paddingVertical: 12, minHeight: 74, ...shadow },
+  rowDone: { backgroundColor: colors.tile, shadowOpacity: 0, elevation: 0 },
+  icon: { fontSize: 30, width: 44, textAlign: 'center' },
+  rowName: { fontFamily: fonts.bodyBold, fontSize: 18, color: colors.ink },
+  rowNameDone: { textDecorationLine: 'line-through', color: colors.muted },
   chk: { width: 44, height: 44, borderRadius: 22, borderWidth: 3, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' },
   chkOn: { backgroundColor: colors.good, borderColor: colors.good },
   chkMark: { color: '#fff', fontSize: 24, fontFamily: fonts.bodyBold },
-  allDone: { textAlign: 'center', padding: 18, borderRadius: 20, borderWidth: 2, borderStyle: 'dashed', borderColor: colors.line },
-  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
-  tile: { backgroundColor: colors.tile, borderRadius: 18, borderWidth: 3, borderColor: colors.line, alignItems: 'center', paddingTop: 6, paddingBottom: 8, paddingHorizontal: 4 },
-  tileName: { fontFamily: fonts.bodyBold, fontSize: 13, color: colors.ink, maxWidth: '100%' },
-  count: { position: 'absolute', top: 4, right: 6, zIndex: 1, fontFamily: fonts.bodyBold, fontSize: 12, color: colors.bg, backgroundColor: colors.ink, borderRadius: 99, paddingHorizontal: 6, overflow: 'hidden' },
+  empty: { textAlign: 'center', padding: 18, borderRadius: 20, borderWidth: 2, borderStyle: 'dashed', borderColor: colors.line },
+  slice: { flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: colors.surface, borderRadius: 16, borderWidth: 2, borderColor: colors.line, padding: 8 },
+  swatch: { width: 14, alignSelf: 'stretch', borderRadius: 6 },
   toast: { position: 'absolute', alignSelf: 'center', backgroundColor: colors.ink, borderRadius: 99, paddingHorizontal: 20, paddingVertical: 12, maxWidth: '90%' },
   toastText: { color: colors.bg, fontFamily: fonts.bodyBold, fontSize: 16, textAlign: 'center' },
-  scrim: { flex: 1, backgroundColor: 'rgba(23,19,42,0.6)', alignItems: 'center', justifyContent: 'center', padding: 20 },
-  sheet: { backgroundColor: colors.surface, borderRadius: 28, padding: 22, alignItems: 'center', gap: 12, width: '100%', maxWidth: 420 },
 });
-

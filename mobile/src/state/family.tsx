@@ -3,8 +3,8 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { AppState } from 'react-native';
 import { localDate, type FamilyState, type Kid, type Settings } from '../game/rules.ts';
 
-const KEY = 'chordoos.family.v1';
-const EMPTY: FamilyState = { version: 1, settings: null, kids: [] };
+const KEY = 'chordoos.family.v2';
+const EMPTY: FamilyState = { version: 2, settings: null, kids: [] };
 
 interface FamilyApi {
   ready: boolean;
@@ -29,7 +29,7 @@ export function FamilyProvider({ children }: { children: ReactNode }) {
       .then((raw) => {
         if (raw) {
           const parsed = JSON.parse(raw) as FamilyState;
-          if (parsed && parsed.version === 1) setState(parsed);
+          if (parsed && parsed.version === 2) setState(parsed);
         }
       })
       .catch(() => {})

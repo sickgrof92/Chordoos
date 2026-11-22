@@ -1,10 +1,8 @@
 import { Redirect, router } from 'expo-router';
 import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Character } from '../characters/Character.tsx';
-import { Avatar, Body, Button, H1, Panel, StarCount, Squish } from '../components/ui.tsx';
-import { CHARACTERS } from '../game/characters.ts';
-import { isDone, ownedCount } from '../game/rules.ts';
+import { Avatar, Body, Button, H1, Panel, Points, Squish } from '../components/ui.tsx';
+import { canSpin, isDone, MIN_SLIVERS, pendingWins } from '../game/rules.ts';
 import { useFamily } from '../state/family.tsx';
 import { colors, fonts, shadow } from '../theme.ts';
 
@@ -35,19 +33,19 @@ export default function Home() {
         <View style={st.grid}>
           {kids.map((k) => {
             const left = tasks.filter((t) => !isDone(k, t, today)).length;
-            const owned = ownedCount(k);
+            const slices = Math.min(k.wheel.length, MIN_SLIVERS);
+            const won = pendingWins(k).length;
             return (
-              <Squish key={k.id} label={`${k.name}, ${k.stars} stars`} onPress={() => router.push(`/kid/${k.id}`)} style={[st.card, { width: cardW }]}>
-                <Avatar color={k.color} name={k.name}>
-                  {k.buddy && k.collection[k.buddy] ? <Character id={k.buddy} size={80} /> : undefined}
-                </Avatar>
+              <Squish key={k.id} label={`${k.name}, ${k.points} points`} onPress={() => router.push(`/kid/${k.id}`)} style={[st.card, { width: cardW }]}>
+                <Avatar color={k.color} name={k.name} />
                 <Text style={st.name} numberOfLines={1}>{k.name}</Text>
-                <StarCount value={k.stars} />
+                <Points value={k.points} />
                 <Body muted style={st.small}>{left ? `${left} task${left > 1 ? 's' : ''} left` : 'All done today!'}</Body>
                 <View style={st.meter}>
-                  <View style={[st.meterFill, { width: `${(owned / CHARACTERS.length) * 100}%` }]} />
+                  <View style={[st.meterFill, { width: `${(slices / MIN_SLIVERS) * 100}%` }, canSpin(k) && { backgroundColor: colors.accent }]} />
                 </View>
-                <Body muted style={st.small}>{owned} of {CHARACTERS.length} Chordoos</Body>
+                <Body muted style={st.small}>{canSpin(k) ? 'Wheel ready to spin!' : `${k.wheel.length} of ${MIN_SLIVERS} wheel slices`}</Body>
+                {won ? <Body style={[st.small, { fontFamily: fonts.bodyBold }]}>🎁 {won} prize{won > 1 ? 's' : ''} to collect</Body> : null}
               </Squish>
             );
           })}

@@ -4,7 +4,6 @@ import * as Haptics from 'expo-haptics';
 const SOURCES = {
   ding: require('../assets/sounds/ding.wav'),
   tap: require('../assets/sounds/tap.wav'),
-  crack: require('../assets/sounds/crack.wav'),
   reveal: require('../assets/sounds/reveal.wav'),
   revealBig: require('../assets/sounds/reveal-big.wav'),
 } as const;

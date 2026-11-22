@@ -2,15 +2,12 @@ import { Redirect, router } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Modal, Pressable, ScrollView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Character } from '../characters/Character.tsx';
+import { PointsField, PrizeEditor, TaskEditor } from '../components/Editors.tsx';
 import { Avatar, Body, Button, H2, Panel, Squish } from '../components/ui.tsx';
 import { haptic } from '../feedback.ts';
-import { CHARACTERS, RARITIES } from '../game/characters.ts';
-import { makeKid, newId, ownedCount, PITY_EVERY, TASK_ICONS, type Settings, type Task } from '../game/rules.ts';
+import { makeKid, markGiven, pendingWins, type Settings } from '../game/rules.ts';
 import { useFamily } from '../state/family.tsx';
 import { colors, fonts } from '../theme.ts';
-
-const COSTS = [1, 2, 3, 4, 5, 6, 8, 10];
 
 function PinGate({ pin, onUnlock }: { pin: string; onUnlock: () => void }) {
   const [entry, setEntry] = useState('');
@@ -60,7 +57,7 @@ export default function Grownups() {
   const [newKid, setNewKid] = useState('');
   const [newPin, setNewPin] = useState('');
   const [confirm, setConfirm] = useState<{ title: string; text: string; run: () => void } | null>(null);
-  const [iconFor, setIconFor] = useState<string | null>(null);
+  const [adjust, setAdjust] = useState(1);
   const [note, setNote] = useState<string | null>(null);
 
   useEffect(() => {
@@ -74,7 +71,8 @@ export default function Grownups() {
   const kids = [...state.kids].sort((a, b) => a.createdAt - b.createdAt);
 
   const set = (patch: Partial<Settings>) => saveSettings({ ...settings, ...patch });
-  const setTask = (id: string, patch: Partial<Task>) => set({ tasks: settings.tasks.map((t) => (t.id === id ? { ...t, ...patch } : t)) });
+  const ask = (title: string, text: string, run: () => void) => setConfirm({ title, text, run });
+  const toGive = kids.flatMap((k) => pendingWins(k).map((w) => ({ kid: k, win: w })));
 
   return (
     <View style={{ flex: 1 }}>
@@ -95,9 +93,7 @@ export default function Grownups() {
               {kids.map((k) => (
                 <View key={k.id} style={st.kidRow}>
                   <View style={st.kidTop}>
-                    <Avatar color={k.color} name={k.name} size={52}>
-                      {k.buddy && k.collection[k.buddy] ? <Character id={k.buddy} size={50} /> : undefined}
-                    </Avatar>
+                    <Avatar color={k.color} name={k.name} size={52} />
                     <View style={{ flex: 1, gap: 4 }}>
                       <TextInput
                         defaultValue={k.name}
@@ -110,20 +106,20 @@ export default function Grownups() {
                         accessibilityLabel={`Name for ${k.name}`}
                       />
                       <Body muted style={{ fontSize: 14 }}>
-                        ★ {k.stars} · {ownedCount(k)}/{CHARACTERS.length} collected · {k.pulls} surprise{k.pulls === 1 ? '' : 's'} opened
+                        ★ {k.points} points · {k.wheel.length} slice{k.wheel.length === 1 ? '' : 's'} on the wheel · {k.wins.length} prize{k.wins.length === 1 ? '' : 's'} won
                       </Body>
                     </View>
                   </View>
                   <View style={st.btnRow}>
-                    <Button title="+1 ★" onPress={() => saveKid({ ...k, stars: k.stars + 1 })} />
-                    <Button title="−1 ★" onPress={() => saveKid({ ...k, stars: Math.max(0, k.stars - 1) })} />
+                    <Button title={`+${adjust} ★`} onPress={() => saveKid({ ...k, points: k.points + adjust })} />
+                    <Button title={`−${adjust} ★`} onPress={() => saveKid({ ...k, points: Math.max(0, k.points - adjust) })} />
                     <Button
                       title="Remove"
                       kind="danger"
                       onPress={() =>
                         setConfirm({
                           title: `Remove ${k.name}?`,
-                          text: `Their stars and their collection of ${ownedCount(k)} Chordoos will be deleted. This can't be undone.`,
+                          text: `Their ${k.points} points, their wheel and their prize history will be deleted. This can't be undone.`,
                           run: () => removeKid(k.id),
                         })
                       }
@@ -131,6 +127,12 @@ export default function Grownups() {
                   </View>
                 </View>
               ))}
+              {kids.length ? (
+                <View style={st.btnRow}>
+                  <Body muted style={{ fontSize: 14 }}>Points the ± buttons add or take away:</Body>
+                  <PointsField value={adjust} onChange={setAdjust} label="Points to add or take away" />
+                </View>
+              ) : null}
               <View style={st.btnRow}>
                 <TextInput
                   value={newKid}
@@ -155,68 +157,37 @@ export default function Grownups() {
               </View>
             </Panel>
 
+            {toGive.length ? (
+              <Panel style={{ borderColor: colors.star }}>
+                <H2>Prizes to hand out</H2>
+                <Body muted style={{ fontSize: 14 }}>The wheel landed on these. Tap Given once the kid has their prize.</Body>
+                {toGive.map(({ kid: k, win: w }) => (
+                  <View key={w.id} style={st.winRow}>
+                    <Text style={{ fontSize: 26 }}>{w.icon}</Text>
+                    <View style={{ flex: 1 }}>
+                      <Text style={st.winName}>{w.name}</Text>
+                      <Body muted style={{ fontSize: 14 }}>
+                        {k.name} · {new Date(w.at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
+                      </Body>
+                    </View>
+                    <Button title="Given ✓" kind="primary" onPress={() => saveKid(markGiven(k, w.id))} />
+                  </View>
+                ))}
+              </Panel>
+            ) : null}
+
             <Panel>
               <H2>Tasks</H2>
-              <Body muted style={{ fontSize: 14 }}>Every-day tasks reset each morning. One-time tasks stay done.</Body>
-              {settings.tasks.map((t) => (
-                <View key={t.id} style={st.taskRow}>
-                  <View style={st.btnRow}>
-                    <Pressable accessibilityLabel="Change icon" onPress={() => setIconFor(t.id)} style={st.iconBtn}>
-                      <Text style={{ fontSize: 24 }}>{t.icon}</Text>
-                    </Pressable>
-                    <TextInput
-                      defaultValue={t.name}
-                      maxLength={40}
-                      onEndEditing={(e) => {
-                        const v = e.nativeEvent.text.trim();
-                        if (v && v !== t.name) setTask(t.id, { name: v });
-                      }}
-                      style={[st.input, { flex: 1 }]}
-                      accessibilityLabel="Task name"
-                    />
-                  </View>
-                  <View style={st.btnRow}>
-                    <Button title="−" onPress={() => setTask(t.id, { stars: Math.max(1, t.stars - 1) })} />
-                    <Text style={st.starsLabel}>{t.stars} ★</Text>
-                    <Button title="+" onPress={() => setTask(t.id, { stars: Math.min(5, t.stars + 1) })} />
-                    <Button title={t.repeat === 'once' ? 'One time' : 'Every day'} onPress={() => setTask(t.id, { repeat: t.repeat === 'once' ? 'daily' : 'once' })} />
-                    <Button
-                      title="Remove"
-                      kind="danger"
-                      onPress={() =>
-                        setConfirm({
-                          title: `Remove "${t.name}"?`,
-                          text: 'Stars already earned from it stay.',
-                          run: () => set({ tasks: settings.tasks.filter((x) => x.id !== t.id) }),
-                        })
-                      }
-                    />
-                  </View>
-                </View>
-              ))}
-              <Button title="+ Add a task" onPress={() => set({ tasks: [...settings.tasks, { id: newId(), name: 'New task', icon: '⭐', stars: 1, repeat: 'daily' }] })} />
+              <Body muted style={{ fontSize: 14 }}>Set any number of points from 1 to 999. Every-day tasks reset each morning. One-time tasks stay done.</Body>
+              <TaskEditor tasks={settings.tasks} onChange={(tasks) => set({ tasks })} confirm={ask} />
             </Panel>
 
             <Panel>
-              <H2>Surprises</H2>
-              <Body style={{ fontFamily: fonts.bodyBold }}>Stars needed for one surprise</Body>
-              <View style={st.btnRow}>
-                {COSTS.map((n) => (
-                  <Pressable key={n} onPress={() => set({ cost: n })} style={[st.costChip, n === settings.cost && st.costOn]} accessibilityRole="radio" accessibilityState={{ selected: n === settings.cost }}>
-                    <Text style={[st.costText, n === settings.cost && { color: colors.accentInk }]}>{n}</Text>
-                  </Pressable>
-                ))}
-              </View>
+              <H2>Prizes</H2>
               <Body muted style={{ fontSize: 14 }}>
-                Chances in each surprise. Every {PITY_EVERY}th surprise is at least Rare, and new Chordoos are favored over repeats.
+                Kids spend points to add a prize as a slice of their wheel, and can buy the same prize more than once to make it likelier. The wheel needs at least 4 slices to spin. The slice the wheel lands on is used up and shows in Prizes to hand out.
               </Body>
-              <View style={st.btnRow}>
-                {RARITIES.map((r) => (
-                  <View key={r.key} style={[st.odds, { backgroundColor: r.color }]}>
-                    <Text style={st.oddsText}>{r.label} {r.odds}%</Text>
-                  </View>
-                ))}
-              </View>
+              <PrizeEditor prizes={settings.prizes} onChange={(prizes) => set({ prizes })} confirm={ask} />
               <View style={[st.btnRow, { justifyContent: 'space-between' }]}>
                 <Body>Sounds</Body>
                 <Switch value={settings.sound} onValueChange={(v) => set({ sound: v })} trackColor={{ true: colors.good }} />
@@ -226,7 +197,7 @@ export default function Grownups() {
             <Panel>
               <H2>Grown-up code</H2>
               <Body muted style={{ fontSize: 14 }}>
-                {settings.pin ? 'A code is set. Kids need it to open this page.' : "No code yet. Add one so kids can't change tasks or stars."} It keeps little hands out. It isn't a password.
+                {settings.pin ? 'A code is set. Kids need it to open this page.' : "No code yet. Add one so kids can't change tasks, prizes or points."} It keeps little hands out. It isn't a password.
               </Body>
               <View style={st.btnRow}>
                 <TextInput
@@ -285,28 +256,6 @@ export default function Grownups() {
         </View>
       </Modal>
 
-      <Modal visible={!!iconFor} transparent animationType="fade" onRequestClose={() => setIconFor(null)}>
-        <Pressable style={st.scrim} onPress={() => setIconFor(null)}>
-          <View style={st.sheet}>
-            <H2>Pick an icon</H2>
-            <View style={[st.btnRow, { justifyContent: 'center' }]}>
-              {TASK_ICONS.map((i) => (
-                <Pressable
-                  key={i}
-                  accessibilityLabel={i}
-                  onPress={() => {
-                    if (iconFor) setTask(iconFor, { icon: i });
-                    setIconFor(null);
-                  }}
-                  style={st.iconBtn}
-                >
-                  <Text style={{ fontSize: 26 }}>{i}</Text>
-                </Pressable>
-              ))}
-            </View>
-          </View>
-        </Pressable>
-      </Modal>
     </View>
   );
 }
@@ -320,20 +269,14 @@ const st = StyleSheet.create({
   kidRow: { gap: 10, paddingVertical: 10, borderTopWidth: 2, borderTopColor: colors.tile },
   kidTop: { flexDirection: 'row', gap: 12, alignItems: 'center' },
   btnRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, alignItems: 'center' },
-  taskRow: { gap: 8, paddingVertical: 10, borderTopWidth: 2, borderTopColor: colors.tile },
-  iconBtn: { width: 52, height: 52, borderRadius: 14, backgroundColor: colors.tile, borderWidth: 2, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' },
-  starsLabel: { fontFamily: fonts.bodyBold, fontSize: 16, color: colors.ink, minWidth: 36, textAlign: 'center' },
-  costChip: { minWidth: 48, height: 48, borderRadius: 24, borderWidth: 2, borderColor: colors.line, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center' },
-  costOn: { backgroundColor: colors.accent, borderColor: colors.accent },
-  costText: { fontFamily: fonts.bodyBold, fontSize: 16, color: colors.ink },
-  odds: { borderRadius: 99, paddingHorizontal: 10, paddingVertical: 3 },
-  oddsText: { color: '#fff', fontFamily: fonts.bodyBold, fontSize: 12, letterSpacing: 0.6 },
   dots: { flexDirection: 'row', gap: 14 },
   dot: { width: 18, height: 18, borderRadius: 9, borderWidth: 3, borderColor: colors.ink },
   dotOn: { backgroundColor: colors.ink },
   keypad: { flexDirection: 'row', flexWrap: 'wrap', width: 72 * 3 + 24, gap: 12 },
   key: { width: 72, height: 72, borderRadius: 36, backgroundColor: colors.tile, borderWidth: 2, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' },
   keyText: { fontFamily: fonts.display, fontSize: 30, color: colors.ink },
+  winRow: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 8, borderTopWidth: 2, borderTopColor: colors.tile },
+  winName: { fontFamily: fonts.bodyBold, fontSize: 17, color: colors.ink },
   foot: { fontSize: 14, textAlign: 'center' },
   toast: { position: 'absolute', alignSelf: 'center', backgroundColor: colors.ink, borderRadius: 99, paddingHorizontal: 20, paddingVertical: 12, maxWidth: '90%' },
   toastText: { color: colors.bg, fontFamily: fonts.bodyBold, fontSize: 16, textAlign: 'center' },

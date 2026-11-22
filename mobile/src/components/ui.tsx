@@ -1,6 +1,5 @@
 import { useRef, type ReactNode } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View, type StyleProp, type TextStyle, type ViewStyle } from 'react-native';
-import { RARITIES, type Rarity } from '../game/characters.ts';
 import { haptic } from '../feedback.ts';
 import { colors, fonts, shadow } from '../theme.ts';
 
@@ -90,21 +89,12 @@ export function Body({ children, style, muted }: { children: ReactNode; style?: 
   return <Text style={[s.body, muted && { color: colors.muted }, style]}>{children}</Text>;
 }
 
-export function StarCount({ value, scale }: { value: number; scale?: Animated.Value }) {
+export function Points({ value, scale, small }: { value: number; scale?: Animated.Value; small?: boolean }) {
   return (
-    <Animated.View style={[s.stars, scale && { transform: [{ scale }] }]} accessibilityLabel={`${value} stars`}>
-      <Text style={s.starIcon}>★</Text>
-      <Text style={s.starText}>{value}</Text>
+    <Animated.View style={[s.stars, small && { paddingHorizontal: 9 }, scale && { transform: [{ scale }] }]} accessibilityLabel={`${value} points`}>
+      <Text style={[s.starIcon, small && { fontSize: 17 }]}>★</Text>
+      <Text style={[s.starText, small && { fontSize: 17 }]}>{value}</Text>
     </Animated.View>
-  );
-}
-
-export function RarityPill({ rarity, big, center }: { rarity: Rarity; big?: boolean; center?: boolean }) {
-  const r = RARITIES[rarity];
-  return (
-    <View style={[s.pill, { backgroundColor: r.color }, big && { paddingHorizontal: 14, paddingVertical: 4 }, center && { alignSelf: 'center' }]}>
-      <Text style={[s.pillText, big && { fontSize: 15 }]}>{r.label.toUpperCase()}</Text>
-    </View>
   );
 }
 
@@ -166,6 +156,4 @@ export const s = StyleSheet.create({
   },
   starIcon: { color: colors.star, fontSize: 22 },
   starText: { fontFamily: fonts.display, fontSize: 22, color: colors.ink, fontVariant: ['tabular-nums'] },
-  pill: { alignSelf: 'flex-start', borderRadius: 999, paddingHorizontal: 10, paddingVertical: 2 },
-  pillText: { color: '#fff', fontFamily: fonts.bodyBold, fontSize: 12, letterSpacing: 1 },
 });

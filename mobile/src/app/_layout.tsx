@@ -26,7 +26,7 @@ function Gate() {
       <Stack.Screen name="setup" />
       <Stack.Screen name="kid/[id]" />
       <Stack.Screen name="grownups" />
-      <Stack.Screen name="reveal" options={{ presentation: 'fullScreenModal', animation: 'fade', gestureEnabled: false }} />
+      <Stack.Screen name="spin" options={{ presentation: 'fullScreenModal', animation: 'fade', gestureEnabled: false }} />
     </Stack>
   );
 }
